@@ -652,182 +652,220 @@
   <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-  <button class="floating-button tour info" onclick="tour(this)"></button>
-  <script type="text/javascript">
-  var step = 0;
+<button class="floating-button tour info" onclick="tour(this)"></button>
+<script type="text/javascript">
+var step=0;
+    function tour(argument) {
+        // body...
 
-  function tour(argument) {
-    // body...
+        if(step==0){
 
-    if (step == 0) {
-
-      $(argument).removeClass('info');
-      $('#m-text').css("top", "60%");
-      $('#m-text').css("left", "calc(100% - 198px)");
-      $('#m-text').html('Welcome to the page where you exchange information about the issues  which affect you the most');
-      $('#m-text').css("opacity", "1");
-      $('#m-text').css("display", "block");
-      $("#post-something").attr("disabled", "disabled")
-
-
-      step = step + 1;
-    } else if (step == 1) {
-
-      $('#m-text').css("top", "calc(100% - 88px)");
-      $('#m-text').html('Add post from here');
-      $('#m-text').css("left", "calc(100% - 158px)");
-
-      step = step + 1;
-    } else if (step == 2) {
+            $(argument).removeClass('info');
+            $('#m-text').css("top","60%");
+          $('#m-text').css("left","calc(100% - 198px)");
+          $('#m-text').html('Welcome to the page where you exchange information about the issues  which affect you the most');
+                      $('#m-text').css("opacity","1");
+                                  $('#m-text').css("display","block");
+ $("#post-something").attr("disabled","disabled")
 
 
-      var f = document.getElementById('post-new');
-      f.style.display = "block";
-      var h = document.getElementById('post-something');
-      h.style.display = "none";
-      step = step + 1;
-      $('#m-text').css("display:none");
-      $("#m-text").css("display", "none");
+            step=step+1;
+        }
+        else if(step==1){
 
-      $("#post-new>.floating-button.close").css("display", "none");
-    } else if (step == 3) {
-      closePost();
-      step = step + 1;
-    } else if (step == 4) {
-      $(argument).addClass('info');
-      //   $("#post-something").attr("disabled","disabled")
-      $('#post-something').removeAttr("disabled");
+             $('#m-text').css("top","calc(100% - 88px)");
+                $('#m-text').html('Add post from here');
+                 $('#m-text').css("left","calc(100% - 158px)");
 
-      step = 0;
+            step=step+1;}
+
+            else if(step==2){
+
+
+                    var f= document.getElementById('post-new');
+                  f.style.display="block";
+                  var h=document.getElementById('post-something');
+                  h.style.display="none";
+              step=step+1;
+              $('#m-text').css("display:none");
+                        $("#m-text").css("display","none");
+
+              $("#post-new>.floating-button.close").css("display","none");
+            }
+            else if(step==3){
+                closePost();step=step+1;
+            }
+        else if(step==4){
+             $(argument).addClass('info');
+           //   $("#post-something").attr("disabled","disabled")
+         $('#post-something').removeAttr("disabled");
+
+            step=0;
+        }
+
+
     }
 
+</script>
 
-  }
 
-  </script>
-  <section class="tour-text " style="opacity: 0;" id="m-text">This the main menu</section>
-  <div class="generic" id="fixnav">
-    <button class="menu" onclick="open_Nav()"></button>
-    <section class="group" id="searchbar" style="display:inline-block;width: 66%;
+
+
+
+
+
+<section class="tour-text " style="opacity: 0;" id="m-text">This the main menu</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="generic" id="fixnav">
+           <button class="menu" onclick="open_Nav()"></button>
+            <section class="group" id="searchbar" style="display:inline-block;width: 66%;
     margin-left: 10px;">
-      <form action="https://www.google.co.in/search?q=mdio&amp;oq=m&amp;aqs=chrome.0.69i59l2j69i57j69i60j69i59j69i60.5787j0j8&amp;sourceid=chrome&amp;es_sm=93&amp;ie=UTF-8#q=h" method="GET">
-        <input class="textip" id="searchtext" placeholder="🔎" required="" type="text" autocomplete="off">
-        <span class="bar">
+                <form action="https://www.google.co.in/search?q=mdio&amp;oq=m&amp;aqs=chrome.0.69i59l2j69i57j69i60j69i59j69i60.5787j0j8&amp;sourceid=chrome&amp;es_sm=93&amp;ie=UTF-8#q=h" method="GET">
+                    <input class="textip" id="searchtext" placeholder="🔎" required="" type="text" autocomplete="off">
+                    <span class="bar">
                     </span>
-      </form>
-    </section>
-  </div>
-  <div id="dialog_menu" class="overlay_menu" style="">
-    <center>
-      <section class="card dialog" style="max-width:500px;overflow:hidden;">
-        <button class="floating-button closebutton generic" id="close_user">
-          <b>
+                </form>
+            </section>
+        </div>
+
+
+
+
+
+ <div id="dialog_menu" class="overlay_menu" style="">
+                      <center>
+                 <section class="card dialog" style="max-width:500px;overflow:hidden;">
+                       <button class="floating-button closebutton generic" id="close_user">
+                <b>
                     X
                 </b>
-        </button>
-        <ul id="li_" style="font-size: 17px;
+            </button>
+
+                <ul id="li_" style="font-size: 17px;
     text-align: left;
 
 
     /* margin-left: -20px; */
     margin: 14px;
     list-style: none;">
-          <li><big>What could be done</big>
-            <ul>
-              <li>Idea<small style="opacity:0.6"><i>- hiiiiiiiiiiiiii</i></small></li>
-              <li>Link</li>
-            </ul>
-          </li>
-          <li><big>What is being done...</big>
-            <ul>
-              <li>Live Event
-                <ul>
-                  <li style="list-style:circle">Q/A</li>
+
+                <li><big>What could be done</big>
+                       <ul>
+                        <li>Idea<small style="opacity:0.6"><i>- hiiiiiiiiiiiiii</i></small></li>
+                        <li>Link</li>
+
+                       </ul>
+                </li>
+                <li><big>What is being done...</big>
+                      <ul>
+                        <li>Live Event<ul><li style="list-style:circle">Q/A</li></ul></li>
+                        <li>Milestone</li>
+                       </ul>
+                 </li>
+                <li><big>What's next</big>
+                     <ul>
+                        <li>What's next</li>
+                        <li>Credits</li>
+                        <li>Announcements</li>
+                       </ul>
+                 </li>
+
                 </ul>
-              </li>
-              <li>Milestone</li>
-            </ul>
-          </li>
-          <li><big>What's next</big>
-            <ul>
-              <li>What's next</li>
-              <li>Credits</li>
-              <li>Announcements</li>
-            </ul>
-          </li>
-        </ul>
-      </section>
-    </center>
-  </div>
-  <div class="overlay_menu" id="category_menu" style="">
-    <button class="menu" style=""></button>
-    <button class="floating-button closebutton" id="close_cat" style="">
-      <b>
+               </section>
+
+
+              </center>
+           </div>
+
+             <div class="overlay_menu" id="category_menu" style="">
+      <button class="menu" style=""></button>
+            <button class="floating-button closebutton" id="close_cat" style="">
+                <b>
                     X
                 </b>
-    </button>
-    <button class="menu " onclick="toggleMenu(this)" style="">
-    </button>
-    <br>
-    <h2 class="title"> lifestyle</h2>
-    <ul class="menu-wrapper">
-      <li class="menu-wrapper-li">
-        <ul class="menucontent">
-          <li>
-            <button onclick="location.href='/category.html'" class="floating-button food icon-food" value="food">
             </button>
-            <big>Food</big><small></small>
-          </li>
-          <li>
-            <button class="floating-button lifestyle icon-lifestyle" value="lifestyle" onclick="location.href='/category.html'">
-            </button><big>Lifestyle</big></li>
-          <li>
-            <button onclick="location.href='/category.html'" class="floating-button accom icon-accom " value="Accomodation">
-            </button><big>Accomodation</big></li>
-          <li>
-            <button onclick="location.href='/category.html'" class="floating-button education icon-education" value="education">
-            </button><big>Education</big></li>
-          <li>
-            <button onclick="location.href='/category.html'" class="floating-button entertainment icon-entertainment" id="entertainmentgo" value="entertainment">
-            </button><big>Entertainment</big></li>
-          <li>
-            <button onclick="location.href='/category.html'" class="floating-button social_welfare icon-social_welfare" value="social welfare">
-            </button><big>Welfare</big></li>
-        </ul>
-      </li>
-      <li class="menu-wrapper-li" id="menu-li-">
-        <ul class="usermenu menucontent user">
-          <li>
-            <button onclick="location.href='/forums.html'" class="floating-button icon-personal_page" value="My Page">
-            </button>
-            <big>Forums</big><small></small>
-          </li>
-          <li>
-            <button onclick="location.href='/notifications.html'" class="floating-button icon-notifications" value="My Notifications">
-            </button><big>Notifications</big></li>
-          <li>
-            <button onclick="location.href='/bookmark.html'" class="floating-button icon-bookmarks" value="My Bookmarks">
-            </button><big>Bookmarks</big></li>
-          <li>
-            <button class="floating-button icon-developments" onclick="location.href='/development.html'" value="My Developments">
-            </button><big>Developments</big></li>
-          <li>
-            <button class="floating-button screen-button" value="MY DASHBOARD" onclick="location.href='/sitemaker.html'">
-            </button><big>Dashboard</big></li>
-          <li>
-            <button onclick="location.href='/messages.html'" class="floating-button message-button" value="My Notifications">
-            </button><big>Messages</big></li>
-          <li>
-            <button onclick="location.href='/ratings.html'" class="floating-button i-ratings" value="My Notifications">
-            </button><big>Ratings</big></li>
-          <li>
-            <button class="floating-button icon-settings" onclick="location.href='/settings-conshub.html'" id="settings_user" value="My Settings">
-            </button><big>Settings</big></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
- 
+            <button class="menu " onclick="toggleMenu(this)" style="">
+
+</button>
+            <br>
+            <h2 class="title"> lifestyle</h2>
+
+             <ul class="menu-wrapper">
+<li class="menu-wrapper-li">
+
+
+
+
+ <ul class="menucontent">
+                <li><button onclick="location.href='/category.html'" class="floating-button food icon-food" value="food">
+                </button>
+  <big>Food</big><small></small>
+</li>
+            <li>    <button class="floating-button lifestyle icon-lifestyle" value="lifestyle" onclick="location.href='/category.html'">
+                </button><big>Lifestyle</big></li>
+               <li> <button onclick="location.href='/category.html'" class="floating-button accom icon-accom " value="Accomodation">
+                </button><big>Accomodation</big></li>
+             <li>   <button onclick="location.href='/category.html'" class="floating-button education icon-education" value="education">
+                </button><big>Education</big></li>
+              <li>  <button onclick="location.href='/category.html'" class="floating-button entertainment icon-entertainment" id="entertainmentgo" value="entertainment">
+                </button><big>Entertainment</big></li>
+               <li> <button onclick="location.href='/category.html'" class="floating-button social_welfare icon-social_welfare" value="social welfare">
+                </button><big>Welfare</big></li>
+            </ul>
+
+
+
+
+
+</li>
+<li class="menu-wrapper-li" id="menu-li-">
+           <ul class="usermenu menucontent user">
+                <li>  <button onclick="location.href='/forums.html'" class="floating-button icon-personal_page" value="My Page">
+                </button>
+  <big>Forums</big><small></small>
+</li>
+            <li>     <button onclick="location.href='/notifications.html'" class="floating-button icon-notifications" value="My Notifications">
+                </button><big>Notifications</big></li>
+               <li>  <button onclick="location.href='/bookmark.html'" class="floating-button icon-bookmarks" value="My Bookmarks">
+                </button><big>Bookmarks</big></li>
+
+             <li>    <button class="floating-button icon-developments" onclick="location.href='/development.html'" value="My Developments">
+                </button><big>Developments</big></li>
+
+                 <li>       <button class="floating-button screen-button" value="MY DASHBOARD" onclick="location.href='/sitemaker.html'">
+                </button><big>Dashboard</big></li>
+            <li>     <button onclick="location.href='/messages.html'" class="floating-button message-button" value="My Notifications">
+                </button><big>Messages</big></li>
+                 <li>     <button onclick="location.href='/ratings.html'" class="floating-button i-ratings" value="My Notifications">
+                </button><big>Ratings</big></li>
+
+            <li>       <button class="floating-button icon-settings" onclick="location.href='/settings-conshub.html'" id="settings_user" value="My Settings">
+                </button><big>Settings</big></li>
+
+            </ul>
+           </li>
+            </ul>
+        </div>
+
+
+
+
+
+
 
 
 
@@ -3223,10 +3261,7 @@ return res;
             });
 
         </script>
-
-
-
-
+    
 
 
 
@@ -4946,6 +4981,11 @@ id="add_pic_title">Add Pictures</h7>
 
 
 
+
+
+
+
+
 <button class="floating-button" onclick="add_window('add',this)" id="post-something" style="
  top:90%;
     right: 0;
@@ -4959,6 +4999,13 @@ id="add_pic_title">Add Pictures</h7>
     background: #1d8be2;
     position: fixed;z-index: 15;
     ">+</button>
+
+
+
+
+
+
+
 
 
 
