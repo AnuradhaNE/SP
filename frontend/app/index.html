@@ -1,60 +1,5002 @@
 <!doctype html>
 <html class="no-js" lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>frontend</title>
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    Servepool:Landing Page
+  </title>
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css styles/cat.css -->
+  <link rel="stylesheet" href="styles/cat.css">
+  <!-- endbuild -->
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+  <style type="text/css">
+  /*@font-face {
+        font-family: 'Merriweather';
+     src: url('../fonts/NotoSans-Regular.ttf'),
+            url('../fonts/NotoSans-Italic.ttf'),
+            url('../fonts/NotoSans-BoldItalic.ttf'),
+            url('../fonts/NotoSans-Bold.ttf')
+        ;
 
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
 
-    <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
-    
-    <!-- build:js scripts/vendor/modernizr.js -->
-    <script src="/bower_components/modernizr/modernizr.js"></script>
-    <!-- endbuild -->
-  </head>
-  <body>
-    <!--[if IE]>
+         font-weight: normal;
+        font-style: normal;
+    }*/
+
+  body {
+    font-family: 'Merriweather';
+    overflow-x: hidden;
+    background: #ffe799;
+    background: #fde187;
+  }
+
+  .menu,
+  .menu:hover {
+    /* margin-left: 7px; */
+    float: left;
+    padding: 3px;
+    position: absolute;
+    margin: 8px;
+    margin-top: 12px;
+    margin-left: 12px;
+    margin-right: 9px;
+    left: 4;
+    padding-left: 6px;
+    /* border: 1.6px solid rgba(255, 255, 255, 0.56); */
+    border-radius: 50%;
+    cursor: pointer;
+    min-width: 20px;
+    min-height: 30px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .menu::before {
+    content: "\2630";
+    margin-right: 5px;
+    font-size: 21px;
+    font-weight: bolder;
+    color: white;
+  }
+
+  #fixnav {
+    display: block;
+    text-align: -webkit-center;
+  }
+
+  .hero-unit {
+    background: inherit;
+    padding: 16px;
+    min-height: 140px;
+    overflow: hidden;
+    margin: 9px;
+  }
+
+
+
+  section.forums {
+    margin: 14px;
+    margin-top: 27px;
+    min-height: 90px;
+    overflow: hidden;
+    display: block;
+    text-align: -webkit-left;
+    padding-left: 6.5px;
+  }
+
+  .forum.card-shadow {
+    min-height: 160px;
+    margin-bottom: 40px;
+    padding: 0;
+    /* position: relative; */
+    max-height: 99px;
+    text-align: -webkit-center;
+  }
+
+  .f-header {
+    /*min-height: 51px;
+    min-width: 150px;
+    position: absolute;
+    border-radius: 30px;
+    margin-top: 16.8;
+    background: rgb(29, 139, 226);
+    box-shadow: 1px 1px grey;
+    background-size: 100% 100%;
+    z-index: 1;
+    color: white;
+    padding: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: -1px 0.8px 9px #4e4c4c;
+    cursor: pointer;
+ width: 280px;
+    height: 60px;
+    font-size: x-large;
+    margin-left: 3%;*/
+    min-height: 51px;
+    */
+    /* min-height: 51px; */
+    min-height: 51px;
+    /* min-height: 51px; */
+    /* position: absolute; */
+    border-radius: 30px;
+    /* float: right; */
+    /* margin-left: 60%; */
+    margin-top: 16.8;
+    background: rgb(29, 139, 226);
+    -webkit-box-shadow: 1px 1px grey;
+    box-shadow: 1px 1px grey;
+    background-size: 100% 100%;
+    /* left: 30%; */
+    z-index: 1;
+    color: white;
+    padding: 15px;
+    padding-left: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    -webkit-box-shadow: -1px 0.8px 9px #4e4c4c;
+    box-shadow: -1px 0.8px 9px #4e4c4c;
+    cursor: pointer;
+    /* top: 0; */
+    /* left: 0; */
+    /* top: 0; */
+    /* left: 0; */
+    width: 280px;
+    height: 67px;
+    font-size: x-large;
+
+    /* top: 0; */
+    /* left: 0; */
+    /* top: 0; */
+    /* left: 0; */
+  }
+
+  .forum.card-shadow .img {
+    width: 33.33%;
+    margin: 0;
+    padding: 0;
+    height: 204px;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.52)), to(rgba(0, 0, 0, 0.21))), url(images/js.jpg);
+    background: linear-gradient(rgba(255, 255, 255, 0.52), rgba(0, 0, 0, 0.21)), url(images/js.jpg);
+    display: inline-block;
+    float: left;
+    background-size: 100% 100%;
+  }
+
+  .f-header:before {
+    /* min-height: 60px; */
+    /* min-width: 60px; */
+    /* background: black; */
+    /* position: relative; */
+    /* border-radius: 20%; */
+  }
+
+  .card.new_post .see-more {
+    display: inline-block;
+  }
+
+  .card.new_post {
+    margin-top: 3px;
+  }
+
+  .card.new_post .see-more {
+    padding: 6px;
+    float: right;
+    cursor: pointer;
+    color: rgb(128, 128, 128);
+    display: inline-block;
+  }
+
+  .card.new_post .see-more:before {
+    content: "\2715";
+    padding: 15;
+    padding-top: 17;
+    margin-top: 6;
+    font-size: large;
+  }
+
+  .card.new_post.compressed .see-more:before {
+    content: "....";
+    padding: 5px;
+    font-size: larger;
+  }
+
+  .card.new_post.compressed .see-more[disabled="true"],
+  .card.new_post.compressed .see-more[disabled] {
+    cursor: not-allowed;
+  }
+
+  .card.new_post.compressed .see-more[disabled="true"]:before,
+  .card.new_post.compressed .see-more[disabled]:before {
+    cursor: not-allowed;
+    content: "";
+  }
+
+  .card.new_post.compressed {
+    float: none;
+    margin-bottom: 71;
+    margin-top: 3;
+    position: relative;
+  }
+
+  section.loader-overlay.dnone {
+    display: none;
+  }
+
+  .card.new_post {
+    position: relative;
+  }
+
+  .new_post .posttitle {
+    padding: 14px;
+  }
+
+  .card.new_post.compressed>.card.new_post.compressed {
+    float: none;
+    margin-bottom: 6;
+    margin-top: 21;
+    position: relative;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid rgba(220, 220, 220, 0.5);
+  }
+
+  .overlay_menu {
+    background: rgba(3, 35, 49, 0.64);
+  }
+
+  .overlay_menu ul.menucontent {
+    list-style: none;
+    padding: 5px;
+    display: block;
+    text-align: -webkit-left;
+  }
+
+  .overlay_menu .menucontent .floating-button {
+    width: 37px;
+    height: 37px;
+    font-size: x-large;
+    margin: 22.9px;
+  }
+
+  .icon-accom:before {
+    content: "\e7f1";
+  }
+
+
+
+  .menucontent li {
+    padding: 5px;
+    margin-bottom: 2px;
+    border-bottom: 1px solid rgba(255, 250, 250, 0.75);
+    display: inherit;
+    width: 90%;
+  }
+
+  .menucontent li big {
+    font-size: large;
+    /* font-style: italic; */
+  }
+
+  .add-text>div {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+
+  section.post-loader {
+    margin-top: 10%;
+    color: white;
+    /* text-align: center; */
+  }
+
+  section.show-p {
+    max-width: 48%;
+    min-height: 30px;
+    display: block;
+    text-align: left;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    margin: 0;
+  }
+
+  hr.p-hr {
+    width: 56%;
+  }
+
+  section.p-hr {
+    min-height: 5;
+    border-top: 2px solid white;
+    width: 39%;
+    border-color: #3be0f5;
+    margin-top: 8px;
+    -webkit-transition: all 0.63s cubic-bezier(.87, -.41, .19, 1.44);
+    transition: all 0.63s cubic-bezier(.87, -.41, .19, 1.44);
+  }
+
+  .loader-overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.68);
+  }
+
+  button.floating-button.close {
+    float: right;
+    margin: -29;
+    margin-top: 2;
+    margin-right: -38;
+    min-height: 49;
+    background: rgb(105, 154, 241);
+    /* position: absolute; */
+  }
+
+  button.floating-button.close:before {
+    content: "\2715";
+    color: whitesmoke;
+    font-size: 19;
+  }
+
+  button.floating-button.close:hover {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  p.post-paragraph {
+    text-align: left;
+    margin: 2;
+    margin-bottom: 8;
+    font-size: 12;
+  }
+
+  .card-ul.attache li a {
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+  }
+
+  .card-ul {
+    padding: 4;
+    margin: 0;
+    list-style: none;
+    text-align: left;
+    padding-left: 15;
+    margin-bottom: 11;
+  }
+
+  .card-ul .attache {}
+
+  .card-ul li {
+    padding: 2px;
+  }
+
+  #li_ li {
+    margin-bottom: 12px;
+    margin-left: 4px;
+  }
+
+  #li_ li ul>li {
+    color: cornflowerblue;
+    cursor: pointer;
+    font-weight: 100;
+    opacity: 0.9;
+  }
+
+  #li_ li ul {
+    margin-top: 10px;
+  }
+
+  #li_ li>big {
+    margin-left: -4px;
+  }
+
+  #add-new input::-webkit-input-placeholder {
+    color: rgba(240, 157, 14, 0.7);
+    text-align: left;
+  }
+
+  #add-new input:-moz-placeholder {
+    color: rgba(240, 157, 14, 0.7);
+    text-align: left;
+  }
+
+  #add-new input::-moz-placeholder {
+    color: rgba(240, 157, 14, 0.7);
+    text-align: left;
+  }
+
+  #add-new :-ms-input-placeholder {
+    color: rgba(240, 157, 14, 0.7);
+    text-align: left;
+  }
+
+
+
+  section.action-link {
+    max-width: 35px;
+    min-width: 35px;
+    text-align: center;
+    min-height: 38px;
+    border: 1px solid rgba(128, 128, 128, 0.35);
+    padding: 5px;
+    color: gray;
+    padding-top: 9px;
+    border-radius: 50%;
+    float: right;
+    cursor: pointer;
+    margin: 9;
+    margin-right: 11px;
+    margin-bottom: 22;
+  }
+
+  section.action-link:first-child {
+    margin-right: 9px;
+  }
+
+
+  section.action-link .num {
+
+    position: absolute;
+    margin-top: 27;
+    margin-left: -10.99;
+    font-size: 11;
+    color: coral;
+    padding: 1.6;
+  }
+
+  .is_ref big>span {
+    color: orange;
+  }
+
+  .idea_links li {
+
+    margin: 5px;
+    cursor: pointer;
+  }
+
+  .item_images>img {
+    min-width: 300px;
+    max-width: 5%;
+    margin-right: 4px;
+    margin-top: 19;
+    min-width: 300px;
+    border: 1px solid rgba(255, 249, 249, 0.94);
+    border-radius: 4px;
+  }
+
+
+
+
+
+  section.item_images li {
+    /* display: none; */
+    margin-bottom: 10;
+    margin-right: 12;
+    float: left;
+    display: inline-block;
+  }
+
+  .item_images li>section {
+    display: block;
+    max-width: 35%;
+    min-width: 220px;
+    min-height: 200;
+    border-radius: 3px;
+    border: 1px solid gainsboro;
+    /* background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/owl1.jpg); */
+    /* background-repeat: no-repeat; */
+  }
+
+  section.item_images.edit li {
+    float: none;
+  }
+
+  .item_images li:nth-child(6) {
+    margin-top: -159.99999;
+  }
+
+  .item_images li:nth-child(6)>section,
+  .item_images li:nth-child(4)>section {
+    min-height: 150;
+  }
+
+  .item_images li:nth-child(7) {
+    margin-top: 3;
+  }
+
+  .item_images li:nth-child(8) {
+    margin-top: -210.7;
+  }
+
+  .item_images li:nth-child(8)>section {
+    min-height: 200;
+  }
+
+  .item_images.edit li:nth-child(6),
+  .item_images.edit li:nth-child(7),
+  .item_images.edit li:nth-child(8) {
+    margin-top: 0;
+  }
+
+  .item_images.edit li:nth-child(6)>section,
+  .item_images.edit li:nth-child(4)>section {
+    min-height: 200;
+  }
+
+  section.livestream>input[type="checkbox"]:checked+label:after {
+    content: "✓";
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-left: 11;
+  }
+
+
+  section.specs>h6 {
+    margin: 6px;
+    font-size: smaller;
+    font-weight: 100;
+    text-align: left;
+    padding-left: 8px;
+    color: #393e32;
+  }
+
+  section.specs {
+    margin-bottom: 19px;
+  }
+
+
+  .item_images.edit li>section:after {
+    content: "×";
+    position: absolute;
+    margin-left: 80;
+    padding: 8px;
+    padding-top: 1;
+    padding-bottom: 1;
+    border: 1px solid;
+    margin-top: 8;
+    background: rgb(255, 119, 87);
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: large;
+    cursor: pointer;
+  }
+
+
+
+
+
+  ul#hr_opts li {
+    margin-top: 19px;
+    font-size: large;
+    margin-bottom: 39px;
+  }
+
+  ul#hr_opts li>span {
+    font-size: 19;
+    margin-left: 33px;
+    margin-top: -9px;
+    padding: 0px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border: 1px solid darkgrey;
+    border-radius: 50%;
+  }
+
+  .hr-opts>li {
+    margin-bottom: 19px;
+
+    border-radius: 7px;
+    padding: 5px;
+    border: 1px solid rgba(100, 149, 237, 0.36);
+    margin-right: 21px;
+    margin-left: 11px;
+  }
+
+  .hr-opts>li>section {
+    position: absolute;
+    background: #c7d9f9;
+    -webkit-transition: 0.2s ease;
+    transition: 0.2s ease;
+    width: 77.4%;
+    color: transparent;
+    margin-left: -6;
+    margin-top: -26;
+    border-radius: 6.4px;
+    min-height: 31px;
+    width: 0;
+  }
+
+  @media (min-width: 150px) and (max-width: 599px) {
+
+
+    .card.new_post.compressed .see-more:before {
+      font-size: large;
+    }
+    .livestream>label {
+      border-color: gray;
+    }
+
+    .open-to>label,
+    .livestream>label {
+      display: block;
+    }
+    input[type="date"],
+    input[type="time"] {
+      margin-bottom: 9px;
+      display: block;
+      margin-top: 9px;
+    }
+  }
+
+  </style>
+  <!-- build:js scripts/vendor/modernizr.js -->
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
+</head>
+
+<body>
+  <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    
-    <div class="hero-unit">
-      <h1>'Allo, 'Allo!</h1>
-      <p>You now have</p>
-      <ul>
-        <li>HTML5 Boilerplate</li>
-        <li>Sass</li>
-        <li>Modernizr</li>
-      </ul>
-    </div>
-    
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
+  <button class="floating-button tour info" onclick="tour(this)"></button>
+  <script type="text/javascript">
+  var step = 0;
 
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="/bower_components/modernizr/modernizr.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
-    
-    <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
-    <!-- endbuild -->
-  </body>
+  function tour(argument) {
+    // body...
+
+    if (step == 0) {
+
+      $(argument).removeClass('info');
+      $('#m-text').css("top", "60%");
+      $('#m-text').css("left", "calc(100% - 198px)");
+      $('#m-text').html('Welcome to the page where you exchange information about the issues  which affect you the most');
+      $('#m-text').css("opacity", "1");
+      $('#m-text').css("display", "block");
+      $("#post-something").attr("disabled", "disabled")
+
+
+      step = step + 1;
+    } else if (step == 1) {
+
+      $('#m-text').css("top", "calc(100% - 88px)");
+      $('#m-text').html('Add post from here');
+      $('#m-text').css("left", "calc(100% - 158px)");
+
+      step = step + 1;
+    } else if (step == 2) {
+
+
+      var f = document.getElementById('post-new');
+      f.style.display = "block";
+      var h = document.getElementById('post-something');
+      h.style.display = "none";
+      step = step + 1;
+      $('#m-text').css("display:none");
+      $("#m-text").css("display", "none");
+
+      $("#post-new>.floating-button.close").css("display", "none");
+    } else if (step == 3) {
+      closePost();
+      step = step + 1;
+    } else if (step == 4) {
+      $(argument).addClass('info');
+      //   $("#post-something").attr("disabled","disabled")
+      $('#post-something').removeAttr("disabled");
+
+      step = 0;
+    }
+
+
+  }
+
+  </script>
+  <section class="tour-text " style="opacity: 0;" id="m-text">This the main menu</section>
+  <div class="generic" id="fixnav">
+    <button class="menu" onclick="open_Nav()"></button>
+    <section class="group" id="searchbar" style="display:inline-block;width: 66%;
+    margin-left: 10px;">
+      <form action="https://www.google.co.in/search?q=mdio&amp;oq=m&amp;aqs=chrome.0.69i59l2j69i57j69i60j69i59j69i60.5787j0j8&amp;sourceid=chrome&amp;es_sm=93&amp;ie=UTF-8#q=h" method="GET">
+        <input class="textip" id="searchtext" placeholder="🔎" required="" type="text" autocomplete="off">
+        <span class="bar">
+                    </span>
+      </form>
+    </section>
+  </div>
+  <div id="dialog_menu" class="overlay_menu" style="">
+    <center>
+      <section class="card dialog" style="max-width:500px;overflow:hidden;">
+        <button class="floating-button closebutton generic" id="close_user">
+          <b>
+                    X
+                </b>
+        </button>
+        <ul id="li_" style="font-size: 17px;
+    text-align: left;
+
+
+    /* margin-left: -20px; */
+    margin: 14px;
+    list-style: none;">
+          <li><big>What could be done</big>
+            <ul>
+              <li>Idea<small style="opacity:0.6"><i>- hiiiiiiiiiiiiii</i></small></li>
+              <li>Link</li>
+            </ul>
+          </li>
+          <li><big>What is being done...</big>
+            <ul>
+              <li>Live Event
+                <ul>
+                  <li style="list-style:circle">Q/A</li>
+                </ul>
+              </li>
+              <li>Milestone</li>
+            </ul>
+          </li>
+          <li><big>What's next</big>
+            <ul>
+              <li>What's next</li>
+              <li>Credits</li>
+              <li>Announcements</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </center>
+  </div>
+  <div class="overlay_menu" id="category_menu" style="">
+    <button class="menu" style=""></button>
+    <button class="floating-button closebutton" id="close_cat" style="">
+      <b>
+                    X
+                </b>
+    </button>
+    <button class="menu " onclick="toggleMenu(this)" style="">
+    </button>
+    <br>
+    <h2 class="title"> lifestyle</h2>
+    <ul class="menu-wrapper">
+      <li class="menu-wrapper-li">
+        <ul class="menucontent">
+          <li>
+            <button onclick="location.href='/category.html'" class="floating-button food icon-food" value="food">
+            </button>
+            <big>Food</big><small></small>
+          </li>
+          <li>
+            <button class="floating-button lifestyle icon-lifestyle" value="lifestyle" onclick="location.href='/category.html'">
+            </button><big>Lifestyle</big></li>
+          <li>
+            <button onclick="location.href='/category.html'" class="floating-button accom icon-accom " value="Accomodation">
+            </button><big>Accomodation</big></li>
+          <li>
+            <button onclick="location.href='/category.html'" class="floating-button education icon-education" value="education">
+            </button><big>Education</big></li>
+          <li>
+            <button onclick="location.href='/category.html'" class="floating-button entertainment icon-entertainment" id="entertainmentgo" value="entertainment">
+            </button><big>Entertainment</big></li>
+          <li>
+            <button onclick="location.href='/category.html'" class="floating-button social_welfare icon-social_welfare" value="social welfare">
+            </button><big>Welfare</big></li>
+        </ul>
+      </li>
+      <li class="menu-wrapper-li" id="menu-li-">
+        <ul class="usermenu menucontent user">
+          <li>
+            <button onclick="location.href='/forums.html'" class="floating-button icon-personal_page" value="My Page">
+            </button>
+            <big>Forums</big><small></small>
+          </li>
+          <li>
+            <button onclick="location.href='/notifications.html'" class="floating-button icon-notifications" value="My Notifications">
+            </button><big>Notifications</big></li>
+          <li>
+            <button onclick="location.href='/bookmark.html'" class="floating-button icon-bookmarks" value="My Bookmarks">
+            </button><big>Bookmarks</big></li>
+          <li>
+            <button class="floating-button icon-developments" onclick="location.href='/development.html'" value="My Developments">
+            </button><big>Developments</big></li>
+          <li>
+            <button class="floating-button screen-button" value="MY DASHBOARD" onclick="location.href='/sitemaker.html'">
+            </button><big>Dashboard</big></li>
+          <li>
+            <button onclick="location.href='/messages.html'" class="floating-button message-button" value="My Notifications">
+            </button><big>Messages</big></li>
+          <li>
+            <button onclick="location.href='/ratings.html'" class="floating-button i-ratings" value="My Notifications">
+            </button><big>Ratings</big></li>
+          <li>
+            <button class="floating-button icon-settings" onclick="location.href='/settings-conshub.html'" id="settings_user" value="My Settings">
+            </button><big>Settings</big></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <section class="forums">
+
+<div class="f-header">#singlepayer</div>
+<section class="forum card-shadow" style="
+    position: absolute;
+    min-width: 100%;
+    margin: 0;
+    left: 0;
+    z-index: -9;
+    margin-top: -90;
+    min-height: 200px;
+">
+
+
+
+      <section class="img" style="background:linear-gradient(rgba(255, 255, 255, 0.52),rgba(0, 0, 0, 0.21)),url(images/spayer.jpg);background-size:100% 100%"></section>
+
+<section class="img" style="background: linear-gradient(rgba(255, 255, 255, 0.52),rgba(0, 0, 0, 0.21)),url(images/sph.jpg);
+    background-size: 100% 100%;background-size:100% 100%"></section>
+    <section class="img" style="background: linear-gradient(rgba(255, 255, 255, 0.52),rgba(0, 0, 0, 0.21)),url(images/spp.jpg);
+    background-size: 100% 100%;background-size:100% 100%"></section>
+
+    </section>
+
+
+
+        </section>
+
+        <section class="f-posts" style="padding:17px;overflow:hidden;width:99%;min-height:99px;display:block;text-align:-webkit-center;" id="all-posts">
+
+
+
+
+<section class="card new_post" id="post-new" style="display: none;float:none;
+
+    /* margin-left: -4; */
+">
+
+<button class="floating-button close" style="
+
+    /* position: absolute; */
+" onclick="closePost()"></button>
+                        <section class="posttitle input">
+
+  <section class="add_link group" style="width:98%" id="post-a-title">
+
+                <input class="textip" required="" type="text" placeholder="Title">
+                <span class="bar">
+                </span>
+
+
+            </section>
+                        </section>
+                        <section class="intro" style="
+    padding: 1px;
+    text-align: -webkit-center;
+">
+<section class="add_link group" style="
+    width: 95%;
+    padding: 2;
+    margin: 0;
+" id="post-an-intro">
+
+                <input class="textip" required="" type="text" placeholder="(140 chars)">
+                <span class="bar">
+                </span>
+                <label class="textip_label">Enter intro</label>
+
+            </section>
+</section>
+                        <section class="texts" id="add-texts">
+                       <section class="add-wrapper">
+                             <span class="add_desc">Add Text</span> <button id="add_text_area" class="add flat" style="
+    /* float: right; */ */
+    border: 1px solid;
+    /* min-width: 28px; */
+    /* min-height: 31px; */
+    /* text-align: -webkit-right; */
+    /* margin-left: 100%; */
+    /* margin-right: 20px; */
+    /* clear: both; */
+    /* display: inline-block; */
+    /* border-radius: 50%; */
+    /* margin-bottom: 9px; */
+    /* padding: 0.45px; */
+    /* margin-top: 3px; */
+    /* color: #1d8be2; */
+    /* text-align: center; */
+" onclick="addtextarea()">+</button></section>
+                        </section>
+
+                    <section class="references" id="add-references">
+
+                       <section class="add-wrapper">
+
+             <span class="add_desc">Add Link</span> <button id="add_reference" class="add flat" onclick="add_link_()">+</button>
+                    </section>
+                    </section>
+                    <section class="attachments" id="add-attachments">
+                                           <section class="add-wrapper">
+
+                      <span class="add_desc">Add Attachment</span> <button id="add_reference" onclick="add_attach_()" class="add flat">+</button></section>
+                    </section>
+                     <button class="save flat" style="float:none;" id="post-now" onclick="post_something()">Post</button>
+                     </section>
+
+
+
+
+
+
+<section id="post-bucket" style="overflow:hidden;min-height:7px;padding:2px">
+
+</section>
+
+
+<section id="show-all-posts" style="overflow:hidden;min-height:7px;padding:2px">
+
+
+
+
+
+
+
+
+
+<section class="card new_post compressed" id="" style="
+    /* margin-left: -4; */
+">
+<h2 class="item_title_wrapper"> <span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto">
+<span style="
+    position: absolute;
+    margin-left: -2;
+    margin-top:24.5;
+    font-size:10;
+    color: coral;
+" class="upvote-item">1000</span>
+ U </span><br>
+
+ <span class="item_title_content">Update Title</span></h2>
+<section style="padding: 5px;text-align: left;word-spacing: 0.12em;word-wrap: break-word;" class="item_text_content">
+
+Update Text Update Text Update Text Update Text Update Text Update Text Update Text, Update Text Update Text Update Text Update Text of Update Text.
+                     </section>
+
+<br>
+
+<section style="  min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images"></section>
+
+
+<section  class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">Jan-1 2017 9:00 EST</section>
+<span style="float:right;text-align: right;margin: 9px;
+    font-weight: 600;margin-top: 2px;
+    margin-bottom: 2px;word-spacing: 0.139em;
+"  class="item_by_wrapper"><img class="item_by_profpic" src="images/bw.jpg" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;
+    margin-top: -6;"><small class="item_by_name">Bob Witanek </small><small style="color: grey"  class="item_by_username">(@bwitanek)</small> <small>from</small> <a  style="font-size: x-small;" class="item_by_place">Clevland,OH</a>
+<br>
+<!-- <small style="line-height: 0.2;color:grey" >Jan-1 2017 9:00 EST</small>
+ -->    </span>
+
+
+
+
+
+<section style="
+    margin-top:63px;
+    margin-bottom: 20;
+    display: block;
+    text-align: -webkit-right;
+    border-top:1px solid #e6e6e6;
+"  class="item_num_wrapper">
+    <section class="action-link">E<span class="num">1.5k</span></section>
+    <section class="action-link">+<span class="num">1.5k</span></section>
+    <section class="action-link">H<span class="num">15k</span></section>
+
+<section style="color: white;font-weight: 600;background: cornflowerblue;border-color: transparent;"
+onclick="replyTo($(this).parent().parent());" class="action-link">R</section>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="card new_post compressed" id="" style="
+    /* margin-left: -4; */
+">
+
+<h2 style="color: #1443a9;
+    letter-spacing: 0.05em;
+    font-size: 28;
+    margin-bottom: -3px;" class="item_title_wrapper"><span class="item_title_content"><span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto">
+<span style="
+    position: absolute;
+    margin-left: -2;
+    margin-top:24.5;
+    font-size:10;
+    color: coral;
+" class="upvote-item">1000</span>
+ U </span>Credit to :</span></h2>
+<section class="card new_post compressed is_ref" id="" style="
+    /* margin-left: -4; */
+">
+<h2  class="item_title_wrapper"><span  class="item_title_content">Update Title</span></h2>
+<section style="padding: 5px;text-align: left;word-spacing: 0.12em; word-wrap: break-word;"  class="item_text_content">
+
+Update Text Update Text Update Text Update Text Update Text Update Text Update Text, Update Text Update Text Update Text Update Text of Update Text.
+                     </section>
+
+<br>
+<section style="  min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images"></section>
+<section  class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">Jan-1 2017 9:00 EST</section>
+<span style="float:right;text-align: right;margin: 9px;
+    font-weight: 600;margin-top: 2px;
+    margin-bottom: 2px;word-spacing: 0.139em;
+"  class="item_by_wrapper"><img class="item_by_profpic" src="images/ik.jpg" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;
+    margin-top: -6;">        <small class="item_by_name">Name </small> <small style="color: grey" class="item_by_username">(@username)</small><small> from</small> <a class="item_by_place">Place</a>
+<br>
+<!-- <small style="line-height: 0.2;color:grey" >Jan-1 2017 9:00 EST</small>
+ -->    </span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </section>
+
+<br>
+<section style="padding: 5px;text-align: left;word-spacing: 0.12em;padding-left: 18;font-size: 12.5;font-style: italic;font-weight: 600;color: navy;" class="item_text_content">
+
+Credit Text Credit Text Credit Text Credit Text Credit Text Credit Text Credit Text, Credit Text Credit Text Credit Text Credit Text of Credit Text.
+                     </section>
+
+                     <section style="  min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images"></section>
+<section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">Jan-1 2017 9:00 EST</section>
+<span style="float:right;text-align: right;margin: 9px;
+    font-weight: 600;margin-top: 2px;
+    margin-bottom: 2px;word-spacing: 0.139em;
+" class="item_by_wrapper"><img class="item_by_profpic" src="images/ikp.jpg" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;
+    margin-top: -6;">  <small class="item_by_name">Name </small> <small class="item_by_username" style="color: grey">(@username)</small>
+<br>
+<!-- <small style="line-height: 0.2;color:grey" >Jan-1 2017 9:00 EST</small>
+ -->    </span>
+
+
+
+
+
+<section style="
+    margin-top:63px;
+    margin-bottom: 20;
+    display: block;
+    text-align: -webkit-right;
+    border-top:1px solid #e6e6e6;
+" class="item_num_wrapper">
+    <section class="action-link">E<span class="num">1.5k</span></section>
+    <section class="action-link">+<span class="num">1.5k</span></section>
+    <section class="action-link">H<span class="num">15k</span></section>
+
+<section style="color: white;font-weight: 600;background: cornflowerblue;border-color: transparent;" onclick="replyTo($(this).parent().parent());" class="action-link">R</section>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="card new_post compressed" id="" style="
+    /* margin-left: -4; */
+">
+
+<h2 style="color: #1443a9;
+    letter-spacing: 0.05em;
+    font-size: 28;
+    margin-bottom: -3px;" class="item_title_wrapper"><span class="item_title_content" ><span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto">
+<span style="
+    position: absolute;
+    margin-left: -2;
+    margin-top:24.5;
+    font-size:10;
+    color: coral;
+" class="upvote-item">1000</span>
+ U </span>Adding to</span> </h2>
+
+
+<br>
+<section class="item_text_content" style="padding: 5px;text-align: left;word-spacing: 0.12em;padding-left: 18;font-size: 12.5;font-style: italic;font-weight: 600;color: navy;">
+
+Credit Text Credit Text Credit Text Credit Text Credit Text Credit Text Credit Text, Credit Text Credit Text Credit Text Credit Text of Credit Text.
+                     </section>
+
+<section class="card new_post compressed is_ref" id="" style="
+    /* margin-left: -4; */
+">
+<h2 class="item_title_wrapper"><span class="item_title_content">Update Title</span>
+  <span style="
+    margin-left: 23px;
+">...</span>
+</h2><section style="padding: 5px;text-align: left;word-spacing: 0.12em;" class="item_text_content">
+
+Milestone Text Milestone Text Milestone Text Milestone Text Milestone Text Milestone Text Milestone Text, Milestone Text Milestone Text Milestone Text Milestone Text of Milestone Text.
+                     </section>
+
+<section style="  min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images"></section>
+
+
+<section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">Jan-1 2017 9:00 EST</section>
+<span style="float:right;text-align: right;margin: 9px;
+    font-weight: 600;margin-top: 2px;
+    margin-bottom: 2px;word-spacing: 0.139em;
+" class="item_by_wrapper"><img  class="item_by_profpic" src="images/ik.jpg" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;
+    margin-top: -6;"><small class="item_by_name">Name </small> <small class="item_by_username" style="color: grey">(@username)</small><small> from </small><a class="item_by_place">Place</a>
+<br>
+<!-- <small style="line-height: 0.2;color:grey" >Jan-1 2017 9:00 EST</small>
+ -->    </span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </section>
+
+
+<section style="  min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images"></section>
+
+        <section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">Jan-1 2017 9:00 EST</section><span style="float:right;text-align: right;margin: 9px;
+    font-weight: 600;margin-top: 2px;
+    margin-bottom: 2px;word-spacing: 0.139em;
+"><img class="item_by_profpic" src="images/ikp.jpg" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;
+    margin-top: -6;"><small class="item_by_name">Name </small> <small style="color: grey" class="item_by_username">(@username)</small>
+<br>
+<!-- <small style="line-height: 0.2;color:grey" >Jan-1 2017 9:00 EST</small>
+ -->    </span>
+
+
+
+<section style="
+    margin-top:63px;
+    margin-bottom: 20;
+    display: block;
+    text-align: -webkit-right;
+    border-top:1px solid #e6e6e6;
+" class="item_num_wrapper">
+    <section class="action-link">E<span class="num">1.5k</span></section>
+    <section class="action-link">+<span class="num">1.5k</span></section>
+    <section class="action-link">H<span class="num">15k</span></section>
+
+<section style="color: white;font-weight: 600;background: cornflowerblue;border-color: transparent;" onclick="replyTo($(this).parent().parent());" class="action-link">R</section>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </section>
+
+
+
+
+<!-- End -->
+
+
+
+
+
+<section class="card new_post compressed" id="" style="
+    /* margin-left: -4; */
+">
+
+<h2 style="color: #1443a9;
+    letter-spacing: 0.05em;
+    font-size: 28;
+    margin-bottom: -3px;" class="item_title_wrapper">
+<span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto">
+<span style="
+    position: absolute;
+    margin-left: -2;
+    margin-top:24.5;
+    font-size:10;
+    color: coral;
+" class="upvote-item">1000</span>
+ U </span>
+    <span class="item_title_content">Mention</span></h2>
+
+
+<section class="card new_post compressed is_ref" id="" style="
+    /* margin-left: -4; */
+">
+<h2 class="item_title_wrapper"><span class="item_title_content">Update Title</span>
+  <span style="
+    margin-left: 23px;
+"></span>
+</h2>
+
+<section style="  min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images"></section>
+
+
+<section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">Jan-1 2017 9:00 EST</section>
+<span style="float:right;text-align: right;margin: 9px;
+    font-weight: 600;margin-top: 2px;
+    margin-bottom: 2px;word-spacing: 0.139em;
+" class="item_by_wrapper"><img class="item_by_profpic" src="images/ik.jpg" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;
+    margin-top: -6;"><small class="item_by_name">Name </small><small class="item_by_username" style="color: grey">(@username)</small> <small>from </small><a class="item_by_place">Place</a>
+<br>
+<!-- <small style="line-height: 0.2;color:grey" >Jan-1 2017 9:00 EST</small>
+ -->    </span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </section><br>
+<section style="padding: 5px;text-align: left;word-spacing: 0.12em;padding-left: 18;font-size: 12.5;font-style: italic;font-weight: 600;color: navy;margin: 9px;
+    margin-top: 0px;
+    margin-bottom: 20px;" class="item_text_content">
+
+Credit Text Credit Text Credit Text Credit Text Credit Text Credit Text Credit Text, Credit Text Credit Text Credit Text Credit Text of Credit Text.
+                     </section><section style="  min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images"></section>
+<section  class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">Jan-1 2017 9:00 EST</section>
+<span style="float:right;text-align: right;margin: 9px;
+    font-weight: 600;margin-top: 2px;
+    margin-bottom: 2px;word-spacing: 0.139em;
+" class="item_by_wrapper"><img class="item_by_profpic" src="images/ikp.jpg" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;
+    margin-top: -6;"> <small class="item_by_name">Name </small> <small class="item_by_username" style="color: grey">(@username)</small>
+<br>
+<!-- <small style="line-height: 0.2;color:grey" >Jan-1 2017 9:00 EST</small>
+ -->    </span>
+
+
+
+
+
+<section style="
+    margin-top:63px;
+    margin-bottom: 20;
+    display: block;
+    text-align: -webkit-right;
+    border-top:1px solid #e6e6e6;
+" class="item_num_wrapper">
+    <section class="action-link">E<span class="num">1.5k</span></section>
+    <section class="action-link">+<span class="num">1.5k</span></section>
+    <section class="action-link">H<span class="num">15k</span></section>
+
+<section style="color: white;font-weight: 600;background: cornflowerblue;border-color: transparent;" onclick="replyTo($(this).parent().parent());" class="action-link">R</section>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+   .event_date_time{
+        line-height: 0.2;color: rgb(120, 120, 100);text-align:center;padding: 9;margin-bottom: 6;font-size: smaller;
+    }
+    .event_date_time>h4{
+        margin-bottom: 3;
+    margin-top: 16;
+    font-weight: 100;
+    text-transform: capitalize;
+    color: #524841;
+    }
+    .event_date_time>section{
+         padding: 8px;
+    margin: 9px;
+    font-size: medium;
+    cursor: pointer;
+    }
+
+
+</style>
+
+
+<section class="card new_post compressed" id="" style="
+    /* margin-left: -4; */
+">
+<br><h2 style="
+    text-align: center;
+" class="item_title_wrapper"><span class="item_title_content">Event Title</span></h2>
+<section class="event_date_time" style="">
+<span class="ev-when">On Jan-1 2017 9:00 EST</span> <br>
+<h4 style="
+
+" class="ev-where">at the well</h4>
+<br><br><section style="
+
+"><a>RSVP</a></section><br></section>
+<section style="padding: 9px;text-align: left;word-spacing: 0.12em;" class="item_text_content">
+
+Event Text Event Text Event Text Event Text Event Text Event Text Event Text, Event Text Event Text Event Text Event Text of Event Text.
+                     </section>
+
+<br>
+<section class="specs">
+    <h6>Open to : </h6>
+    <h6>Livestream :</h6>
+</section>
+
+
+<br><section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">Jan-1 2017 9:00 EST</section>
+<span style="float:right;text-align: right;margin: 9px;
+    font-weight: 600;margin-top: 2px;
+    margin-bottom: 2px;word-spacing: 0.139em;
+" class="item_by_wrapper"><img class="item_by_profpic" src="images/ikp.jpg" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;
+    margin-top: -6;"> <small class="item_by_name">Name </small> <small class="item_by_username" style="color: grey">(@username)</small>
+<br>
+<!-- <small style="line-height: 0.2;color:grey" >Jan-1 2017 9:00 EST</small>
+ -->    </span>
+<section style="
+    margin-top:63px;
+    margin-bottom: 20;
+    display: block;
+    text-align: -webkit-right;
+    border-top:1px solid #e6e6e6;
+" class="item_num_wrapper">
+    <section class="action-link">E<span class="num">1.5k</span></section>
+    <section class="action-link">+<span class="num">1.5k</span></section>
+    <section class="action-link">H<span class="num">15k</span></section>
+
+<section style="color: white;font-weight: 600;background: cornflowerblue;border-color: transparent;" onclick="replyTo($(this).parent().parent());" class="action-link">R</section>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="card new_post compressed" id="" style="
+    /* margin-left: -4; */
+">
+
+<h2 style="color: #1443a9;
+    letter-spacing: 0.05em;
+    font-size: 28;
+    margin-bottom: -3px;"  class="item_title_wrapper">
+
+<span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto">
+<span style="
+    position: absolute;
+    margin-left: -2;
+    margin-top:24.5;
+    font-size:10;
+    color: coral;
+" class="upvote-item">1000</span>
+ U </span>
+    <span class="item_title_content">Milestone</span></h2>
+
+
+<section class="card new_post compressed is_ref" id="" style="
+    /* margin-left: -4; */
+">
+<h2 style="
+    margin-bottom: 1px;
+" class="item_title_wrapper"><span class="item_title_content">Update Title</span>
+  <span style="
+    margin-left: 23px;
+    font-size: medium;
+    opacity: 0.7;
+    letter-spacing: 0.1em;
+">...</span>
+</h2>
+
+
+
+
+<section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">Jan-1 2017 9:00 EST</section>
+<span style="float:right;text-align: right;margin: 9px;
+    font-weight: 600;margin-top: 2px;
+    margin-bottom: 2px;word-spacing: 0.139em;
+" class="item_by_wrapper"><img class="item_by_profpic" src="images/ik.jpg" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;
+    margin-top: -6;">  <small class="item_by_name">Name </small> <small class="item_by_username" style="color: grey">(@username)
+    </small><small> from </small><a class="item_by_place">Place</a>
+<br>
+<!-- <small style="line-height: 0.2;color:grey" >Jan-1 2017 9:00 EST</small>
+ -->    </span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </section><br>
+<section style="
+    padding: 5px;
+    text-align: left;
+    word-spacing: 0.12em;
+    padding-left: 18;
+    font-size: 12.5;
+    /* font-style: italic; */
+    font-weight: 600;
+    color: navy;
+    margin: 9px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    " class="item_text_content">Description :<br>
+
+Credit Text Credit Text Credit Text Credit Text Credit Text Credit Text Credit Text, Credit Text Credit Text Credit Text Credit Text of Credit Text.
+                     </section>
+
+<section style="
+    min-height: 90px;
+    overflow: hidden;
+    padding: 7px;
+    padding-left: 20px;
+    display: block;
+    text-align: -webkit-center;
+" class="item_images">
+<img src="images/ikp.jpg" style="
+    /* float: left; */
+    min-width: 300px;
+    max-width: 5%;
+    margin-right: 4px;
+    /* margin-left: 9; */
+    margin-top: 1.9%;
+    min-width: 300px;
+    border: 1px solid rgba(255, 249, 249, 0.94);
+    /* color: black; */
+    border-radius: 4px;
+"><img src="images/ikp.jpg" style="
+    /* float: left; */
+    max-width: 45%;
+    /* margin-right: 19; */
+    /* margin-left: 8px; */
+    min-width: 300px;
+    margin-top: 19px;
+    /* float: left; */ */
+    min-width: 300px;
+    max-width: 5%;
+    margin-right: 4px;
+    /* margin-left: 9; */
+    margin-top: 17;
+    min-width: 300px;
+    border: 1px solid rgba(255, 249, 249, 0.94);
+    border-radius: 4px;
+">
+</section>
+<section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">Jan-1 2017 9:00 EST</section>
+<span style="float:right;text-align: right;margin: 9px;
+    font-weight: 600;margin-top: 2px;
+    margin-bottom: 2px;word-spacing: 0.139em;
+" class="item_by_wrapper"><img class="item_by_profpic" src="images/ikp.jpg" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;
+    margin-top: -6;"><small class="item_by_name">Name </small> <small class="item_by_username" style="color: grey">(@username)</small>
+<br>
+<!-- <small style="line-height: 0.2;color:grey" >Jan-1 2017 9:00 EST</small>
+ -->    </span>
+
+
+
+
+
+<section style="
+    margin-top:63px;
+    margin-bottom: 20;
+    display: block;
+    text-align: -webkit-right;
+    border-top:1px solid #e6e6e6;
+" class="item_num_wrapper">
+    <section class="action-link">E<span class="num">1.5k</span></section>
+    <section class="action-link">+<span class="num">1.5k</span></section>
+    <section class="action-link">H<span class="num">15k</span></section>
+
+<section style="color: white;font-weight: 600;background: cornflowerblue;border-color: transparent;" onclick="replyTo($(this).parent().parent());" class="action-link">R</section>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="card new_post compressed" id="" style="
+    /* margin-left: -4; */
+">
+<h2  class="item_title_wrapper">
+<span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto">
+<span style="
+    position: absolute;
+    margin-left: -2;
+    margin-top:24.5;
+    font-size:10;
+    color: coral;
+" class="upvote-item">1000</span>
+ U </span>
+<br>
+<span  class="item_title_content">Idea Title</span></h2>
+
+<section style="font-size: small;padding: 5px;text-align: left;/* word-spacing: 0.12em; */word-wrap: break-word;font-style: italic;/* letter-spacing: 0.1em; */color: teal;" class="idea_motiv">
+Motivation:<br>
+Idea Text Idea Text Idea Text Idea Text Idea Text Idea Text Idea Text, Idea Text Idea Text Idea Text Idea Text of Idea Text.
+                     </section><section class="item_text_content" style="padding: 5px;text-align: left;word-spacing: 0.12em;word-wrap: break-word;">
+
+Idea Text Idea Text Idea Text Idea Text Idea Text Idea Text Idea Text, Idea Text Idea Text Idea Text Idea Text of Idea Text.
+                     </section>
+
+<ol class="idea_links" style="/* padding: 5px; */text-align: left;word-spacing: 0.12em;word-wrap: break-word;margin-bottom: 2px;">
+  <h3 style="margin: 6px;margin-left: -13;">Sources : </h3>
+<li style="
+    margin: 5px;
+    cursor: pointer;
+">
+  <a>Google</a>
+</li>
+                     <li style="
+    margin: 5px;
+    cursor: pointer;
+">
+  <a style="
+    /* transition: 0.2s ease-in-out; */
+">Google</a>
+</li></ol><br>
+
+<section style="  min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images"></section>
+<section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">Jan-1 2017 9:00 EST</section>
+<span style="float:right;text-align: right;margin: 9px;
+    font-weight: 600;margin-top: 2px;
+    margin-bottom: 2px;word-spacing: 0.139em;
+" class="item_by_wrapper"><img class="item_by_profpic" src="images/ikp.jpg" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;
+    margin-top: -6;"><small class="item_by_name">Name </small> <small class="item_by_username" style="color: grey">(@username)</small>
+<br>
+<!-- <small style="line-height: 0.2;color:grey" >Jan-1 2017 9:00 EST</small>
+ -->    </span>
+
+
+
+
+
+<section style="
+    margin-top:63px;
+    margin-bottom: 20;
+    display: block;
+    text-align: -webkit-right;
+    border-top:1px solid #e6e6e6;
+" class="item_num_wrapper">
+    <section class="action-link">E<span class="num">1.5k</span></section>
+    <section class="action-link">+<span class="num">1.5k</span></section>
+    <section class="action-link">H<span class="num">15k</span></section>
+
+<section style="color: white;font-weight: 600;background: cornflowerblue;border-color: transparent;" onclick="replyTo($(this).parent().parent());" class="action-link">R</section>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="card new_post compressed" id="" style="
+    /* margin-left: -4; */
+">
+<span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto;margin: 9;">
+<span style="
+    position: absolute;
+    margin-left: -2;
+    margin-top:24.5;
+    font-size:10;
+    color: coral;
+" class="upvote-item">1000</span>
+ U </span><h2 class="item_title_wrapper"> <br>
+
+ <span class="item_title_content">What is i?</span></h2>
+<section style="padding: 5px;text-align: left;word-spacing: 0.12em;word-wrap: break-word;" class="item_text_content">
+    <ol class="hr-opts" type="a"><li>k</li><li>l</li></ol>
+
+
+</section>
+
+<br>
+
+<section style="  min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images"></section>
+
+
+<section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">Jan-1 2017 9:00 EST</section>
+<span style="float:right;text-align: right;margin: 9px;
+    font-weight: 600;margin-top: 2px;
+    margin-bottom: 2px;word-spacing: 0.139em;
+" class="item_by_wrapper"><img class="item_by_profpic" src="images/bw.jpg" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;
+    margin-top: -6;"><small class="item_by_name">Bob Witanek </small><small style="color: grey" class="item_by_username">(@bwitanek)</small> <small>from</small> <a style="font-size: x-small;" class="item_by_place">Clevland,OH</a>
+<br>
+<!-- <small style="line-height: 0.2;color:grey" >Jan-1 2017 9:00 EST</small>
+ -->    </span>
+
+
+
+
+
+<section style="
+    margin-top:63px;
+    margin-bottom: 20;
+    display: block;
+    text-align: -webkit-right;
+    border-top:1px solid #e6e6e6;
+" class="item_num_wrapper">
+    <section class="action-link">E<span class="num">1.5k</span></section>
+    <section class="action-link">+<span class="num">1.5k</span></section>
+    <section class="action-link">H<span class="num">15k</span></section>
+
+<section style="color: white;font-weight: 600;background: cornflowerblue;border-color: transparent;" onclick="replyTo($(this).parent().parent());" class="action-link">R</section>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+     <section class="card new_post compressed" id="" style="
+    /* margin-left: -4; */
+">
+<section style="line-height: 0.2;color: rgb(162, 162, 162);text-align: left;/* padding-left: 27px; */padding: 9;/* float: left; */margin-bottom: 6;font-size: smaller;/* padding-left: 59px; */" class="item_date_time">Jan-1 2017 9:00 EST</section><span style="
+    float: left;
+    text-align: right;
+    margin: 9px;
+    font-weight: 600;
+    margin-top: 8px;
+    margin-bottom: 2px;
+    word-spacing: 0.139em;
+" class="item_by_wrapper"><img class="item_by_profpic" src="images/ikp.jpg" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;
+    margin-top: -6;"><small class="item_by_name">Name </small><small style="color: grey" class="item_by_username">(@username)</small>
+    </span><br><br><h2 style="
+    text-align: center;
+" class="item_title_wrapper"><span class="item_title_content">Event Title</span></h2>
+<section class="event_date_time" style="line-height: 0.2;color: rgb(120, 120, 100);text-align:center;padding: 9;margin-bottom: 6;font-size: smaller;">On Jan-1 2017 9:00 EST &nbsp; <big><a>RSVP</a></big></section>
+<section style="padding: 5px;text-align: left;word-spacing: 0.12em;" class="item_text_content">
+
+Event Text Event Text Event Text Event Text Event Text Event Text Event Text, Event Text Event Text Event Text Event Text of Event Text.
+                     </section>
+
+<br>
+
+
+
+
+
+
+
+<section style="
+    margin-top:63px;
+    margin-bottom: 20;
+    display: block;
+    text-align: -webkit-right;
+    border-top:1px solid #e6e6e6;
+" class="item_num_wrapper">
+
+    <section class="action-link">@</section>
+<section class="action-link">+</section>
+
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </section> -->
+
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+<img src="images/loader-w.svg"></section>
+<script src="scripts/catmenu.js"></script>
+
+        <script type="text/javascript">
+          var rec_t=null;
+
+          var new_post=' <button class="floating-button close" style="" onclick="closePost()"></button><section class="posttitle input"> <section class="add_link group" style="width:98%" id="post-a-title"> <input class="textip" required="" type="text" placeholder="Title" ><span class="bar"></span> </section></section> <section class="intro" style="padding: 1px;text-align: -webkit-center;"><section class="add_link group" style="width: 95%;padding: 2;margin: 0;"  id="post-an-intro"><input class="textip" required="" type="text" placeholder="(140 chars)">  <span class="bar"></span><label class="textip_label">Enter intro</label></section></section><section class="texts" id="add-texts"><section class="add-wrapper">  <span class="add_desc">Add Text</span> <button id="add_text_area" class="add flat" style="border: 1px solid;" onclick="addtextarea()">+</button></section></section> <section class="references" id="add-references"> <section class="add-wrapper">  <span class="add_desc">Add Link</span> <button id="add_reference" class="add flat" onclick="add_link_()">+</button> </section></section><section class="attachments" id="add-attachments" > <section class="add-wrapper">  <span class="add_desc">Add Attachment</span> <button id="add_reference" onclick="add_attach_()"  class="add flat">+</button></section></section><button class="save flat" style="float:none;" id="post-now" onclick="post_something()">Post</button>';
+
+
+
+          function setLink(arg) {
+              var argument=arg;
+              argument.value=argument.value;
+              console.log('argument'+arg);
+          }
+          function closePost() {
+                var f= document.getElementById('post-new');
+                  f.style.display="none";
+                  var h=document.getElementById('post-something');
+                  h.style.display="block";
+
+
+          }
+var Link=null;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function confirm_link() {
+    // body...
+
+//
+console.log(' hkh');
+}
+
+
+
+
+function onc() {
+    // body...
+
+if(document.getElementById('clear-input-button').value=='clear'){
+    document.getElementById('enter_url').value='';$('#clear-input-button').css('transform','rotate(0deg)');$('#link_title').html('Enter Link Title');console.log('new');
+}else{
+    $('#addedlinks').append('<li>'+document.getElementById('enter_url').value+'<span style="font-size: xx-large;float: right;line-height: 0.6;cursor: pointer;" onclick="$(this).parent().remove()">×</span> </li>');
+    document.getElementById('enter_url').value='';$('#clear-input-button').css('transform','rotate(0deg)');$('#link_title').html('Enter Link Title');console.log('new');document.getElementById('clear-input-button').value='clear';
+}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+          function add_link_() {
+
+
+             var addLink='<section class="reference"><section class="add_link group"><input class="textip" required="" type="text" onkeyup="setLink(this)"><span class="bar"></span> <label class="textip_label">Enter Link </label> </section><img width="26" height="25" src="images/loader.svg">  </section>';
+
+                 var add_link_=document.getElementById('add-references');
+                 // var add_link_html=add_link_.innerHTML;
+                 //  add_link_.innerHTML=add_link_html+addLink;
+
+
+
+if (null === Link){
+                  Link=addLink;
+                    $( "#add-references" ).append( addLink );
+                   console.log('is null') ;
+                 }
+                 else{
+                     console.log('is not null') ;
+                          Link=document.querySelector('#add-references .reference:last-child .add_link input');
+                        if( "" != Link.value){
+
+  console.log('val not null') ;
+ $( "#add-references" ).append( addLink );
+                                 $('#add-references section.reference:nth-last-child(2) .add_link.group').removeClass('err');
+                        }
+                        else{
+                             console.log('val is null') ;
+                           $('#add-references section.reference:last-child .add_link.group').addClass('err');
+                        }
+
+               }
+
+                   // $( "#add-references" ).append( addLink );
+
+
+          }
+
+
+
+              function compress(argument) {
+
+             if(!$(argument).attr("disabled")
+)  $(argument).parent().parent().toggleClass('compressed');
+
+               }
+var att=null;
+function add_attach_(argument) {
+
+var attachments='<section class="add_link group add-attachment" > <input  onsubmit="onchange_file(event)" onchange="onchange_file(event)"  class="textip" required="" type="file"><span class="bar">  </span> </section>';
+
+var add_attachments=document.getElementById('add-attachments');
+ // var add_Attach_html=add_attachments.innerHTML;
+ //                  add_attachments.innerHTML=add_Attach_html+attachments;
+if (null === att){
+                   att=attachments;
+                    $( "#add-attachments" ).append( attachments );
+                   console.log('is null') ;
+                 }
+                 else{
+                     console.log('is not null') ;
+                          att=document.querySelector('#add-attachments .add-attachment:last-child input');
+                        if( "" != att.value){
+
+
+                            $( "#add-attachments" ).append( attachments );
+
+                                 $('#add-attachments .add-attachment:nth-last-child(2)').removeClass('err')
+                        }
+                        else{
+
+                           $('#add-attachments .add-attachment:last-child').addClass('err');
+                        }
+
+               }
+     //  $( "#add-attachments" ).append( attachments );
+
+}
+
+
+
+function processInputs() {
+
+ var arr=document.querySelectorAll('#add-references .reference .add_link input');
+
+var t='',s='';
+    $.each(arr, function( index, val ) {
+console.log( index + ": " + val.value );
+               s=s+'<li>'+val.value+'</li>';
+                          });
+
+return '<ul class="card-ul">'+s+'</ul>';
+
+    // body...
+}
+function processAttachments() {
+
+ var arr=document.querySelectorAll('#add-attachments .add-attachment input');
+
+var t='',s='';
+    $.each(arr, function( index, val ) {
+
+var leafname=  val.value.split('\\').pop().split('/').pop();
+console.log( index + ": " + leafname);
+               s=s+'<li><a>'+leafname+'</a></li>';
+                          });
+
+
+return '<ul class="card-ul attache">'+s+'</ul>';
+
+    // body...
+}
+
+
+function processTexts() {
+    var arr=document.querySelectorAll('#add-texts section.add-text');
+    var t='',s='';
+    var regexd = /<div>/gi;
+var regexde = /<[/]div>/gi;
+    $.each(arr, function( index, value ) {
+  console.log( index + ": " + value.innerHTML );
+s=value.innerHTML;
+s=s.replace(regexde,'<br>');
+s=s.replace(regexd,'');
+ t=t+'<p class="post-paragraph">'+s+'</p>';
+console.log('text'+t);
+});
+    return t;
+}
+// function removediv(e) {
+//     console.log('div remove');
+//   if (e.keyCode === 13) {
+//       // insert 2 br tags (if only one br tag is inserted the cursor won't go to the next line)
+//       document.execCommand('insertHTML', false, '<br><br>');
+//       // prevent the default behaviour of return key pressed
+//       return false;
+//     }
+// return false;
+
+//     // body...
+// }
+
+
+function onchange_file(e) {
+    // body...
+    console.log('file console');
+e.preventDefault();
+}
+
+function post_something() {
+ var inp= document.querySelector('#post-an-intro>input');
+                   var title=document.querySelector('#post-a-title>input');
+                 var ipar=document.querySelector('#post-an-intro');
+                 var tpar=document.querySelector('#post-a-title');;
+                   if(''===title.value||''===inp.value){
+                     if(''===inp.value) $(ipar).addClass('err');
+                     else  $(ipar).removeClass('err');
+                       if(''===title.value) $(tpar).addClass('err');
+                        else  $(tpar).removeClass('err');
+                   }
+                   else{
+                     if(''===inp.value) $(ipar).addClass('err');
+                     else  $(ipar).removeClass('err');
+                       if(''===title.value) $(tpar).addClass('err');
+                        else  $(tpar).removeClass('err');
+
+
+
+
+
+                 var forumposts='<section class="card new_post compressed" id="" style=""><section class="loader-overlay" style=""><section class="post-loader"><section class="post-%">78%</section><section class="show-p"> <section class="p-hr"></section></section> </section></section> <section class="posttitle">'+title.value+'</section><section class="intro final">'+inp.value+'</section><section class="texts final">'+processTexts()+'</section>'+processInputs()+processAttachments()+'<section class="post_actions"> <span  onclick="compress(this)" class="see-more"></span> <section class="action highfive"></section><section class="action icon-share" style="color:#41ce09"></section><section class="action icon-add"></section></section></section>' ;
+                 var f= document.getElementById('post-new');
+                  var pb= document.getElementById('post-bucket');
+                  pb.innerHTML=forumposts+pb.innerHTML;
+
+                  f.style.display="none";
+                            var h=document.getElementById('post-something');
+
+                  h.style.display="block";
+                  var pnew=document.getElementById('post-new');
+                  pnew.innerHTML=new_post;
+                  att=null;Link=null;rec_t=null;
+
+                   }
+                    console.log('post-now'+inp.value);
+
+
+}
+            function addtextarea() {
+                // body...
+                  var textarea='<section class="add-text" contenteditable="true" ></section>';
+
+                 var add_text_area=document.getElementById('add-texts');
+                   var txta=add_text_area.innerHTML;
+                // if (typeof rec_t == 'undefined'){
+
+if (null === rec_t){
+                    rec_t=textarea;
+                   add_text_area.innerHTML=txta+textarea;
+
+                 }
+               // }
+                    else{
+                          rec_t=document.querySelector('#add-texts .add-text:last-child');
+                        if( "" != rec_t.innerHTML){
+
+
+                            $( "#add-texts" ).append(textarea);
+
+                                  var secndL=  document.querySelector('.texts>section:nth-last-child(2)');
+                                 secndL.style.borderColor="rgba(31, 224, 70, 0.36)";
+
+                        }
+                        else{
+                              rec_t.style.borderColor="coral";
+                        }
+
+               }
+
+
+
+            }
+
+            function open_d_Nav(){
+    // body...
+           $('#dialog_menu').velocity("fadeIn", { delay: 200, duration: 600 });
+
+
+}
+
+/* What i am doing right now ************************************************************************------------------------------- */
+var curr_reply="EMPTY";
+function add__to_forum(arg,a)
+ {
+  console.log('in function');
+    $('#'+a+'_to_f').velocity("fadeOut", {  duration: 600 });
+
+$('#add_'+arg+'_to_forum').velocity("fadeIn", { delay:588, duration: 600 });
+
+ }
+
+function replyTo(argument) {
+    add_window('reply',argument);
+}
+
+
+function isURL(str) {
+  var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
+  '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.?)+[a-z]{2,}|'+ // domain name
+  '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
+  '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
+  '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
+  '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
+  return pattern.test(str);
+}
+
+
+function show_add_to_from__(arg,a)
+{
+     console.log('in function');
+
+$('#add_'+arg+'_to_forum').velocity("fadeOut", {  duration: 600 });
+  $('#'+a+'_to_f').velocity("fadeIn", {delay:587,  duration: 600 });
+
+}
+
+
+
+
+
+
+function slideshowsmilestone(milestone) {
+    var a=$(milestone).children('.item_images').children('ul').children();
+
+var i=0;var s1='';var s2='';
+// for(;true;){
+// $(a[i]).velocity("fadeIn",{duration:100});
+
+
+// }
+
+
+
+      console.log(a+a[0].innerHTML+a.length);
+      //    $('#forum_add_window').velocity("fadeOut", {  duration: 600,complete:function (argument) {
+
+    // body...
+}
+
+
+
+
+
+
+function appendideatoall(title,text,motiv,name,pic,username,links,h)
+{
+   var date = getCurrDate(new Date());
+   var str='';
+   console.log('lin'+links);
+   var m='';
+   if(motiv!='')m='<section style="font-size: small;padding: 5px;text-align: left;/* word-spacing: 0.12em; */word-wrap: break-word;font-style: italic;/* letter-spacing: 0.1em; */color: teal;" class="idea_motiv">Motivation:<br>'+motiv+'</section>';
+   if(links!='')str='<ol class="idea_links" style="/* padding: 5px; */text-align: left;word-spacing: 0.12em;word-wrap: break-word;margin-bottom: 2px;"><h3 style="margin: 6px;margin-left: -13;">Sources : </h3>'+links+'</ol>';
+    $('#show-all-posts').append('<section class="card new_post compressed" id="" style=""><h2 class="item_title_wrapper"><span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto"><span style=" position: absolute; margin-left: -2;margin-top:24.5;font-size:10;color: coral;" class="upvote-item"></span> U </span><br><span class="item_title_content">'+title+'</span></h2>'+m+'<section class="item_text_content" style="padding: 5px;text-align: left;word-spacing: 0.12em;word-wrap: break-word;">'+text+'</section>'+str+' <br><section style="  min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images">'+h+'</section><section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">'+date+'</section><span style="float:right;text-align: right;margin: 9px;font-weight: 600;margin-top: 2px;margin-bottom: 2px;word-spacing: 0.139em;" class="item_by_wrapper"><img class="item_by_profpic" src="'+pic+'" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px; margin-top: -6;"><small class="item_by_name">'+name+' </small> <small class="item_by_username" style="color: grey">('+username+')</small> <br></span><section style="  margin-top:63px;margin-bottom: 20;display: block;text-align: -webkit-right;border-top:1px solid #e6e6e6;" class="item_num_wrapper"><section class="action-link">E<span class="num"></span></section><section class="action-link">+<span class="num"></span></section><section class="action-link">H<span class="num"></span></section><section style="color: white;font-weight: 600;background: cornflowerblue;border-color: transparent;" onclick="replyTo($(this).parent().parent());" class="action-link">R</section></section></section>');
+
+
+
+
+
+Allsources=[];
+Allpics=[];
+return;
+
+}
+
+
+function appendhrtoall(title,ref,opts,name,username,img)
+{
+    /* My Prof pic */
+    var date = getCurrDate(new Date());
+
+
+$( "#show-all-posts" ).append( '<section class="card new_post compressed" id="" style=""><span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto"><span style=" position: absolute;margin-left: -2; margin-top:24.5; font-size:10; color: coral;" class="upvote-item">0</span>U </span><br><h2 class="item_title_wrapper"> <span class="item_title_content">'+title+'</span></h2><h3>'+ref+'</h3><section style="padding: 5px;text-align: left;word-spacing: 0.12em;word-wrap: break-word;" class="item_text_content"><ol class="hr-opts" type="a">'+opts+'</ol></section><br><section  class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">'+date+'</section><span style="float:right;text-align: right;margin: 9px;font-weight: 600;margin-top: 2px;margin-bottom: 2px;word-spacing: 0.139em;"  class="item_by_wrapper"><img class="item_by_profpic" src="'+img+'" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px; margin-top: -6;"><small class="item_by_name">'+name+' </small><small style="color: grey"  class="item_by_username">'+username+'</small></span><br><section style=" margin-top:63px; margin-bottom: 20;display: block;text-align: -webkit-right;border-top:1px solid #e6e6e6;"  class="item_num_wrapper"> <section  class="action-link show_act">E<span class="num">0</span></section> <section class="action-link BK" >+<span class="num">0</span></section><section class="action-link HF">H<span class="num">0</span></section><section style="color: white;font-weight: 600;background: cornflowerblue;border-color: transparent;" class="action-link replybutton" onclick="replyTo($(this).parent().parent());">R</section></section>        </section>' );
+
+
+
+
+
+}
+
+
+function appendupdatetoall(title,text,name,pic,username,H)
+{
+    /* My Prof pic */
+    var date = getCurrDate(new Date());
+    var place ='PL';
+$( "#show-all-posts" ).append( '<section class="card new_post compressed" id="" style=""><h2 class="item_title_wrapper"> <span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto"><span style=" position: absolute;margin-left: -2; margin-top:24.5; font-size:10; color: coral;" class="upvote-item"></span>U </span><br><span class="item_title_content">'+title+'</span></h2><section style="padding: 5px;text-align: left;word-spacing: 0.12em;word-wrap: break-word;" class="item_text_content">'+text+'</section><br><section style=" min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images">'+H+'</section><section  class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">'+date+'</section><span style="float:right;text-align: right;margin: 9px;font-weight: 600;margin-top: 2px;margin-bottom: 2px;word-spacing: 0.139em;"  class="item_by_wrapper"><img class="item_by_profpic" src="'+pic+'" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px; margin-top: -6;"><small class="item_by_name">'+name+' </small><small style="color: grey"  class="item_by_username">'+username+'</small><small> from</small> <a  style="font-size: x-small;" class="item_by_place">'+place+'</a></span><br><section style=" margin-top:63px; margin-bottom: 20;display: block;text-align: -webkit-right;border-top:1px solid #e6e6e6;"  class="item_num_wrapper"> <section  class="action-link show_act">E<span class="num"></span></section> <section class="action-link BK" >+<span class="num"></span></section><section class="action-link HF">H<span class="num"></span></section><section style="color: white;font-weight: 600;background: cornflowerblue;border-color: transparent;" class="action-link replybutton" onclick="replyTo($(this).parent().parent());">R</section></section>        </section>' );
+
+Allpics=[];return;
+}
+
+
+function appendcredit(text,ref,username,name,pic,h)
+{
+     var date = getCurrDate(new Date());;
+     var pl="";
+
+     if($(ref).children('.ref-c-wrapper').children('.ref-wrapper').children('.ref-place').html()!='Place')
+    {
+        pl='<small> from</small> <a class="item_by_place">'+$(ref).children('.ref-c-wrapper').children('.ref-wrapper').children('.ref-place').html();
+    }
+ $( "#show-all-posts" ).append( '<section class="card new_post compressed" id="" style=""><h2 style="color: #1443a9;letter-spacing: 0.05em;font-size: 28;  margin-bottom: -3px;" class="item_title_wrapper"><span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto"><span style="position: absolute; margin-left: -2; margin-top:24.5; font-size:10;color: coral;" class="upvote-item"> </span>U </span><br><span class="item_title_content">Credit to :</span></h2><section class="card new_post compressed is_ref" id="" style=""><h2 class="item_title_wrapper"><span class="item_title_content">'+$(ref).children('.ref-title').html()+'</span></h2><section style="padding: 5px;text-align: left;word-spacing: 0.12em; word-wrap: break-word;" class="item_text_content">'+$(ref).children('.ref-text').html()+'</section><br><section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">'+$(ref).children('.ref-c-wrapper').children('.ref-date').html()+'</section><span style="float:right;text-align: right;margin: 9px;font-weight: 600;margin-top: 2px; margin-bottom: 2px;word-spacing: 0.139em;" class="item_by_wrapper"><img class="item_by_profpic" src="'+$(ref).children('.ref-c-wrapper').children('.ref-wrapper').children('.ref-profpic').attr('src')+'" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;margin-top: -6;">        <small class="item_by_name">'+$(ref).children('.ref-c-wrapper').children('.ref-wrapper').children('.ref-name').html()+'</small> <small style="color: grey" class="item_by_username">'+$(ref).children('.ref-c-wrapper').children('.ref-wrapper').children('.ref-username').html()+'</small>'+pl+'<br></span></section><br><section style="padding: 5px;text-align: left;word-spacing: 0.12em;padding-left: 18;font-size: 12.5;font-style: italic;font-weight: 600;color: navy;" class="item_text_content">'+text+'</section><section style="  min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images">'+h+'</section><section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">'+date+'</section><span style="float:right;text-align: right;margin: 9px;font-weight: 600;margin-top: 2px; margin-bottom: 2px;word-spacing: 0.139em;" class="item_by_wrapper"><img class="item_by_profpic" src="'+pic+'" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;margin-top: -6;">  <small class="item_by_name">'+name+' </small> <small class="item_by_username" style="color: grey">'+username+'</small> <br></span><section style="margin-top:63px;margin-bottom: 20;display: block;text-align: -webkit-right;border-top:1px solid #e6e6e6;" class="item_num_wrapper"><section class="action-link">E<span class="num"></span></section><section class="action-link">+<span class="num"></span></section><section class="action-link">H<span class="num"></span></section><section style="color: white;font-weight: 600;background: cornflowerblue;border-color: transparent;" onclick="replyTo($(this).parent().parent());" class="action-link">R</section></section>  </section>' );
+
+
+Allpics=[];return;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+function appendaddto(text,ref,username,name,pic,h)
+{
+  var date = getCurrDate(new Date());
+     var pl="";
+
+     if($(ref).children('.ref-c-wrapper').children('.ref-wrapper').children('.ref-place').html()!='Place')
+    {
+        pl='<small> from</small> <a class="item_by_place">'+$(ref).children('.ref-c-wrapper').children('.ref-wrapper').children('.ref-place').html();
+    }
+ $( "#show-all-posts" ).append( '<section class="card new_post compressed" id="" style=""><h2 style="color: #1443a9;letter-spacing: 0.05em;font-size: 28;  margin-bottom: -3px;" class="item_title_wrapper"><span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto"><span style="position: absolute; margin-left: -2; margin-top:24.5; font-size:10;color: coral;" class="upvote-item"> </span>U </span><br><span class="item_title_content">Adding To :</span></h2><section style="padding: 5px;text-align: left;word-spacing: 0.12em;padding-left: 18;font-size: 12.5;font-style: italic;font-weight: 600;color: navy;" class="item_text_content">'+text+'</section><section class="card new_post compressed is_ref" id="" style=""><h2 class="item_title_wrapper"><span class="item_title_content">'+$(ref).children('.ref-title').html()+'</span></h2><section style="padding: 5px;text-align: left;word-spacing: 0.12em; word-wrap: break-word;" class="item_text_content">'+$(ref).children('.ref-text').html()+'</section><br><section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">'+$(ref).children('.ref-c-wrapper').children('.ref-date').html()+'</section><span style="float:right;text-align: right;margin: 9px;font-weight: 600;margin-top: 2px; margin-bottom: 2px;word-spacing: 0.139em;" class="item_by_wrapper"><img class="item_by_profpic" src="'+$(ref).children('.ref-c-wrapper').children('.ref-wrapper').children('.ref-profpic').attr('src')+'" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;margin-top: -6;">        <small class="item_by_name">'+$(ref).children('.ref-c-wrapper').children('.ref-wrapper').children('.ref-name').html()+'</small> <small style="color: grey" class="item_by_username">'+$(ref).children('.ref-c-wrapper').children('.ref-wrapper').children('.ref-username').html()+'</small>'+pl+'<br></span></section><br><section style="  min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images">'+h+'</section><section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">'+date+'</section><span style="float:right;text-align: right;margin: 9px;font-weight: 600;margin-top: 2px; margin-bottom: 2px;word-spacing: 0.139em;" class="item_by_wrapper"><img class="item_by_profpic" src="'+pic+'" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;margin-top: -6;">  <small class="item_by_name">'+name+' </small> <small class="item_by_username" style="color: grey">'+username+'</small> <br></span><section style="margin-top:63px;margin-bottom: 20;display: block;text-align: -webkit-right;border-top:1px solid #e6e6e6;" class="item_num_wrapper"><section class="action-link">E<span class="num"></span></section><section class="action-link">+<span class="num"></span></section><section class="action-link">H<span class="num"></span></section><section style="color: white;font-weight: 600;background: cornflowerblue;border-color: transparent;" onclick="replyTo($(this).parent().parent());" class="action-link">R</section></section>  </section>' );
+
+
+
+
+Allpics=[];return;
+
+}
+
+
+
+
+function appendEvent(title,desc,date,time,place,open_to,livestream,name,uname,src) {
+ var dt=getCurrDate(new Date());
+console.log(src+date);
+$('#show-all-posts').append('<section class="card new_post compressed" id="" style=""><br><h2 style=" text-align: center;" class="item_title_wrapper"><span class="item_title_content">'+title+'</span></h2><section class="event_date_time" style=""><span class="ev-when">On '+date+' '+time+'  EST</span> <br><h4 style="" class="ev-where">At '+place+'</h4><br><br><section style=""><a>RSVP</a></section><br></section><section style="padding: 9px;text-align: left;word-spacing: 0.12em;" class="item_text_content">'+desc+' </section><br><section class="specs">  <h6>Open to :'+open_to+' </h6> <h6>Livestream/Recording :'+livestream+'</h6></section><br><section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">'+dt+'</section><span style="float:right;text-align: right;margin: 9px; font-weight: 600;margin-top: 2px; margin-bottom: 2px;word-spacing: 0.139em;" class="item_by_wrapper"><img class="item_by_profpic" src="'+src+'" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;margin-top: -6;"> <small class="item_by_name">'+name+' </small> <small class="item_by_username" style="color: grey">'+uname+'</small> <br> </span><section style="  margin-top:63px;  margin-bottom: 20; display: block; text-align: -webkit-right; border-top:1px solid #e6e6e6;" class="item_num_wrapper">  <section class="action-link">E<span class="num">0</span></section><section class="action-link">+<span class="num">0</span></section> <section class="action-link">H<span class="num">0</span></section><section style="color: white;font-weight: 600;background: cornflowerblue;border-color: transparent;" onclick="replyTo($(this).parent().parent());" class="action-link">R</section></section></section>');
+
+
+
+
+
+
+
+
+
+return;
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function appendmention(text,ref,username,name,pic,h)
+{
+   var date = getCurrDate(new Date());
+     var pl="";
+
+     if($(ref).children('.ref-c-wrapper').children('.ref-wrapper').children('.ref-place').html()!='Place')
+    {
+        pl='<small> from</small> <a class="item_by_place">'+$(ref).children('.ref-c-wrapper').children('.ref-wrapper').children('.ref-place').html();
+    }
+ $( "#show-all-posts" ).append( '<section class="card new_post compressed" id="" style=""><h2 style="color: #1443a9;letter-spacing: 0.05em;font-size: 28;  margin-bottom: -3px;" class="item_title_wrapper"><span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto"><span style="position: absolute; margin-left: -2; margin-top:24.5; font-size:10;color: coral;" class="upvote-item"> </span>U </span><br><span class="item_title_content">Mention</span></h2><section class="card new_post compressed is_ref" id="" style=""><h2 class="item_title_wrapper"><span class="item_title_content">'+$(ref).children('.ref-title').html()+'</span></h2><br><section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">'+$(ref).children('.ref-c-wrapper').children('.ref-date').html()+'</section><span style="float:right;text-align: right;margin: 9px;font-weight: 600;margin-top: 2px; margin-bottom: 2px;word-spacing: 0.139em;" class="item_by_wrapper"><img class="item_by_profpic" src="'+$(ref).children('.ref-c-wrapper').children('.ref-wrapper').children('.ref-profpic').attr('src')+'" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;margin-top: -6;">        <small class="item_by_name">'+$(ref).children('.ref-c-wrapper').children('.ref-wrapper').children('.ref-name').html()+'</small> <small style="color: grey" class="item_by_username">'+$(ref).children('.ref-c-wrapper').children('.ref-wrapper').children('.ref-username').html()+'</small>'+pl+'<br></span></section><br><section style="padding: 5px;text-align: left;word-spacing: 0.12em;padding-left: 18;font-size: 12.5;font-style: italic;font-weight: 600;color: navy;" class="item_text_content">'+text+'</section><section style="  min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images">'+h+'</section><section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">'+date+'</section><span style="float:right;text-align: right;margin: 9px;font-weight: 600;margin-top: 2px; margin-bottom: 2px;word-spacing: 0.139em;" class="item_by_wrapper"><img class="item_by_profpic" src="'+pic+'" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;margin-top: -6;">  <small class="item_by_name">'+name+' </small> <small class="item_by_username" style="color: grey">'+username+'</small> <br></span><section style="margin-top:63px;margin-bottom: 20;display: block;text-align: -webkit-right;border-top:1px solid #e6e6e6;" class="item_num_wrapper"><section class="action-link">E<span class="num"></span></section><section class="action-link">+<span class="num"></span></section><section class="action-link">H<span class="num"></span></section><section style="color: white;font-weight: 600;background: cornflowerblue;border-color: transparent;" onclick="replyTo($(this).parent().parent());" class="action-link">R</section></section>  </section>' );
+
+Allpics=[];return;
+}
+
+
+
+
+
+function appendmilestone(title,text,name,pic,username,ref,ht)
+{
+    /* My Prof pic */
+    var date = getCurrDate(new Date());
+    var place ='PL';
+ $( "#show-all-posts" ).append( '<section class="card new_post compressed" id="" style=""><h2 style="color: #1443a9;letter-spacing: 0.05em;font-size: 28;margin-bottom: -3px;" class="item_title_wrapper"><span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto"><span style=" position: absolute; margin-left: -2;margin-top:24.5; font-size:10;  color: coral;" class="upvote-item"></span> U </span> <span class="item_title_content">Milestone:<br>'+title+'</span></h2><section class="card new_post compressed is_ref" id="" style=" text-align:left;"><big>In Reference to <span>'+ref+'</span></big> </section><br><section style="padding: 5px;text-align: left;word-spacing: 0.12em;padding-left: 18;font-size: 12.5;    font-weight: 600; color: navy;  margin: 9px;margin-top: 0px;margin-bottom: 20px;" class="item_text_content">Description :<br>'+text+' </section><section style="  min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images">'+ht+'</section><section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">'+date+'</section><span style="float:right;text-align: right;margin: 9px;  font-weight: 600;margin-top: 2px; margin-bottom: 2px;word-spacing: 0.139em;" class="item_by_wrapper"><img class="item_by_profpic" src="'+pic+'" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px; margin-top: -6;"><small class="item_by_name">'+name+' </small> <small class="item_by_username" style="color: grey">'+username+'</small> <br> </span><section style=" margin-top:63px; margin-bottom: 20; display: block;text-align: -webkit-right;border-top:1px solid #e6e6e6;" class="item_num_wrapper"> <section class="action-link">E<span class="num"></span></section><section class="action-link">+<span class="num"></span></section><section class="action-link">H<span class="num"></span></section><section style="color: white;font-weight: 600;background: cornflowerblue;border-color: transparent;" onclick="replyTo($(this).parent().parent());" class="action-link">R</section></section>        </section>' );
+
+// slideshowsmilestone(document.getElementById('mx6'));
+
+Allpics=[];return;
+}
+
+
+
+
+
+
+
+
+
+
+function onpicremove(argument,e) {
+    // body...
+if(!$(argument).parent().parent().parent().hasClass('edit')) return;
+     var c=195;
+; //console.log('just'+e.offsetX+" "+c);
+
+
+  if (e.offsetX >c)  {
+ if(Allpics.length>0)
+    {
+       Allpics.splice($(argument).parent().index(), 1);
+        console.log('clicked'+Allpics.length+" "+$(argument).parent().index());
+    }
+
+  $(argument).parent().remove();
+     }
+
+}
+
+
+
+
+
+
+  function pic_change(input) {
+
+if(Allpics.length<8)
+           {
+
+ var a=input.value.split('\\');
+                               if(!Allpics.includes(a[a.length-1]))  {
+                                    Allpics.push(a[a.length-1]);
+                               $(input).parent().prev().html('Adding '+a[a.length-1]);
+                               $(input).next().html('8% &nbsp;');
+                                $(input).next().css('margin-left','-55');
+
+
+
+                                            if (input.files && input.files[0]) {
+                                                var reader = new FileReader();
+
+                                                reader.onload = function (e) {
+
+                                              $(input).parent().parent().next().children('ul').append('<li ><section onclick="onpicremove(this,event)" style="background:    linear-gradient(rgba(255, 255, 255, 0.45),         rgba(255, 255, 255, 0.58)      ),           url('+e.target.result+'); background-repeat: no-repeat;background-size: 100% 99%;"></section> </li>');
+
+                                                };
+
+                                                reader.readAsDataURL(input.files[0]);
+                                            }
+
+                                        }
+
+                                        else{
+                                                                          $(input).parent().prev().html('Already added');
+
+                                        }
+
+                }
+
+
+                else{
+                      $(input).parent().prev().html('Limit Reached');
+
+                }
+    }
+
+
+
+
+
+function closeadd_window()
+{
+    $('#forum_add_window').velocity("fadeOut", {  duration: 600,complete:function (argument) {
+     $('.add_new_item').velocity("fadeOut", {  duration: 20 });
+$('#add_to_f').css('display','none');$('#reply_to_f').css('display','none');
+//$('#add_wrapper').css('display','none');
+    } }
+        );    $('#post-something').css({"top":"90%","background": "#1d8be2","transform":"rotate(0deg)"});
+
+}
+
+function showadd_window(arg,el)
+{
+
+
+   if(arg==='reply') {
+
+    console.log('reply show'+$(el).children('.item_by_wrapper').children('.item_by_profpic').attr('src'));
+
+$('.ref-title').html($(el).children('.item_title_wrapper').children('.item_title_content').html());
+$('.ref-text').html($(el).children('.item_text_content').html());
+$('.ref-date').html($(el).children('.item_date_time').html());
+$('.ref-profpic').attr('src',$(el).children('.item_by_wrapper').children('.item_by_profpic').attr('src'));
+$('.ref-name').html($(el).children('.item_by_wrapper').children('.item_by_name').html());
+$('.ref-username').html($(el).children('.item_by_wrapper').children('.item_by_username').html());
+if($(el).children('.item_by_wrapper').children('.item_by_place').length)$('.ref-place').html($(el).children('.item_by_wrapper').children('.item_by_place').html());
+else{ $('.ref-place').css('display','none');$('.ref-place').prev().css('display','none');}
+    $('#reply_to_f').velocity("fadeIn", {  duration: 20 });  ;$('#add_to_f').velocity("fadeOut", {  duration: 20 });   }
+       else {console.log('add show ');$('#add_to_f').velocity("fadeIn", {  duration: 20 });  ;$('#reply_to_f').velocity("fadeOut", {  duration: 20 });  ;}
+     //$('#add_wrapper').css('display','block');
+    $('#forum_add_window').velocity("fadeIn", {  duration: 600 });
+    $('#post-something').css({"top":"0%","background": "navy","transform":"rotate(45deg)"});
+
+
+
+}
+var forum_add_window_shown=true;
+function add_window(arg,el)
+{
+   // console.log(' '+ $('#post-something').css('background-color')=== 'rgb(0, 0, 128)');
+if(! forum_add_window_shown ){showadd_window(arg,el); forum_add_window_shown=true;}
+else { closeadd_window(); forum_add_window_shown=false;}
+}
+
+/* -------------------What i am doing now---------------------------------------------------------------------------------------------*/
+
+
+
+
+
+function createCORSRequest(method, url) {
+  var xhr = new XMLHttpRequest();
+  if ("withCredentials" in xhr) {
+    // XHR for Chrome/Firefox/Opera/Safari.
+    xhr.open(method, url, true);
+  } else if (typeof XDomainRequest != "undefined") {
+    // XDomainRequest for IE.
+    xhr = new XDomainRequest();
+    xhr.open(method, url);
+  } else {
+    // CORS not supported.
+    xhr = null;
+  }
+  return xhr;
+}
+
+// Helper method to parse the title tag from the response.
+function getTitle(text) {
+  return text.match('<title>(.*)?</title>')[1];
+}
+
+// Make the actual CORS request.
+function makeCorsRequest() {
+  // This is a sample server that supports CORS.
+  var url = 'https://twitter.com/nick_brana?lang=en';
+
+  var xhr = createCORSRequest('GET', url);
+  if (!xhr) {
+    alert('CORS not supported');
+    return;
+  }
+
+  // Response handlers.
+  xhr.onload = function() {
+    var text = xhr.responseText;
+    var title = getTitle(text);
+   console.log('Response from CORS request to ' + url + ': ' + title);
+  };
+
+  xhr.onerror = function() {
+    alert('Woops, there was an error making the request.');
+  };
+
+  xhr.send();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var Allsources=[];
+var Allpics=[];
+var Allopts=[];
+
+
+Array.prototype.remove = function() {
+    var what, a = arguments, L = a.length, ax;
+    while (L && this.length) {
+        what = a[--L];
+        while ((ax = this.indexOf(what)) !== -1) {
+            this.splice(ax, 1);
+        }
+    }
+    return this;
+};
+
+// function source_li(argument) {
+//     // body...
+//     console.log('l '+$(argument).index());
+//   //  $(argument).parent().remove();
+// }
+
+
+
+function linkonchange(val) {
+    // body...
+
+// var ch=document.getElementById('link_title');
+// var b=document.getElementById("clear-input-button");
+var res="";
+
+
+
+
+        $.ajax({
+          url: 'https://www.googleapis.com/pagespeedonline/v1/runPagespeed?url='+val  ,
+          context: this,
+          type: 'GET',
+          dataType: 'json',
+          success: function(data) {
+
+              console.log(data.title);
+
+                 if(data.responseCode===200){
+
+                  res=  data.title;
+                    // ch.innerHTML=""+data.title;
+                       // $(b).css('transform','rotate(0deg)');
+                       //                     b.value="add";
+                 if($("#allsources").children().length<=4)
+                    {
+                         if(Allsources.includes(res)){
+                            $('#idea_source_title').html('Sources <small>Already Exists</small>');
+                         }
+                   else     {$('#idea_source_title').html('Sources');
+                             Allsources.push(res);
+                           //  console.log('#allsources')
+                    $('#allsources').append('<li style="padding:3;margin:5;margin-top:20" ><a  target="_blank" href="'+val+'">'+res+'</a><span style="float:right;color:orangered;border-radius:50%;;border:1px solid;padding:5px;font-size:x-small;padding-left:7px;padding-right:7px;"   onclick="    Allsources.splice($(this).parent().index(), 1);$(this).parent().remove();"  >✖</span></li>');
+                           }
+                    }
+                else $('#idea_source_title').html('Sources <small>Source Limit Reached</small>');
+
+                 }
+                  else {
+                   // ch.innerHTML=" "+data.title;
+                   //  $(b).css('transform','rotate(45deg)');
+                   //  b.value="clear";
+                   res="notfound";
+                  }
+            },
+            error:
+            function (argument) {
+               // console.log(argument);
+               //  ch.innerHTML="Error "+argument.status;
+               //      $(b).css('transform','rotate(45deg)');
+               //                          b.value="clear";
+ res="error";
+            }
+
+        });
+
+// if(res==="error"||res==="notfound"){
+//     res="null";
+// }
+
+console.log(res);
+return res;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        $(document).ready(function() {
+
+
+
+
+
+
+
+// makeCorsRequest();
+
+             var textarea='<textarea class="add-text"></textarea>';
+               // $('#add_text_area').click(function () {
+               //      console.log('add_text_area');
+               //     var add_text_area=document.getElementById('#add-texts');
+               //     var txta=add_text_area.innerHTML;
+               //     add_text_area.innerHTML=textarea+txta;
+
+
+               // });
+
+               $('section[contenteditable]').keydown(function(e) {
+    // trap the return key being pressed
+    if (e.keyCode === 13) {
+      // insert 2 br tags (if only one br tag is inserted the cursor won't go to the next line)
+      document.execCommand('insertHTML', false, '<br><br>');
+      // prevent the default behaviour of return key pressed
+      return false;
+    }
+  });
+
+
+
+
+
+
+                          $('#post-something').click(function () {
+                  // var f= document.getElementById('post-new');
+                  // f.style.display="block";
+                  // var h=document.getElementById('post-something');
+                  // h.style.display="none";
+
+
+               });
+
+
+
+
+                  $('#post-now').click(function () {
+
+
+
+                  });
+
+            $('span.see-more').click(function () {
+                $(this).parent().parent().toggleClass('compressed');
+            });
+            $('.add-attachment input[type="file"]').submit(function (e) {
+                console.log('upload');
+                //  e.preventDefault();
+               e.preventDefault();
+            });
+               $('.add-attachment input[type="file"]').change(function (e) {
+                console.log('change');
+                //  e.preventDefault();
+               e.preventDefault();
+            });
+
+
+            });
+
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="forum_add_window" style="display: block; box-shadow: none; min-height: 30px; overflow-x: hidden; position: fixed; left: 0px; top: 0px; width: 100%; z-index: 9; right: 0px; bottom: 0px; overflow-y: auto; background: rgba(255, 255, 255, 0.946); opacity: 1;" class="">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><div id="add-new" style="z-index:666;width: 86%;min-width: 255px;min-height: 30px;overflow: hidden;margin-top: 49px;/* height: 300px; */margin-top: 30;left: %;/* overflow-y: scroll; *//* top: 4.4%; *//* background: #399be8; */border-radius: 18px;/* padding-left: 11.5%; *//* position: absolute; */text-align: center;/* padding: 18px; *//* padding-top: 20px; *//* padding-left: 3.5%; */transition: 0.2s ease-in-out;box-shadow: none;/* margin: 9; */color: #38383a;">
+
+
+<!-- display: inline-block-->
+
+
+
+
+
+
+ <section id="reply_to_f" style="min-width: 59%; min-height: 40%; overflow: hidden; padding: 30px; margin-top: 5%; margin-bottom: 7%; text-align: center; display: none; " class="">
+      <h1 style="
+    float: left;
+    font-size: 50px;
+    font-size: -moz-xxx-large;
+">Reply  : </h1>
+      <ul style="
+    float: left;
+    padding-left: 19;
+    list-style: none;
+    font-size: large;
+    /* color: rgba(255, 255, 255, 0.71); */
+    margin: 0;
+    margin-left: 6px;
+    font-size: x-large;
+    text-align: left;
+">
+  <li style="
+    padding-top: 10;
+    padding-bottom: 16;
+      transition: 0.1s ease;
+       cursor: pointer;
+" onclick="add__to_forum('add_to','reply')">Add To</li>
+  <li style="
+    padding-top: 10;
+    padding-bottom: 16;
+      transition: 0.1s ease;
+       cursor: pointer;
+" onclick="add__to_forum('credit','reply')">Give Credit </li>
+
+          <li style="
+    padding-top: 10;
+    transition: 0.1s ease;
+    padding-bottom: 16;
+    cursor: pointer;
+" onclick="add__to_forum('mention','reply')">Mention</li>
+
+
+          <li style="
+    padding-top: 10;
+    transition: 0.1s ease;
+    padding-bottom: 16;
+    cursor: pointer;
+" onclick="add__to_forum('pass_on','reply')">Pass On</li>
+
+
+          <!-- <li style="
+    padding-top: 10;
+    padding-bottom: 16;
+       cursor: pointer;
+         transition: 0.1s ease;
+" >Event</li> -->
+      </ul>
+  </section>
+
+
+
+
+
+
+
+
+
+
+  <section id="add_to_f" style="min-width: 59%; min-height: 40%; overflow: hidden; padding: 30px; margin-top: 5%; margin-bottom: 7%; text-align: center; opacity: 1; display: block;" class="">
+      <h1 style="
+    float: left;
+    font-size: 50px;
+    font-size: -moz-xxx-large;
+">Add  : </h1>
+      <ul style="
+    float: left;
+    padding-left: 19;
+    list-style: none;
+    font-size: large;
+    /* color: #04041d; */
+    margin: 0;
+    margin-left: 6px;
+    font-size: x-large;
+    text-align: left;
+">
+          <li style="
+    padding-top: 10;
+    transition: 0.1s ease;
+    padding-bottom: 16;
+    cursor: pointer;
+" onclick="add__to_forum('update','add')">Update</li>
+          <li style="
+    padding-top: 10;
+    padding-bottom: 16;
+      transition: 0.1s ease;
+       cursor: pointer;
+" onclick="add__to_forum('idea','add')">Idea</li>
+          <li style="
+    padding-top: 10;
+    padding-bottom: 16;
+      transition: 0.1s ease;
+       cursor: pointer;
+" onclick="add__to_forum('milestone','add')">Milestone</li>
+  <li style="
+    padding-top: 10;
+    padding-bottom: 16;
+      transition: 0.1s ease;
+       cursor: pointer;
+" onclick="add__to_forum('event','add')">Event</li>
+
+
+ <li style="
+    padding-top: 10;
+    padding-bottom: 16;
+      transition: 0.1s ease;
+       cursor: pointer;
+" onclick="add__to_forum('hand_raise','add')">Hand Raise</li>
+
+          <!-- <li style="
+    padding-top: 10;
+    padding-bottom: 16;
+       cursor: pointer;
+         transition: 0.1s ease;
+" >Event</li> -->
+      </ul>
+  </section>
+  <section id="add_wrapper" style="padding: 2px; min-height: 7px; overflow: hidden; display: block;">
+
+
+<section id="add_hand_raise_to_forum" style="padding: 5px; margin: 7px; min-height: 60px; overflow: hidden; display: none; text-align: left;" class="add_new_item">
+
+     <span style="float: left;/* color: #231f1f; */font-size: large;cursor: pointer;opacity: 0.9;" onclick="show_add_to_from__('hand_raise','add')">◀</span>
+
+
+ <h2 style="
+    /* color: rgba(8, 6, 6, 0.93); */
+    text-align: center;
+    margin: 0px;
+    margin-bottom: 20px;
+    letter-spacing: 0.06em;
+    font-size: 22px;
+">Add Hand Raise</h2>
+
+<input type="text" name="" style="
+    font-size: large;
+    color: #636262;
+    border: 1px solid grey;
+    border-radius: 2.5px;
+    padding: 5px;
+    margin: 3px;
+    margin-bottom: 17px;
+    width: 95%;
+" placeholder="Enter Your Question" id="handr_ques" minlength="1" maxlength="190">
+
+<input type="text" name="" style="
+    font-size: medium;
+    color: #636262;
+    border: 1px solid grey;
+    border-radius: 2.5px;
+    padding: 5px;
+    margin: 3px;
+    margin-bottom: 17px;
+    width: 95%;
+" placeholder="In Reference to...(optional)" id="handr_ref" minlength="1" maxlength="190">
+
+<section style="margin-top:14px;">
+<h4>Add Options</h4>
+    <input id="optioninput" type="text" name="" style="padding: 5px; border: 1px solid grey;width: 77%;font-size: medium;color:darkgrey;" minlength="1" maxlength="100" placeholder="Enter options"><span style="cursor:pointer;margin-left: 25px;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid darkgrey"
+    onclick="opt_add()">+</span>
+
+    <ul id="hr_opts" style="list-style: none;margin-top: 34px">
+    <span id="opt_err" style="color:rgba(255,0,0,0.5);display: none;">Already added!</span>
+
+    </ul>
+</section>
+
+
+
+
+
+
+
+<button style="   margin-top: 19px;
+    float: right;
+    min-height: 40px;
+    color: white;
+    background: #ff20a6;
+    letter-spacing: 0.14em;
+    padding-left: 9px;
+    padding-right: 9px;
+" onclick="post_hr()">Post</button>
+
+
+
+
+
+
+
+
+     </section>
+
+
+
+
+<script type="text/javascript">
+    function opt_add() {
+       var r=document.getElementById('optioninput').value;if(!Allopts.includes(r) &&r!=''&& Allopts.length<=4){$('#hr_opts').append('<li><big>'+r+'</big><span  onclick="opt_remove(this)">×</span"></li>');Allopts.push(r);document.getElementById('opt_err').style.display='none'}
+      else if(Allopts.length>4){document.getElementById('opt_err').innerHTML='Maximum limit reached';document.getElementById('opt_err').style.display='block'} else if(r==''){document.getElementById('opt_err').innerHTML='Nothing is entered';document.getElementById('opt_err').style.display='block'}  else{document.getElementById('opt_err').innerHTML='Already Added';document.getElementById('opt_err').style.display='block'}
+    }
+function post_hr() {
+    // body...
+    var p=document.getElementById('handr_ques').value;
+    var r=document.getElementById('handr_ref').value;
+    var st='';
+
+
+
+for (var i = 0, len = Allopts.length; i < len; i++) {
+ st=st+'<li><section></section>'+Allopts[i]+'</li>';
+}
+
+
+
+
+appendhrtoall(p,r,st,'Anu','@anu','images/ikp.jpg');
+
+
+
+
+
+
+
+
+
+
+
+
+Allopts=[];
+closeadd_window();
+return;
+
+
+
+}
+function opt_remove(argument) {
+
+        if(Allopts.length>0) {
+                           console.log('clicked'+Allopts.length+" "+$(argument).parent().index());
+
+             Allopts.splice($(argument).parent().index()-1, 1);
+
+        }
+
+$(argument).parent().remove();
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="add_event_to_forum" style="padding: 5px; margin: 7px; min-height: 60px; overflow: hidden; display: none; text-align: left;" class="add_new_item">
+
+     <span style="float: left;/* color: #231f1f; */font-size: large;cursor: pointer;opacity: 0.9;" onclick="show_add_to_from__('event','add')">◀</span>
+
+
+<style type="text/css">
+
+ section.livestream>input[type="checkbox"] {
+    /* display: none; */
+    opacity: 0;
+}
+
+.livestream>label {
+    padding: 6px;
+    margin: 8px;
+    cursor: pointer;
+    -webkit-transition: 0.2s ease;
+    transition: 0.2s ease;
+    font-size: 15px;
+    border:1px solid rgba(178, 207, 216, 0.91);
+    border-radius: 6px;
+}
+
+section.livestream {
+    padding: 9px;
+    padding-top: 15;
+}
+
+section.livestream>input[type="checkbox"]:checked + label {
+    opacity: 1;
+    color: #2573b1;
+    /* transform: scale(8,8); */
+    /* transform: scale(0.5,2); */
+    font-size: 19;
+    border: none;
+}
+
+section.livestream>input[type="checkbox"]:checked + label[for="sp"] {
+    color: cornflowerblue;
+}
+
+
+section.livestream>input[type="checkbox"]:checked + label[for="fb"] {
+    color: #3b5998;
+}
+
+section.livestream>input[type="checkbox"]:checked + label[for="yt"] {
+    color: crimson;
+}
+
+section.open-to {
+    padding-top: 17px;
+    padding-left: 22px;
+}
+
+.open-to>label {
+    /* padding: 5px; */
+    margin-right: 11px;
+    border:1px solid;
+    padding:8px;
+    border-radius:6px;cursor:pointer;
+    -webkit-transition:0.2s ease-in-out;
+    transition:0.2s ease-in-out
+}
+
+.open-to>input[type="radio"] {
+    opacity: 0;
+}
+
+.open-to>input[type="radio"]:checked + label {
+    color: orange;font-size:18;
+}
+
+.open-to>input[type="text"] {
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    opacity: 1;
+    padding: 5px;
+    min-width: 210;
+    padding-top: 12;
+    font-size: 16;
+    width: 70%;
+}
+
+input#custom-open-to {
+    display: none;
+}
+
+
+</style>
+
+     <h2 style="
+    /* color: rgba(8, 6, 6, 0.93); */
+    text-align: center;
+    margin: 0px;
+    margin-bottom: 20px;
+    letter-spacing: 0.06em;
+    font-size: 22px;
+">New Event</h2>
+<input type="text" name="" style="
+    font-size: large;
+    color: #636262;
+    border: 1px solid grey;
+    border-radius: 2.5px;
+    padding: 5px;
+    margin: 3px;
+    margin-bottom: 17px;
+    width: 95%;
+" placeholder="Enter Title" id="eventtitle_" minlength="1" maxlength="40">
+<br><br><label>When</label>
+<input type="date" name="when_date" id="when_date" style="margin-right: 9px;
+    margin-left: 9px;
+    padding: 8px;
+    border: 1px solid rgba(128, 128, 128, 0.66);">
+<input type="time" name="when_time" id="when_time" style="margin-right: 9px;
+    margin-left: 9px;
+    padding: 8px;
+    border: 1px solid rgba(128, 128, 128, 0.66);">
+<br><br><label>Where</label>
+<input type="text" name="" style="
+    font-size: large;
+    color: #636262;
+    border: 1px solid grey;
+    border-radius: 2.5px;
+    padding: 5px;
+    margin: 3px;
+    margin-bottom: 17px;
+    width: 95%;border:1px solid rgba(151, 206, 75, 0.78);
+" placeholder="Enter Location Address" id="event_address" minlength="1" maxlength="540" >
+<textarea maxlength="500" minlength="99" style="
+    font-size: medium;
+    /* padding: 8px; */
+    border: 1px solid grey;
+    background: white;
+    margin: 3px;
+    margin-top: 14px;
+    color: rgb(0, 0, 0);
+    width: 95%;
+    border-radius: 3px;
+" placeholder="Describe your event.." id="eventdesc_"></textarea>
+
+
+<br style="line-height: 2"><br><label>Open to</label>
+<section class="open-to">
+    <input type="radio" name="open-to" id="only" value="only" checked><label for="only">Only to this forum</label>
+       <input type="radio" name="open-to" id="everyone" value="everyone"><label for="everyone">Everyone</label>
+       <input type="radio" name="open-to" id="custom" value="custom"><label for="custom">Custom</label>
+
+
+<br><br><input type="text" id="custom-open-to"></section>
+
+<br><br>
+<label>Livestream</label>
+<section class="livestream">
+    <input name="livestream" value="youtube" id="yt" type="checkbox"><label for="yt">Youtube</label>
+    <input name="livestream" id="fb" value="facebook" type="checkbox"><label for="fb">Facebook</label>
+    <input name="livestream" value="servepool" id="sp" type="checkbox"><label for="sp">Servepool</label>
+<br>
+</section>
+
+
+<button style="
+    margin-top:69px;
+     float: right;
+    min-height: 40px;
+    color: white;
+    background: #ff20a6;
+    letter-spacing: 0.14em;
+    padding-left: 9px;
+    padding-right: 9px;
+    margin-right: 0;
+" onclick="var loc=document.getElementById('event_address').value;title=document.getElementById('eventtitle_').value;text=document.getElementById('eventdesc_').value;var time=document.getElementById('when_time').value;var dt=document.getElementById('when_date').value;;var r=null;var l='';if(document.getElementById('only').checked)r='Only to this forum';else if(document.getElementById('everyone').checked)r='Open to all';else if(document.getElementById('custom').checked) r='Custom';if(document.getElementById('yt').checked)l=l+' Youtube ,'; if(document.getElementById('fb').checked)l=l+' Facebook ,'; if(document.getElementById('sp').checked) l=l+' Servepool';if(!document.getElementById('sp').checked&&!document.getElementById('yt').checked&&!document.getElementById('fb').checked) l='Not available';appendEvent(title,text,dt,time,loc,r,l,'name','@uname','images/ikp.jpg') ;closeadd_window()">Post</button>
+
+
+
+
+
+
+
+</section>
+
+  <section id="add_idea_to_forum" style="padding: 5px; margin: 7px; min-height: 60px; overflow: hidden; display: none; text-align: left;" class="add_new_item">
+        <span style="float: left;/* color: #231f1f; */font-size: large;cursor: pointer;opacity: 0.9;" onclick="show_add_to_from__('idea','add')">◀</span>
+         <h2 style="
+    /* color: rgba(8, 6, 6, 0.93); */
+    text-align: center;
+    margin: 0px;
+    margin-bottom: 20px;
+    letter-spacing: 0.06em;
+    font-size: 22px;
+">New Idea</h2>
+<input type="text" name="" style="
+    font-size: large;
+    color: #636262;
+    border: 1px solid grey;
+    border-radius: 2.5px;
+    padding: 5px;
+    margin: 3px;
+    margin-bottom: 17px;
+    width: 95%;
+" placeholder="Enter Title" id="ideatitle_" minlength="1" maxlength="40">
+<input type="text" name="" style="
+    font-size: large;
+    color: #636262;
+    border: 1px solid grey;
+    border-radius: 2.5px;
+    padding: 5px;
+    margin: 3px;
+    font-size: medium;
+    margin-bottom: 17px;
+    width: 95%;
+" minlength="1" placeholder="How did it come about?(optional)" id="ideamotivation_">
+ <textarea maxlength="500" minlength="99" style="
+    font-size: medium;
+    /* padding: 8px; */
+    border: 1px solid grey;
+    background: white;
+    margin: 3px;
+    margin-top: 14px;
+    color: rgb(0, 0, 0);
+    width: 95%;
+    border-radius: 3px;
+" placeholder="Describe your idea.." id="ideacontent_"></textarea>
+<h3 style="/* color: #191212; */text-align: left;margin-bottom: 0px;padding-bottom: 3px;" id="idea_source_title">Sources : </h3>
+<input type="text" name="" style="
+    font-size: large;
+    color: #636262;
+    border: 1px solid grey;
+    border-radius: 2.5px;
+    padding: 3px;
+    margin: 3px;
+    margin-bottom: 17px;
+    width: 78%;
+    " placeholder="Enter Link" id="ideasource_"><span style="
+    padding: 6px;
+    padding-right: 6px;
+    padding-left: 6px;
+    margin-left: 0x;
+    cursor: pointer;
+    /* color: white; */
+    border-radius: 50%;
+    border: 1px solid;
+    float: right;
+    /*font-size: large;*/
+" onclick="if(isURL($('#ideasource_').val())){ linkonchange($('#ideasource_').val()); ;}
+else {$('#ideasource_').css('border','2px solid redorange');}
+" >GO</span>
+<ol id="allsources" style="/* color: white; */text-align: left;font-size: medium;padding: 4px;padding-left: 21px;margin-bottom: -70;margin-top: 3px;"></ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--   <section class="add_link group" style="
+    margin-bottom: 17px;
+    width: 60%;margin-top:60;
+">
+  <h7 style="
+    font-weight: 600;
+    /* position: absolute; */
+    margin: 19;
+    /* margin-left: 9; */
+    color: #ea7208;
+    margin-top: 3;
+    letter-spacing: 0.05em;
+    /* font-size: x-small; */
+    padding: 9px;
+"
+id="add_pic_title">Add Pictures</h7>
+                <input  accept="image/x-png,image/gif,image/jpeg" class="textip" required="" type="file" placeholder="Name" style="
+    padding: 8px;
+    text-align: center;
+    border: 1px solid orange;
+    color: transparent;
+    margin-top: 9;
+" id="up_m" onchange="var a=this.value.split('\\');$(this).prev().html('Adding '+a[a.length-1]);$(this).next().html('0% &nbsp;'); $(this).next().css('margin-left','-55')">
+
+
+
+            <span style="
+    position: absolute;
+    margin-top: 18;
+    margin-left: -25;
+    color: #ea7208;
+    font-weight: 600;
+    /* font-size: x-large; */
+" id="add_pics_span"></span></section> -->
+<!-- </center>
+ -->
+
+
+
+
+
+
+
+
+<section style="/* max-width: 40%; *//* float: left; *//* min-height: 260px; */margin: 9px;margin-top:59px;text-align: -webkit-center;margin-left: 3;margin-right: 9;">
+
+       <section class="add_link group" style="
+    margin-bottom: 17px;
+    width: 60%;
+">
+  <span style="
+    font-weight: 600;
+    /* position: absolute; */
+    margin: 19;
+    /* margin-left: 9; */
+    color: #ea7208;
+    margin-top: 3;
+    letter-spacing: 0.05em;
+    /* font-size: x-small; */
+    padding: 9px;
+" id="add_pic_title">Add pictures</span>
+                <section>
+  <section style="
+    position: absolute;
+    width: 94.4%;
+    margin-left: 1;
+    min-height: 38;
+    background: rgba(90, 224, 81, 0.64);
+    margin-top: 10;
+   /* transition:  all 600ms cubic‑bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    width: 50%;
+    transition: 0.2s ease-in-out;
+    transition: all 0.46s cubic-bezier(0.175, 0.885, 0.32, 1.275);*/
+        transition: all 0.5s ease-in-out;
+    width: 80%;
+"></section>
+  <input accept="image/x-png,image/gif,image/jpeg" class="textip" required="" type="file" placeholder="Name" style="
+    padding: 8px;
+    text-align: center;
+    border: 1px solid orange;
+    color: transparent;
+    margin-top: 9;
+" id="up_m" onchange="pic_change(this)"><span style="position: absolute; margin-top: 18px; margin-left: -15px; color: rgb(234, 114, 8); font-weight: 600;" id="add_pics_span"></span></section>
+
+
+
+            </section>
+<!-- montage_wrapper -->
+            <section class="item_images edit">
+<ul id="" style="
+    list-style: none;
+    padding-left: 0;
+    padding-top:9;
+">
+
+</ul></section>
+    </section>
+
+
+
+
+
+
+
+
+ <section class="post-idea-wrapper" style="
+    min-height: 50px;
+    overflow: hidden;
+    padding: 16px;
+    text-align: -webkit-center;
+    margin-right: -90;
+    padding-right: 0px;
+    margin-top: -19;
+"><button style="
+    margin-top:69px;
+    /* float: right; */
+    min-height: 40px;
+    color: white;
+    background: #ff20a6;
+    letter-spacing: 0.14em;
+    padding-left: 9px;
+    padding-right: 9px;
+    margin-right: 0;
+" onclick="var h=this.parentElement.previousElementSibling.lastElementChild.lastElementChild.innerHTML;;motiv=document.getElementById('ideamotivation_').value;title=document.getElementById('ideatitle_').value;text=document.getElementById('ideacontent_').value;appendideatoall(title,text,motiv,'ik','images/ikp.jpg','@u',$('#allsources').html(),h);closeadd_window();">Post</button></section>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+    span#add_pics_span:after {
+    content: "\2193";
+    font-size: large;
+}
+</style>
+<section id="add_milestone_to_forum" style="padding: 5px;min-height: 60px;overflow: hidden;display: none;text-align: left;" class="add_new_item">
+        <span style="float: left;/* color: white; */font-size: large;cursor: pointer;opacity: 0.9;" onclick="show_add_to_from__('milestone','add')">◀</span>
+         <h2 style="
+    /* color: rgba(253, 253, 253, 0.93); */
+    text-align: center;
+    margin: 17px;
+    margin-bottom: 30px;
+    letter-spacing: 0.06em;
+    font-size: 22px;
+">New Milestone</h2>
+<input type="text" name="" style="
+    font-size: large;
+    color: #636262;
+    border: 1px solid grey;
+    border-radius: 2.5px;
+    padding: 5px;
+    margin: 3px;
+    margin-bottom: 17px;
+    width: 95%;
+" maxlength="40" minlength="1" placeholder="Enter Title" id="milestonetitle_">
+
+<section style="/* padding: 4px; *//* float: left; *//* margin-left: 12px; */min-height: 260px;">
+    <section style="/* width: 58%; *//* float: left; *//* margin-left: 7; */"> <input type="text" name="" style="
+    font-size: large;
+    color: #636262;
+    border: 1px solid grey;
+    border-radius: 2.5px;
+    padding: 5px;
+    margin: 3px;
+    font-size: medium;
+    margin-bottom: 17px;
+    width: 95%;
+" placeholder="Reference" id="milestone_ref" >
+ <textarea maxlength="200"  minlength="1" style="
+    font-size: medium;
+    /* padding: 8px; */
+    border: 1px solid grey;
+    background: white;
+    margin: 3px;
+    margin-top: 14px;
+    color: rgb(0, 0, 0);
+    width: 95%;
+    border-radius: 3px;
+    padding: 4px;
+" placeholder="Enter Content" id="milestonedesc_"></textarea></section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section style="/* max-width: 40%; *//* float: left; *//* min-height: 260px; */margin: 9px;text-align: -webkit-center;margin-left: 3;margin-right: 9;">
+  <h5 style="
+    margin-top: 36px;
+    /* margin-top: -8px; */
+    font-size: medium;
+    /* color: white; */
+    margin-bottom: 13px;
+    /* text-align: left; */
+    font-size: large;
+    /* border-top: 1px solid darkgrey; */
+">Make A  Montage</h5>
+       <section class="add_link group" style="
+    margin-bottom: 17px;
+    width: 60%;
+">
+  <span style="
+    font-weight: 600;
+    /* position: absolute; */
+    margin: 19;
+    /* margin-left: 9; */
+    color: #ea7208;
+    margin-top: 3;
+    letter-spacing: 0.05em;
+    /* font-size: x-small; */
+    padding: 9px;
+" id="add_pic_title">Add pictures</span>
+                <section>
+  <section style="
+    position: absolute;
+    width: 94.4%;
+    margin-left: 1;
+    min-height: 38;
+    background: rgba(90, 224, 81, 0.64);
+    margin-top: 10;
+   /* transition:  all 600ms cubic‑bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    width: 50%;
+    transition: 0.2s ease-in-out;
+    transition: all 0.46s cubic-bezier(0.175, 0.885, 0.32, 1.275);*/
+        transition: all 0.5s ease-in-out;
+    width: 80%;
+"></section>
+  <input accept="image/x-png,image/gif,image/jpeg" class="textip" required="" type="file" placeholder="Name" style="
+    padding: 8px;
+    text-align: center;
+    border: 1px solid orange;
+    color: transparent;
+    margin-top: 9;
+" id="up_m" onchange="pic_change(this)"><span style="position: absolute; margin-top: 18px; margin-left: -15px; color: rgb(234, 114, 8); font-weight: 600;" id="add_pics_span"></span></section>
+
+
+
+            </section>
+<!-- montage_wrapper -->
+            <section  class="item_images edit">
+<ul id="" style="
+    list-style: none;
+    padding-left: 0;
+    padding-top:9;
+">
+
+</ul></section>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+  <button style="
+    margin-top: 19px;
+    float: right;
+    min-height: 40px;
+    color: white;
+    background: #ff20a6;
+    letter-spacing: 0.14em;
+    padding-left: 9px;
+    padding-right: 9px;
+" onclick="var h=this.previousElementSibling.lastElementChild.lastElementChild.innerHTML;console.log(h);title=document.getElementById('milestonetitle_').value;text=document.getElementById('milestonedesc_').value;appendmilestone(title,text,'anu','images/ikp.jpg','@use',document.getElementById('milestone_ref').value,h);closeadd_window();">Post</button>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="add_update_to_forum" style="padding: 5px; margin: 7px; min-height: 60px; overflow: hidden; display: none; " class="add_new_item">
+
+   <span style="float: left;/* color: white; */font-size: large;cursor: pointer;opacity: 0.9;" onclick="show_add_to_from__('update','add')">◀</span>
+  <h2 style="
+    /* color: rgba(253, 253, 253, 0.93); */
+    text-align: center;
+    margin: 17px;
+    margin-bottom: 30px;
+    letter-spacing: 0.06em;
+    font-size: 22px;
+">New Update</h2>
+
+<input type="text" name="" style="
+    font-size: large;
+    color: #636262;
+    border: 1px solid grey;
+    border-radius: 2.5px;
+    padding: 5px;
+    margin: 3px;
+    margin-bottom: 17px;
+    width: 95%;
+" placeholder="Enter Title" minlength="1" maxlength="50" id="updatetitle_">
+  <textarea style="
+    font-size: medium;
+    /* padding: 8px; */
+    border: 1px solid grey;
+    background: white;
+    margin: 3px;
+    margin-top: 14px;
+    color: rgb(0, 0, 0);
+    width: 95%;
+    border-radius: 3px;
+" placeholder="Enter Content"  minlength="1" maxlength="140" id="updatecontent_"></textarea>
+
+
+
+
+
+
+<section style="/* max-width: 40%; *//* float: left; *//* min-height: 260px; */margin: 9px;margin-top:19px;text-align: -webkit-center;margin-left: 3;margin-right: 9;">
+
+       <section class="add_link group" style="
+    margin-bottom: 17px;
+    width: 60%;
+">
+  <span style="
+    font-weight: 600;
+    /* position: absolute; */
+    margin: 19;
+    /* margin-left: 9; */
+    color: #ea7208;
+    margin-top: 3;
+    letter-spacing: 0.05em;
+    /* font-size: x-small; */
+    padding: 9px;
+" id="add_pic_title">Add pictures</span>
+                <section>
+  <section style="
+    position: absolute;
+    width: 94.4%;
+    margin-left: 1;
+    min-height: 38;
+    background: rgba(90, 224, 81, 0.64);
+    margin-top: 10;
+   /* transition:  all 600ms cubic‑bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    width: 50%;
+    transition: 0.2s ease-in-out;
+    transition: all 0.46s cubic-bezier(0.175, 0.885, 0.32, 1.275);*/
+        transition: all 0.5s ease-in-out;
+    width: 80%;
+"></section>
+  <input accept="image/x-png,image/gif,image/jpeg" class="textip" required="" type="file" placeholder="Name" style="
+    padding: 8px;
+    text-align: center;
+    border: 1px solid orange;
+    color: transparent;
+    margin-top: 9;
+" id="up_m" onchange="pic_change(this)"><span style="position: absolute; margin-top: 18px; margin-left: -15px; color: rgb(234, 114, 8); font-weight: 600;" id="add_pics_span"></span></section>
+
+
+
+            </section>
+<!-- montage_wrapper -->
+            <section class="item_images edit">
+<ul id="" style="
+    list-style: none;
+    padding-left: 0;
+    padding-top:9;
+">
+
+</ul></section>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+  <button style="   margin-top: 19px;
+    float: right;
+    min-height: 40px;
+    color: white;
+    background: #ff20a6;
+    letter-spacing: 0.14em;
+    padding-left: 9px;
+    padding-right: 9px;
+" onclick="var h=this.previousElementSibling.lastElementChild.lastElementChild.innerHTML;title=document.getElementById('updatetitle_').value;text=document.getElementById('updatecontent_').value;appendupdatetoall(title,text,'name','images/ikp.jpg','@ik',h);closeadd_window();">Post</button>
+
+<!-- //name,pic,username
+ -->
+
+</section>
+
+
+
+
+
+
+<section id="add_mention_to_forum" style="padding: 5px; margin: 7px; min-height: 60px; overflow: hidden; display:none;" class="add_new_item">
+
+   <span style="float: left;/* color: white; */font-size: large;cursor: pointer;opacity: 0.9;" onclick="show_add_to_from__('mention','reply')">◀</span>
+  <h2 style="
+    /* color: rgba(253, 253, 253, 0.93); */
+    text-align: center;
+    margin: 17px;
+    margin-bottom: 30px;
+    letter-spacing: 0.06em;
+    font-size: 22px;
+">Mention</h2>
+
+
+<center>
+<section id="mention_Ref" style="padding:8px;margin:5px;word-wrap:break-word;border: 1px solid rgba(130, 130, 130, 0.45);min-height:60px;background: white;border-radius: 6px;margin-bottom: 20px;max-width: 400px">
+
+  <h4 style="
+    margin: 5px;
+    margin-top: -1px;
+    font-size: larger;
+" class="ref-title">Title</h4>
+  <section style="
+
+    margin-top: 9px;
+    text-align: left;
+    margin-bottom: 19px;
+    font-size: small;
+    padding: 5;
+
+" class="ref-text">Text</section><section style="
+    min-height: 30px;
+    overflow: hidden;
+    padding: 6px;
+    text-align: -webkit-right;
+    font-size: small;
+" class="ref-c-wrapper">
+  <h6 style="
+    text-align: right;
+    color: #c7c7c7;
+    margin: 2px;
+" class="ref-date">Jan-1 2017 9:00 EST</h6><span style="
+    /* float:right; */
+    text-align: right;
+    margin: 9px;
+    font-weight: 600;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    word-spacing: 0.139em;
+" class="ref-wrapper"><img src="images/ikp.jpg" width="35" height="30" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;
+    margin-top: -6;" class="ref-profpic"><small class="ref-name">Name </small><small style="color: grey" class="ref-username">(@username)</small> <small>from</small> <a class="ref-place" style="
+    font-size: x-small;
+">Place</a>
+<br>
+<!-- <small style="line-height: 0.2;color:grey" >Jan-1 2017 9:00 EST</small>
+ -->    </span>
+
+</section>
+
+</section>
+
+
+</center>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <input type="text" name="" style="
+    font-size: large;
+    color: #636262;
+    border: 1px solid grey;
+    border-radius: 2.5px;
+    padding: 5px;
+    margin: 3px;
+    margin-bottom: 17px;
+    width: 95%;
+" placeholder="Enter Title" id="mentiontitle_"> -->
+  <textarea style="
+    font-size: medium;
+    /* padding: 8px; */
+    border: 1px solid grey;
+    background: white;
+    margin: 3px;
+    margin-top: 14px;
+    color: rgb(0, 0, 0);
+    width: 95%;
+    border-radius: 3px;
+" placeholder="Enter Content" maxlength="140" minlength="1" id="mentioncontent_"></textarea>
+
+
+
+
+
+
+
+
+
+
+<section style="/* max-width: 40%; *//* float: left; *//* min-height: 260px; */margin: 9px;margin-top:19px;text-align: -webkit-center;margin-left: 3;margin-right: 9;">
+
+       <section class="add_link group" style="
+    margin-bottom: 17px;
+    width: 60%;
+">
+  <span style="
+    font-weight: 600;
+    /* position: absolute; */
+    margin: 19;
+    /* margin-left: 9; */
+    color: #ea7208;
+    margin-top: 3;
+    letter-spacing: 0.05em;
+    /* font-size: x-small; */
+    padding: 9px;
+" id="add_pic_title">Add pictures</span>
+                <section>
+  <section style="
+    position: absolute;
+    width: 94.4%;
+    margin-left: 1;
+    min-height: 38;
+    background: rgba(90, 224, 81, 0.64);
+    margin-top: 10;
+   /* transition:  all 600ms cubic‑bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    width: 50%;
+    transition: 0.2s ease-in-out;
+    transition: all 0.46s cubic-bezier(0.175, 0.885, 0.32, 1.275);*/
+        transition: all 0.5s ease-in-out;
+    width: 80%;
+"></section>
+  <input accept="image/x-png,image/gif,image/jpeg" class="textip" required="" type="file" placeholder="Name" style="
+    padding: 8px;
+    text-align: center;
+    border: 1px solid orange;
+    color: transparent;
+    margin-top: 9;
+" id="up_m" onchange="pic_change(this)"><span style="position: absolute; margin-top: 18px; margin-left: -15px; color: rgb(234, 114, 8); font-weight: 600;" id="add_pics_span"></span></section>
+
+
+
+            </section>
+<!-- montage_wrapper -->
+            <section class="item_images edit">
+<ul id="" style="
+    list-style: none;
+    padding-left: 0;
+    padding-top:9;
+">
+
+</ul></section>
+    </section>
+
+
+
+
+
+
+
+
+
+
+  <button style="   margin-top: 53px;
+    float: right;
+    min-height: 40px;
+    color: white;
+    background: #ff20a6;
+    letter-spacing: 0.14em;
+    padding-left: 9px;
+    padding-right: 9px;
+" onclick="var h=this.previousElementSibling.lastElementChild.lastElementChild.innerHTML;;text=document.getElementById('mentioncontent_').value;appendmention(text,$('#mention_Ref'),'@ik','nm','images/ik.jpg',h);closeadd_window();">Post</button>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<section id="add_pass_on_to_forum" style="padding: 5px; margin: 7px; min-height: 60px; overflow: hidden; display:none;" class="add_new_item">
+
+   <span style="float: left;/* color: white; */font-size: large;cursor: pointer;opacity: 0.9;" onclick="show_add_to_from__('pass_on','reply')">◀</span>
+  <h2 style="
+    /* color: rgba(253, 253, 253, 0.93); */
+    text-align: center;
+    margin: 17px;
+    margin-bottom: 30px;
+    letter-spacing: 0.06em;
+    font-size: 22px;
+">Share to another forum</h2>
+
+
+
+
+
+
+
+<input type="text" name="" style="
+    font-size: large;
+    color: #636262;
+    border: 1px solid grey;
+    border-radius: 2.5px;
+    padding: 5px;
+    margin: 3px;
+    margin-bottom: 17px;
+    width: 97%;
+" placeholder="#Search Forums" id="mentiontitle_">
+
+
+
+
+
+
+
+
+
+
+
+
+  <button style="   margin-top: 53px;
+    float: right;
+    min-height: 40px;
+    color: white;
+    background: #ff20a6;
+    letter-spacing: 0.14em;
+    padding-left: 9px;
+    padding-right: 9px;
+" onclick="var h=this.previousElementSibling.lastElementChild.lastElementChild.innerHTML;;text=document.getElementById('mentioncontent_').value;appendmention(text,$('#mention_Ref'),'@ik','nm','images/ik.jpg',h);closeadd_window();">Done</button>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="add_add_to_to_forum" style="padding: 5px; margin: 7px; min-height: 60px; overflow: hidden; display: none;" class="add_new_item">
+
+   <span style="float: left;/* color: white; */font-size: large;cursor: pointer;opacity: 0.9;" onclick="show_add_to_from__('add_to','reply')">◀</span>
+  <h2 style="
+    /* color: rgba(253, 253, 253, 0.93); */
+    text-align: center;
+    margin: 17px;
+    margin-bottom: 30px;
+    letter-spacing: 0.06em;
+    font-size: 22px;
+">Add to</h2>
+
+
+<center>
+
+<section id="add_to_Ref" style="padding:8px;margin:5px;word-wrap:break-word;border: 1px solid rgba(130, 130, 130, 0.45);min-height:60px;background: white;border-radius: 6px;margin-bottom: 20px;max-width: 400">
+
+  <h4 style="
+    margin: 5px;
+    margin-top: -1px;
+    font-size: larger;
+" class="ref-title">Title</h4>
+  <section style="
+
+    margin-top: 9px;
+    text-align: left;
+    margin-bottom: 19px;
+    font-size: small;
+    padding: 5;
+
+" class="ref-text">Text</section><section style="
+    min-height: 30px;
+    overflow: hidden;
+    padding: 6px;
+    text-align: -webkit-right;
+    font-size: small;
+" class="ref-c-wrapper">
+  <h6 style="
+    text-align: right;
+    color: #c7c7c7;
+    margin: 2px;
+" class="ref-date">Jan-1 2017 9:00 EST</h6><span style="
+    /* float:right; */
+    text-align: right;
+    margin: 9px;
+    font-weight: 600;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    word-spacing: 0.139em;
+" class="ref-wrapper"><img src="images/ikp.jpg" width="35" height="30" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;
+    margin-top: -6;" class="ref-profpic"><small class="ref-name">Name </small> <small style="color: grey" class="ref-username">(@username)</small><small> from</small> <a class="ref-place" style="
+    font-size: x-small;
+">Place</a>
+<br>
+<!-- <small style="line-height: 0.2;color:grey" >Jan-1 2017 9:00 EST</small>
+ -->    </span>
+
+</section>
+
+</section></center>
+
+<!--
+<input type="text" name="" style="
+    font-size: large;
+    color: #636262;
+    border: 1px solid grey;
+    border-radius: 2.5px;
+    padding: 5px;
+    margin: 3px;
+    margin-bottom: 17px;
+    width: 95%;
+" placeholder="Enter Title" id="addtotitle_"> -->
+  <textarea style="
+    font-size: medium;
+    /* padding: 8px; */
+    border: 1px solid grey;
+    background: white;
+    margin: 3px;
+    margin-top: 14px;
+    color: rgb(0, 0, 0);
+    width: 95%;
+    border-radius: 3px;
+" placeholder="Enter Content" maxlength="140" minlength="1" id="addtocontent_"></textarea>
+
+
+
+
+
+
+
+
+
+
+
+
+<section style="/* max-width: 40%; *//* float: left; *//* min-height: 260px; */margin: 9px;margin-top:19px;text-align: -webkit-center;margin-left: 3;margin-right: 9;">
+
+       <section class="add_link group" style="
+    margin-bottom: 17px;
+    width: 60%;
+">
+  <span style="
+    font-weight: 600;
+    /* position: absolute; */
+    margin: 19;
+    /* margin-left: 9; */
+    color: #ea7208;
+    margin-top: 3;
+    letter-spacing: 0.05em;
+    /* font-size: x-small; */
+    padding: 9px;
+" id="add_pic_title">Add pictures</span>
+                <section>
+  <section style="
+    position: absolute;
+    width: 94.4%;
+    margin-left: 1;
+    min-height: 38;
+    background: rgba(90, 224, 81, 0.64);
+    margin-top: 10;
+   /* transition:  all 600ms cubic‑bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    width: 50%;
+    transition: 0.2s ease-in-out;
+    transition: all 0.46s cubic-bezier(0.175, 0.885, 0.32, 1.275);*/
+        transition: all 0.5s ease-in-out;
+    width: 80%;
+"></section>
+  <input accept="image/x-png,image/gif,image/jpeg" class="textip" required="" type="file" placeholder="Name" style="
+    padding: 8px;
+    text-align: center;
+    border: 1px solid orange;
+    color: transparent;
+    margin-top: 9;
+" id="up_m" onchange="pic_change(this)"><span style="position: absolute; margin-top: 18px; margin-left: -15px; color: rgb(234, 114, 8); font-weight: 600;" id="add_pics_span"></span></section>
+
+
+
+            </section>
+<!-- montage_wrapper -->
+            <section class="item_images edit">
+<ul id="" style="
+    list-style: none;
+    padding-left: 0;
+    padding-top:9;
+">
+
+</ul></section>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+  <button style="   margin-top: 53px;
+    float: right;
+    min-height: 40px;
+    color: white;
+    background: #ff20a6;
+    letter-spacing: 0.14em;
+    padding-left: 9px;
+    padding-right: 9px;
+" onclick="var h=this.previousElementSibling.lastElementChild.lastElementChild.innerHTML;text=document.getElementById('addtocontent_').value;appendaddto(text,$('#add_to_Ref'),'@ik','nm','images/ik.jpg',h);closeadd_window();">Post</button>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="add_credit_to_forum" style="padding: 5px; margin: 7px; min-height: 60px; overflow: hidden; display: none; " class="add_new_item">
+
+   <span style="float: left;/* color: white; */font-size: large;cursor: pointer;opacity: 0.9;" onclick="show_add_to_from__('credit','reply')">◀</span>
+  <h2 style="
+    /* color: rgba(253, 253, 253, 0.93); */
+    text-align: center;
+    margin: 17px;
+    margin-bottom: 30px;
+    letter-spacing: 0.06em;
+    font-size: 22px;
+">Give Credit </h2>
+
+
+<center>
+<section id="credit_ref" style="padding:8px;margin:5px;word-wrap:break-word;border: 1px solid rgba(130, 130, 130, 0.45);min-height:60px;background: white;border-radius: 6px;margin-bottom: 20px;;max-width: 400">
+
+  <h4 style="
+    margin: 5px;
+    margin-top: -1px;
+    font-size: larger;
+" class="ref-title">Title</h4>
+  <section style="
+
+    margin-top: 9px;
+    text-align: left;
+    margin-bottom: 19px;
+    font-size: small;
+    padding: 5;
+
+" class="ref-text">Text</section><section style="
+    min-height: 30px;
+    overflow: hidden;
+    padding: 6px;
+    text-align: -webkit-right;
+    font-size: small;
+" class="ref-c-wrapper">
+  <h6 style="
+    text-align: right;
+    color: #c7c7c7;
+    margin: 2px;
+" class="ref-date">Jan-1 2017 9:00 EST</h6><span style="
+    /* float:right; */
+    text-align: right;
+    margin: 9px;
+    font-weight: 600;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    word-spacing: 0.139em;
+" class="ref-wrapper"><img src="images/ikp.jpg" width="35" height="30" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;
+    margin-top: -6;" class="ref-profpic"><small class="ref-name">Name </small><small style="color: grey" class="ref-username">(@username)</small><small> from </small><a class="ref-place" style="
+    font-size: x-small;
+">Place</a>
+<br>
+<!-- <small style="line-height: 0.2;color:grey" >Jan-1 2017 9:00 EST</small>
+ -->    </span>
+
+</section>
+
+</section>
+
+
+
+</center>
+
+
+
+<!-- <input type="text" name="" style="
+    font-size: large;
+    color: #636262;
+    border: 1px solid grey;
+    border-radius: 2.5px;
+    padding: 5px;
+    margin: 3px;
+    margin-bottom: 17px;
+    width: 95%;
+" placeholder="Enter Title" id="credittitle_"> -->
+  <textarea style="
+    font-size: medium;
+    /* padding: 8px; */
+    border: 1px solid grey;
+    background: white;
+    margin: 3px;
+    margin-top: 14px;
+    color: rgb(0, 0, 0);
+    width: 95%;
+    border-radius: 3px;
+" placeholder="Enter Content" maxlength="140" minlength="1" id="creditcontent_"></textarea>
+
+
+
+
+
+
+
+
+
+
+
+<section style="/* max-width: 40%; *//* float: left; *//* min-height: 260px; */margin: 9px;margin-top:19px;text-align: -webkit-center;margin-left: 3;margin-right: 9;">
+
+       <section class="add_link group" style="
+    margin-bottom: 17px;
+    width: 60%;
+">
+  <span style="
+    font-weight: 600;
+    /* position: absolute; */
+    margin: 19;
+    /* margin-left: 9; */
+    color: #ea7208;
+    margin-top: 3;
+    letter-spacing: 0.05em;
+    /* font-size: x-small; */
+    padding: 9px;
+" id="add_pic_title">Add pictures</span>
+                <section>
+  <section style="
+    position: absolute;
+    width: 94.4%;
+    margin-left: 1;
+    min-height: 38;
+    background: rgba(90, 224, 81, 0.64);
+    margin-top: 10;
+   /* transition:  all 600ms cubic‑bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    width: 50%;
+    transition: 0.2s ease-in-out;
+    transition: all 0.46s cubic-bezier(0.175, 0.885, 0.32, 1.275);*/
+        transition: all 0.5s ease-in-out;
+    width: 80%;
+"></section>
+  <input accept="image/x-png,image/gif,image/jpeg" class="textip" required="" type="file" placeholder="Name" style="
+    padding: 8px;
+    text-align: center;
+    border: 1px solid orange;
+    color: transparent;
+    margin-top: 9;
+" id="up_m" onchange="pic_change(this)"><span style="position: absolute; margin-top: 18px; margin-left: -15px; color: rgb(234, 114, 8); font-weight: 600;" id="add_pics_span"></span></section>
+
+
+
+            </section>
+<!-- montage_wrapper -->
+            <section class="item_images edit">
+<ul id="" style="
+    list-style: none;
+    padding-left: 0;
+    padding-top:9;
+">
+
+</ul></section>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <button style="   margin-top: 53px;
+    float: right;
+    min-height: 40px;
+    color: white;
+    background: #ff20a6;
+    letter-spacing: 0.14em;
+    padding-left: 9px;
+    padding-right: 9px;
+" onclick="var h=this.previousElementSibling.lastElementChild.lastElementChild.innerHTML;;text=document.getElementById('creditcontent_').value;appendcredit(text,$('#credit_ref'),'@ik','nm','images/ik.jpg',h);closeadd_window();">Post</button>
+
+
+
+
+</section>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+</div></center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<button class="floating-button" onclick="add_window('add',this)" id="post-something" style="
+ top:90%;
+    right: 0;
+    font-size: x-large;
+    width: 48px;
+    height: 48px;
+    min-width: 30px;
+    min-height: 30px;
+    max-width: 44px;
+    max-height: 45px;
+    background: #1d8be2;
+    position: fixed;z-index: 15;
+    ">+</button>
+
+
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+  <script>
+  (function(b, o, i, l, e, r) {
+    b.GoogleAnalyticsObject = l;
+    b[l] || (b[l] =
+      function() {
+        (b[l].q = b[l].q || []).push(arguments) });
+    b[l].l = +new Date;
+    e = o.createElement(i);
+    r = o.getElementsByTagName(i)[0];
+    e.src = 'https://www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e, r)
+  }(window, document, 'script', 'ga'));
+  ga('create', 'UA-XXXXX-X');
+  ga('send', 'pageview');
+
+  </script>
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:js scripts/velocity.min.js -->
+  <script src="scripts/velocity.min.js"></script>
+  <!-- endbuild -->
+  <!-- build:js scripts/jquery-autocomplete.js -->
+  <script src="scripts/jquery-autocomplete.js"></script>
+  <!-- endbuild -->
+  <!-- build:js scripts/catmenu.js -->
+  <script src="scripts/catmenu.js"></script>
+  <!-- endbuild -->
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
+</body>
+
 </html>
