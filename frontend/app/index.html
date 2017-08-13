@@ -20,8 +20,11 @@
   <!-- build:css styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
-  <style type="text/css">
-  /*@font-face {
+
+
+
+        <style type="text/css">
+@font-face {
         font-family: 'Merriweather';
      src: url('../fonts/NotoSans-Regular.ttf'),
             url('../fonts/NotoSans-Italic.ttf'),
@@ -32,17 +35,13 @@
 
          font-weight: normal;
         font-style: normal;
-    }*/
+    }
+    body
+{
+    font-family: 'Merriweather';overflow-x: hidden;background:#ffe799;background: #fde187;
+}
 
-  body {
-    font-family: 'Merriweather';
-    overflow-x: hidden;
-    background: #ffe799;
-    background: #fde187;
-  }
-
-  .menu,
-  .menu:hover {
+.menu, .menu:hover {
     /* margin-left: 7px; */
     float: left;
     padding: 3px;
@@ -51,7 +50,7 @@
     margin-top: 12px;
     margin-left: 12px;
     margin-right: 9px;
-    left: 4;
+    left: 4px;
     padding-left: 6px;
     /* border: 1.6px solid rgba(255, 255, 255, 0.56); */
     border-radius: 50%;
@@ -59,54 +58,47 @@
     min-width: 20px;
     min-height: 30px;
     -webkit-box-shadow: none;
-    box-shadow: none;
+            box-shadow: none;
     background: transparent;
-  }
-
-  .menu::before {
+}
+.menu::before {
     content: "\2630";
     margin-right: 5px;
     font-size: 21px;
     font-weight: bolder;
     color: white;
-  }
+}
+#fixnav{
+    display: block;text-align: -webkit-center;
+}
+       .hero-unit{
+background:inherit;padding: 16px;min-height:140px;overflow: hidden;margin:9px;
 
-  #fixnav {
-    display: block;
-    text-align: -webkit-center;
-  }
-
-  .hero-unit {
-    background: inherit;
-    padding: 16px;
-    min-height: 140px;
-    overflow: hidden;
-    margin: 9px;
-  }
+        }
 
 
 
-  section.forums {
+        section.forums {
     margin: 14px;
     margin-top: 27px;
     min-height: 90px;
     overflow: hidden;
-    display: block;
+        display: block;
     text-align: -webkit-left;
-    padding-left: 6.5px;
-  }
+    padding-left:6.5px;
+}
 
-  .forum.card-shadow {
-    min-height: 160px;
+.forum.card-shadow {
+  min-height: 160px;
     margin-bottom: 40px;
-    padding: 0;
+    padding: 0px;
     /* position: relative; */
     max-height: 99px;
     text-align: -webkit-center;
-  }
+}
 
-  .f-header {
-    /*min-height: 51px;
+.f-header {
+/*min-height: 51px;
     min-width: 150px;
     position: absolute;
     border-radius: 30px;
@@ -125,8 +117,9 @@
     height: 60px;
     font-size: x-large;
     margin-left: 3%;*/
-    min-height: 51px;
-    */
+
+
+    min-height: 51px; */
     /* min-height: 51px; */
     min-height: 51px;
     /* min-height: 51px; */
@@ -134,10 +127,10 @@
     border-radius: 30px;
     /* float: right; */
     /* margin-left: 60%; */
-    margin-top: 16.8;
+    margin-top: 16.8px;
     background: rgb(29, 139, 226);
     -webkit-box-shadow: 1px 1px grey;
-    box-shadow: 1px 1px grey;
+            box-shadow: 1px 1px grey;
     background-size: 100% 100%;
     /* left: 30%; */
     z-index: 1;
@@ -147,7 +140,7 @@
     font-weight: 600;
     letter-spacing: 1px;
     -webkit-box-shadow: -1px 0.8px 9px #4e4c4c;
-    box-shadow: -1px 0.8px 9px #4e4c4c;
+            box-shadow: -1px 0.8px 9px #4e4c4c;
     cursor: pointer;
     /* top: 0; */
     /* left: 0; */
@@ -161,272 +154,234 @@
     /* left: 0; */
     /* top: 0; */
     /* left: 0; */
-  }
 
-  .forum.card-shadow .img {
-    width: 33.33%;
-    margin: 0;
-    padding: 0;
+}
+.forum.card-shadow .img {
+      width: 33.33%;
+    margin: 0px;
+    padding: 0px;
     height: 204px;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.52)), to(rgba(0, 0, 0, 0.21))), url(images/js.jpg);
-    background: linear-gradient(rgba(255, 255, 255, 0.52), rgba(0, 0, 0, 0.21)), url(images/js.jpg);
+    background: -webkit-gradient(linear,left top, left bottom,from(rgba(255, 255, 255, 0.52)),to(rgba(0, 0, 0, 0.21))),url(images/js.jpg);
+    background: linear-gradient(rgba(255, 255, 255, 0.52),rgba(0, 0, 0, 0.21)),url(images/js.jpg);
     display: inline-block;
     float: left;
     background-size: 100% 100%;
-  }
-
-  .f-header:before {
+}
+.f-header:before {
     /* min-height: 60px; */
     /* min-width: 60px; */
     /* background: black; */
     /* position: relative; */
     /* border-radius: 20%; */
-  }
+}
 
-  .card.new_post .see-more {
+.card.new_post .see-more {
     display: inline-block;
-  }
-
-  .card.new_post {
+}
+.card.new_post{
     margin-top: 3px;
-  }
-
-  .card.new_post .see-more {
+}
+.card.new_post .see-more {
     padding: 6px;
     float: right;
     cursor: pointer;
     color: rgb(128, 128, 128);
     display: inline-block;
-  }
+}
 
-  .card.new_post .see-more:before {
+.card.new_post .see-more:before {
     content: "\2715";
-    padding: 15;
-    padding-top: 17;
-    margin-top: 6;
+    padding: 15px;
+    padding-top: 17px;
+    margin-top: 6px;
     font-size: large;
-  }
-
-  .card.new_post.compressed .see-more:before {
-    content: "....";
-    padding: 5px;
-    font-size: larger;
-  }
-
-  .card.new_post.compressed .see-more[disabled="true"],
-  .card.new_post.compressed .see-more[disabled] {
+}
+.card.new_post.compressed .see-more:before {
+    content: "....";padding: 5px;font-size: larger;
+}
+.card.new_post.compressed .see-more[disabled="true"],.card.new_post.compressed .see-more[disabled]{
     cursor: not-allowed;
-  }
-
-  .card.new_post.compressed .see-more[disabled="true"]:before,
-  .card.new_post.compressed .see-more[disabled]:before {
-    cursor: not-allowed;
-    content: "";
-  }
-
-  .card.new_post.compressed {
-    float: none;
-    margin-bottom: 71;
-    margin-top: 3;
-    position: relative;
-  }
-
-  section.loader-overlay.dnone {
+}
+.card.new_post.compressed .see-more[disabled="true"]:before,.card.new_post.compressed .see-more[disabled]:before{
+    cursor: not-allowed;content: "";
+}
+.card.new_post.compressed{
+    float: none;    margin-bottom: 71px;    margin-top: 3px;position: relative;
+}
+section.loader-overlay.dnone {
     display: none;
-  }
-
-  .card.new_post {
+}
+.card.new_post{
     position: relative;
-  }
+}
 
-  .new_post .posttitle {
-    padding: 14px;
-  }
+.new_post .posttitle{
+padding: 14px;
+}
 
-  .card.new_post.compressed>.card.new_post.compressed {
+ .card.new_post.compressed > .card.new_post.compressed {
     float: none;
-    margin-bottom: 6;
-    margin-top: 21;
+    margin-bottom: 6px;
+    margin-top: 21px;
     position: relative;
     -webkit-box-shadow: none;
-    box-shadow: none;
-    border: 1px solid rgba(220, 220, 220, 0.5);
-  }
-
-  .overlay_menu {
-    background: rgba(3, 35, 49, 0.64);
-  }
-
-  .overlay_menu ul.menucontent {
+            box-shadow: none;
+    border:1px solid rgba(220,220,220,0.5);
+}
+        .overlay_menu{
+                   background: rgba(3, 35, 49, 0.64);
+}
+       .overlay_menu ul.menucontent {
     list-style: none;
     padding: 5px;
     display: block;
     text-align: -webkit-left;
-  }
+}
 
-  .overlay_menu .menucontent .floating-button {
+.overlay_menu .menucontent .floating-button {
     width: 37px;
     height: 37px;
     font-size: x-large;
     margin: 22.9px;
-  }
-
-  .icon-accom:before {
+}
+.icon-accom:before {
     content: "\e7f1";
-  }
+}
 
 
 
-  .menucontent li {
+.menucontent li {
     padding: 5px;
     margin-bottom: 2px;
     border-bottom: 1px solid rgba(255, 250, 250, 0.75);
     display: inherit;
     width: 90%;
-  }
+}
 
-  .menucontent li big {
+.menucontent li big {
     font-size: large;
     /* font-style: italic; */
-  }
+}
+.add-text>div{
+    -webkit-box-shadow:none;
+            box-shadow:none;
+}
 
-  .add-text>div {
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
 
-
-  section.post-loader {
+section.post-loader {
     margin-top: 10%;
     color: white;
     /* text-align: center; */
-  }
+}
 
-  section.show-p {
+section.show-p {
     max-width: 48%;
     min-height: 30px;
     display: block;
     text-align: left;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-    margin: 0;
-  }
+    margin: 0px;
+}
 
-  hr.p-hr {
+hr.p-hr {
     width: 56%;
-  }
+}
 
-  section.p-hr {
-    min-height: 5;
+section.p-hr {
+    min-height: 5px;
     border-top: 2px solid white;
     width: 39%;
     border-color: #3be0f5;
     margin-top: 8px;
-    -webkit-transition: all 0.63s cubic-bezier(.87, -.41, .19, 1.44);
-    transition: all 0.63s cubic-bezier(.87, -.41, .19, 1.44);
-  }
-
-  .loader-overlay {
+    -webkit-transition: all 0.63s cubic-bezier(.87,-.41,.19,1.44);
+    transition: all 0.63s cubic-bezier(.87,-.41,.19,1.44);
+}
+.loader-overlay {
     position: absolute;
-    top: 0;
+    top: 0px;
     width: 100%;
     height: 100%;
-    left: 0;
-    background: rgba(0, 0, 0, 0.68);
-  }
-
-  button.floating-button.close {
+    left: 0px;
+    background: rgba(0,0,0,0.68);
+}
+button.floating-button.close{
     float: right;
-    margin: -29;
-    margin-top: 2;
-    margin-right: -38;
-    min-height: 49;
-    background: rgb(105, 154, 241);
+    margin: -29px;
+    margin-top: 2px;
+    margin-right: -38px;
+    min-height:49px;
+    background:rgb(105, 154, 241);
     /* position: absolute; */
-  }
-
-  button.floating-button.close:before {
-    content: "\2715";
-    color: whitesmoke;
-    font-size: 19;
-  }
-
-  button.floating-button.close:hover {
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
-
-  p.post-paragraph {
+}
+button.floating-button.close:before {content: "\2715";color:whitesmoke;font-size:19;}
+button.floating-button.close:hover {-webkit-box-shadow:none;box-shadow:none;}
+p.post-paragraph {
     text-align: left;
-    margin: 2;
-    margin-bottom: 8;
-    font-size: 12;
-  }
+    margin: 2px;
+    margin-bottom: 8px;
+    font-size: 12px;
 
-  .card-ul.attache li a {
+}
+.card-ul.attache li a {
     -webkit-transition: 0.2s ease-in-out;
     transition: 0.2s ease-in-out;
     cursor: pointer;
-  }
+}
 
-  .card-ul {
-    padding: 4;
-    margin: 0;
+.card-ul {
+ padding: 4px;
+    margin: 0px;
     list-style: none;
     text-align: left;
-    padding-left: 15;
-    margin-bottom: 11;
-  }
+    padding-left: 15px;
+    margin-bottom: 11px;
+}
+.card-ul .attache{
 
-  .card-ul .attache {}
-
-  .card-ul li {
+}
+.card-ul li {
     padding: 2px;
-  }
+}
 
-  #li_ li {
+#li_ li {
     margin-bottom: 12px;
     margin-left: 4px;
-  }
-
-  #li_ li ul>li {
+}
+#li_ li ul>li{
     color: cornflowerblue;
     cursor: pointer;
-    font-weight: 100;
-    opacity: 0.9;
-  }
-
-  #li_ li ul {
+    font-weight: 100;opacity: 0.9;
+}
+#li_ li ul{
     margin-top: 10px;
-  }
-
-  #li_ li>big {
+}
+#li_ li>big {
     margin-left: -4px;
-  }
-
-  #add-new input::-webkit-input-placeholder {
+}
+#add-new input::-webkit-input-placeholder {
     color: rgba(240, 157, 14, 0.7);
     text-align: left;
-  }
+}
 
-  #add-new input:-moz-placeholder {
+#add-new input:-moz-placeholder {
     color: rgba(240, 157, 14, 0.7);
     text-align: left;
-  }
+}
 
-  #add-new input::-moz-placeholder {
+#add-new input::-moz-placeholder {
     color: rgba(240, 157, 14, 0.7);
     text-align: left;
-  }
+}
 
-  #add-new :-ms-input-placeholder {
+#add-new :-ms-input-placeholder {
     color: rgba(240, 157, 14, 0.7);
     text-align: left;
-  }
+}
 
 
 
-  section.action-link {
+section.action-link {
     max-width: 35px;
     min-width: 35px;
     text-align: center;
@@ -438,155 +393,139 @@
     border-radius: 50%;
     float: right;
     cursor: pointer;
-    margin: 9;
+    margin: 9px;
     margin-right: 11px;
-    margin-bottom: 22;
-  }
+        margin-bottom: 22px;
+}
 
-  section.action-link:first-child {
+section.action-link:first-child {
     margin-right: 9px;
-  }
+}
 
 
-  section.action-link .num {
+section.action-link .num {
 
-    position: absolute;
-    margin-top: 27;
+  position: absolute;
+    margin-top: 27px;
     margin-left: -10.99;
-    font-size: 11;
+    font-size: 11px;
     color: coral;
-    padding: 1.6;
-  }
-
-  .is_ref big>span {
+    padding: 1.6px;
+}
+.is_ref big>span{
     color: orange;
-  }
+}
+.idea_links li{
 
-  .idea_links li {
-
-    margin: 5px;
-    cursor: pointer;
-  }
-
-  .item_images>img {
-    min-width: 300px;
-    max-width: 5%;
-    margin-right: 4px;
-    margin-top: 19;
-    min-width: 300px;
-    border: 1px solid rgba(255, 249, 249, 0.94);
-    border-radius: 4px;
-  }
+margin: 5px; cursor: pointer;
+}
+.item_images>img{
+     min-width: 300px;  max-width: 5%;  margin-right: 4px;  margin-top: 19px;min-width: 300px;
+     border: 1px solid rgba(255, 249, 249, 0.94);   border-radius: 4px;
+}
 
 
 
 
 
-  section.item_images li {
+section.item_images li {
     /* display: none; */
-    margin-bottom: 10;
-    margin-right: 12;
+    margin-bottom: 10px;
+    margin-right: 12px;
     float: left;
     display: inline-block;
-  }
+}
 
-  .item_images li>section {
+.item_images li>section {
     display: block;
     max-width: 35%;
     min-width: 220px;
-    min-height: 200;
+    min-height: 200px;
     border-radius: 3px;
-    border: 1px solid gainsboro;
+    border:1px solid gainsboro;
     /* background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/owl1.jpg); */
     /* background-repeat: no-repeat; */
-  }
+}
 
-  section.item_images.edit li {
+section.item_images.edit li {
     float: none;
-  }
 
-  .item_images li:nth-child(6) {
-    margin-top: -159.99999;
-  }
+}
+.item_images li:nth-child(6) {
+    margin-top: -159.99999px;
+}
 
-  .item_images li:nth-child(6)>section,
-  .item_images li:nth-child(4)>section {
-    min-height: 150;
-  }
+.item_images li:nth-child(6) > section ,.item_images li:nth-child(4) > section {
+    min-height: 150px;
+}
 
-  .item_images li:nth-child(7) {
-    margin-top: 3;
-  }
+.item_images li:nth-child(7) {
+    margin-top: 3px;
+}
 
-  .item_images li:nth-child(8) {
-    margin-top: -210.7;
-  }
+.item_images li:nth-child(8) {
+    margin-top: -210.7px;
+}
+.item_images li:nth-child(8)>section{
+    min-height: 200px;
+}
+.item_images.edit li:nth-child(6),.item_images.edit li:nth-child(7),.item_images.edit li:nth-child(8){
+margin-top: 0px;
+}
+.item_images.edit li:nth-child(6)>section,.item_images.edit li:nth-child(4)>section
+{
+    min-height: 200px;
+}
 
-  .item_images li:nth-child(8)>section {
-    min-height: 200;
-  }
-
-  .item_images.edit li:nth-child(6),
-  .item_images.edit li:nth-child(7),
-  .item_images.edit li:nth-child(8) {
-    margin-top: 0;
-  }
-
-  .item_images.edit li:nth-child(6)>section,
-  .item_images.edit li:nth-child(4)>section {
-    min-height: 200;
-  }
-
-  section.livestream>input[type="checkbox"]:checked+label:after {
+section.livestream>input[type="checkbox"]:checked + label:after {
     content: "✓";
     -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    margin-left: 11;
-  }
+            transform: rotate(45deg);
+    margin-left: 11px;
+}
 
 
-  section.specs>h6 {
+section.specs>h6 {
     margin: 6px;
     font-size: smaller;
     font-weight: 100;
     text-align: left;
     padding-left: 8px;
     color: #393e32;
-  }
+}
 
-  section.specs {
+section.specs {
     margin-bottom: 19px;
-  }
+}
 
 
-  .item_images.edit li>section:after {
+.item_images.edit li>section:after {
     content: "×";
     position: absolute;
-    margin-left: 80;
+    margin-left: 80px;
     padding: 8px;
-    padding-top: 1;
-    padding-bottom: 1;
+    padding-top: 1px;
+    padding-bottom: 1px;
     border: 1px solid;
-    margin-top: 8;
+    margin-top: 8px;
     background: rgb(255, 119, 87);
     border-radius: 50%;
     color: #ffffff;
     font-size: large;
     cursor: pointer;
-  }
+}
 
 
 
 
 
-  ul#hr_opts li {
+ul#hr_opts li {
     margin-top: 19px;
     font-size: large;
     margin-bottom: 39px;
-  }
-
-  ul#hr_opts li>span {
-    font-size: 19;
+}
+ul#hr_opts li>span {
+    font-size: 19px;
     margin-left: 33px;
     margin-top: -9px;
     padding: 0px;
@@ -594,55 +533,58 @@
     padding-right: 6px;
     border: 1px solid darkgrey;
     border-radius: 50%;
-  }
-
-  .hr-opts>li {
+}
+.hr-opts>li {
     margin-bottom: 19px;
 
     border-radius: 7px;
     padding: 5px;
-    border: 1px solid rgba(100, 149, 237, 0.36);
-    margin-right: 21px;
-    margin-left: 11px;
-  }
+    border:1px solid rgba(100, 149, 237, 0.36);
+    margin-right:21px;
+    margin-left:11px;
+}
 
-  .hr-opts>li>section {
+.hr-opts>li>section{
     position: absolute;
     background: #c7d9f9;
     -webkit-transition: 0.2s ease;
     transition: 0.2s ease;
     width: 77.4%;
     color: transparent;
-    margin-left: -6;
-    margin-top: -26;
+    margin-left: -6px;
+    margin-top: -26px;
     border-radius: 6.4px;
-    min-height: 31px;
-    width: 0;
-  }
-
-  @media (min-width: 150px) and (max-width: 599px) {
+    min-height: 31px;width:0px;
+}
+@media (min-width: 150px) and (max-width: 599px) {
 
 
     .card.new_post.compressed .see-more:before {
-      font-size: large;
+        font-size: large;
     }
-    .livestream>label {
-      border-color: gray;
+    .livestream>label{
+        border-color:gray;
     }
 
-    .open-to>label,
-    .livestream>label {
-      display: block;
+    .open-to>label,.livestream>label{
+        display: block;
     }
-    input[type="date"],
-    input[type="time"] {
-      margin-bottom: 9px;
-      display: block;
-      margin-top: 9px;
+    input[type="date"],input[type="time"]{
+            margin-bottom: 9px;
+    display: block;
+    margin-top: 9px;
     }
-  }
+}
 
-  </style>
+
+
+
+
+
+
+        </style>
+
+
   <!-- build:js scripts/vendor/modernizr.js -->
   <script src="/bower_components/modernizr/modernizr.js"></script>
   <!-- endbuild -->
@@ -888,10 +830,10 @@ var step=0;
 <section class="forum card-shadow" style="
     position: absolute;
     min-width: 100%;
-    margin: 0;
-    left: 0;
+    margin: 0px;
+    left: 0px;
     z-index: -9;
-    margin-top: -90;
+    margin-top: -90px;
     min-height: 200px;
 ">
 
@@ -941,8 +883,8 @@ var step=0;
 ">
 <section class="add_link group" style="
     width: 95%;
-    padding: 2;
-    margin: 0;
+    padding: 2px;
+    margin: 0px;
 " id="post-an-intro">
 
                 <input class="textip" required="" type="text" placeholder="(140 chars)">
@@ -1014,9 +956,9 @@ var step=0;
 <h2 class="item_title_wrapper"> <span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto">
 <span style="
     position: absolute;
-    margin-left: -2;
-    margin-top:24.5;
-    font-size:10;
+    margin-left: -2px;
+    margin-top:24.5px;
+    font-size:10px;
     color: coral;
 " class="upvote-item">1000</span>
  U </span><br>
@@ -1032,12 +974,13 @@ Update Text Update Text Update Text Update Text Update Text Update Text Update T
 <section style="  min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images"></section>
 
 
-<section  class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">Jan-1 2017 9:00 EST</section>
+<section  class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9px;margin-bottom: 6px;font-size: smaller;">Jan-1 2017 9:00 EST</section>
 <span style="float:right;text-align: right;margin: 9px;
     font-weight: 600;margin-top: 2px;
     margin-bottom: 2px;word-spacing: 0.139em;
-"  class="item_by_wrapper"><img class="item_by_profpic" src="images/bw.jpg" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;
-    margin-top: -6;"><small class="item_by_name">Bob Witanek </small><small style="color: grey"  class="item_by_username">(@bwitanek)</small> <small>from</small> <a  style="font-size: x-small;" class="item_by_place">Clevland,OH</a>
+"  class="item_by_wrapper"><img class="item_by_profpic" src="images/bw.jpg" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    
+margin-right: 9px;
+    margin-top: -6px;"><small class="item_by_name">Bob Witanek </small><small style="color: grey"  class="item_by_username">(@bwitanek)</small> <small>from</small> <a  style="font-size: x-small;" class="item_by_place">Clevland,OH</a>
 <br>
 <!-- <small style="line-height: 0.2;color:grey" >Jan-1 2017 9:00 EST</small>
  -->    </span>
@@ -1048,7 +991,7 @@ Update Text Update Text Update Text Update Text Update Text Update Text Update T
 
 <section style="
     margin-top:63px;
-    margin-bottom: 20;
+    margin-bottom: 20px;
     display: block;
     text-align: -webkit-right;
     border-top:1px solid #e6e6e6;
@@ -1124,13 +1067,13 @@ onclick="replyTo($(this).parent().parent());" class="action-link">R</section>
 
 <h2 style="color: #1443a9;
     letter-spacing: 0.05em;
-    font-size: 28;
+    font-size: 28px;
     margin-bottom: -3px;" class="item_title_wrapper"><span class="item_title_content"><span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto">
 <span style="
     position: absolute;
-    margin-left: -2;
-    margin-top:24.5;
-    font-size:10;
+    margin-left: -2px;
+    margin-top:24.5px;
+    font-size:10px;
     color: coral;
 " class="upvote-item">1000</span>
  U </span>Credit to :</span></h2>
@@ -1145,12 +1088,13 @@ Update Text Update Text Update Text Update Text Update Text Update Text Update T
 
 <br>
 <section style="  min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images"></section>
-<section  class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">Jan-1 2017 9:00 EST</section>
+<section  class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9px;margin-bottom: 6px;font-size: smaller;">Jan-1 2017 9:00 EST</section>
 <span style="float:right;text-align: right;margin: 9px;
     font-weight: 600;margin-top: 2px;
     margin-bottom: 2px;word-spacing: 0.139em;
-"  class="item_by_wrapper"><img class="item_by_profpic" src="images/ik.jpg" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;
-    margin-top: -6;">        <small class="item_by_name">Name </small> <small style="color: grey" class="item_by_username">(@username)</small><small> from</small> <a class="item_by_place">Place</a>
+"  class="item_by_wrapper"><img class="item_by_profpic" src="images/ik.jpg" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    
+margin-right: 9px;
+    margin-top: -6px;">        <small class="item_by_name">Name </small> <small style="color: grey" class="item_by_username">(@username)</small><small> from</small> <a class="item_by_place">Place</a>
 <br>
 <!-- <small style="line-height: 0.2;color:grey" >Jan-1 2017 9:00 EST</small>
  -->    </span>
@@ -1182,18 +1126,18 @@ Update Text Update Text Update Text Update Text Update Text Update Text Update T
         </section>
 
 <br>
-<section style="padding: 5px;text-align: left;word-spacing: 0.12em;padding-left: 18;font-size: 12.5;font-style: italic;font-weight: 600;color: navy;" class="item_text_content">
+<section style="padding: 5px;text-align: left;word-spacing: 0.12em;padding-left: 18px;font-size: 12.5px;font-style: italic;font-weight: 600;color: navy;" class="item_text_content">
 
 Credit Text Credit Text Credit Text Credit Text Credit Text Credit Text Credit Text, Credit Text Credit Text Credit Text Credit Text of Credit Text.
                      </section>
 
                      <section style="  min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images"></section>
-<section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">Jan-1 2017 9:00 EST</section>
+<section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9px;margin-bottom: 6px;font-size: smaller;">Jan-1 2017 9:00 EST</section>
 <span style="float:right;text-align: right;margin: 9px;
     font-weight: 600;margin-top: 2px;
     margin-bottom: 2px;word-spacing: 0.139em;
 " class="item_by_wrapper"><img class="item_by_profpic" src="images/ikp.jpg" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;
-    margin-top: -6;">  <small class="item_by_name">Name </small> <small class="item_by_username" style="color: grey">(@username)</small>
+    margin-top: -6px;">  <small class="item_by_name">Name </small> <small class="item_by_username" style="color: grey">(@username)</small>
 <br>
 <!-- <small style="line-height: 0.2;color:grey" >Jan-1 2017 9:00 EST</small>
  -->    </span>
@@ -1204,7 +1148,7 @@ Credit Text Credit Text Credit Text Credit Text Credit Text Credit Text Credit T
 
 <section style="
     margin-top:63px;
-    margin-bottom: 20;
+    margin-bottom: 20px;
     display: block;
     text-align: -webkit-right;
     border-top:1px solid #e6e6e6;
@@ -1346,20 +1290,20 @@ Credit Text Credit Text Credit Text Credit Text Credit Text Credit Text Credit T
 
 <h2 style="color: #1443a9;
     letter-spacing: 0.05em;
-    font-size: 28;
+    font-size: 28px;
     margin-bottom: -3px;" class="item_title_wrapper"><span class="item_title_content" ><span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto">
 <span style="
     position: absolute;
-    margin-left: -2;
-    margin-top:24.5;
-    font-size:10;
+    margin-left: -2px;
+    margin-top:24.5px;
+    font-size:10px;
     color: coral;
 " class="upvote-item">1000</span>
  U </span>Adding to</span> </h2>
 
 
 <br>
-<section class="item_text_content" style="padding: 5px;text-align: left;word-spacing: 0.12em;padding-left: 18;font-size: 12.5;font-style: italic;font-weight: 600;color: navy;">
+<section class="item_text_content" style="padding: 5px;text-align: left;word-spacing: 0.12em;padding-left: 18;font-size: 12.5px;font-style: italic;font-weight: 600;color: navy;">
 
 Credit Text Credit Text Credit Text Credit Text Credit Text Credit Text Credit Text, Credit Text Credit Text Credit Text Credit Text of Credit Text.
                      </section>
@@ -1379,12 +1323,13 @@ Milestone Text Milestone Text Milestone Text Milestone Text Milestone Text Miles
 <section style="  min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images"></section>
 
 
-<section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">Jan-1 2017 9:00 EST</section>
+<section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9px;margin-bottom: 6px;font-size: smaller;">Jan-1 2017 9:00 EST</section>
 <span style="float:right;text-align: right;margin: 9px;
     font-weight: 600;margin-top: 2px;
     margin-bottom: 2px;word-spacing: 0.139em;
-" class="item_by_wrapper"><img  class="item_by_profpic" src="images/ik.jpg" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;
-    margin-top: -6;"><small class="item_by_name">Name </small> <small class="item_by_username" style="color: grey">(@username)</small><small> from </small><a class="item_by_place">Place</a>
+" class="item_by_wrapper"><img  class="item_by_profpic" src="images/ik.jpg" width="45" height="41" style="border-radius: 50%;margin-right: 9px;
+    margin-right: 9px;
+    margin-top: -6px;"><small class="item_by_name">Name </small> <small class="item_by_username" style="color: grey">(@username)</small><small> from </small><a class="item_by_place">Place</a>
 <br>
 <!-- <small style="line-height: 0.2;color:grey" >Jan-1 2017 9:00 EST</small>
  -->    </span>
@@ -1418,11 +1363,11 @@ Milestone Text Milestone Text Milestone Text Milestone Text Milestone Text Miles
 
 <section style="  min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images"></section>
 
-        <section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">Jan-1 2017 9:00 EST</section><span style="float:right;text-align: right;margin: 9px;
+        <section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9px;margin-bottom: 6px;font-size: smaller;">Jan-1 2017 9:00 EST</section><span style="float:right;text-align: right;margin: 9px;
     font-weight: 600;margin-top: 2px;
     margin-bottom: 2px;word-spacing: 0.139em;
 "><img class="item_by_profpic" src="images/ikp.jpg" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;
-    margin-top: -6;"><small class="item_by_name">Name </small> <small style="color: grey" class="item_by_username">(@username)</small>
+    margin-top: -6px;"><small class="item_by_name">Name </small> <small style="color: grey" class="item_by_username">(@username)</small>
 <br>
 <!-- <small style="line-height: 0.2;color:grey" >Jan-1 2017 9:00 EST</small>
  -->    </span>
@@ -1431,7 +1376,7 @@ Milestone Text Milestone Text Milestone Text Milestone Text Milestone Text Miles
 
 <section style="
     margin-top:63px;
-    margin-bottom: 20;
+    margin-bottom: 20px;
     display: block;
     text-align: -webkit-right;
     border-top:1px solid #e6e6e6;
@@ -1481,14 +1426,14 @@ Milestone Text Milestone Text Milestone Text Milestone Text Milestone Text Miles
 
 <h2 style="color: #1443a9;
     letter-spacing: 0.05em;
-    font-size: 28;
+    font-size: 28px;
     margin-bottom: -3px;" class="item_title_wrapper">
 <span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto">
 <span style="
     position: absolute;
-    margin-left: -2;
-    margin-top:24.5;
-    font-size:10;
+    margin-left: -2px;
+    margin-top:24.5px;
+    font-size:10px;
     color: coral;
 " class="upvote-item">1000</span>
  U </span>
@@ -1507,12 +1452,13 @@ Milestone Text Milestone Text Milestone Text Milestone Text Milestone Text Miles
 <section style="  min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images"></section>
 
 
-<section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">Jan-1 2017 9:00 EST</section>
+<section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9px;margin-bottom: 6px;font-size: smaller;">Jan-1 2017 9:00 EST</section>
 <span style="float:right;text-align: right;margin: 9px;
     font-weight: 600;margin-top: 2px;
     margin-bottom: 2px;word-spacing: 0.139em;
-" class="item_by_wrapper"><img class="item_by_profpic" src="images/ik.jpg" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;
-    margin-top: -6;"><small class="item_by_name">Name </small><small class="item_by_username" style="color: grey">(@username)</small> <small>from </small><a class="item_by_place">Place</a>
+" class="item_by_wrapper"><img class="item_by_profpic" src="images/ik.jpg" width="45" height="41" style="border-radius: 50%;margin-right: 9px;
+    margin-right: 9px;
+    margin-top: -6px;"><small class="item_by_name">Name </small><small class="item_by_username" style="color: grey">(@username)</small> <small>from </small><a class="item_by_place">Place</a>
 <br>
 <!-- <small style="line-height: 0.2;color:grey" >Jan-1 2017 9:00 EST</small>
  -->    </span>
@@ -1542,18 +1488,18 @@ Milestone Text Milestone Text Milestone Text Milestone Text Milestone Text Miles
 
 
         </section><br>
-<section style="padding: 5px;text-align: left;word-spacing: 0.12em;padding-left: 18;font-size: 12.5;font-style: italic;font-weight: 600;color: navy;margin: 9px;
+<section style="padding: 5px;text-align: left;word-spacing: 0.12em;padding-left: 18px;font-size: 12.5px;font-style: italic;font-weight: 600;color: navy;margin: 9px;
     margin-top: 0px;
     margin-bottom: 20px;" class="item_text_content">
 
 Credit Text Credit Text Credit Text Credit Text Credit Text Credit Text Credit Text, Credit Text Credit Text Credit Text Credit Text of Credit Text.
                      </section><section style="  min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images"></section>
-<section  class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">Jan-1 2017 9:00 EST</section>
+<section  class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9px;margin-bottom: 6px;font-size: smaller;">Jan-1 2017 9:00 EST</section>
 <span style="float:right;text-align: right;margin: 9px;
     font-weight: 600;margin-top: 2px;
     margin-bottom: 2px;word-spacing: 0.139em;
 " class="item_by_wrapper"><img class="item_by_profpic" src="images/ikp.jpg" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;
-    margin-top: -6;"> <small class="item_by_name">Name </small> <small class="item_by_username" style="color: grey">(@username)</small>
+    margin-top: -6px;"> <small class="item_by_name">Name </small> <small class="item_by_username" style="color: grey">(@username)</small>
 <br>
 <!-- <small style="line-height: 0.2;color:grey" >Jan-1 2017 9:00 EST</small>
  -->    </span>
@@ -1564,7 +1510,7 @@ Credit Text Credit Text Credit Text Credit Text Credit Text Credit Text Credit T
 
 <section style="
     margin-top:63px;
-    margin-bottom: 20;
+    margin-bottom: 20px;
     display: block;
     text-align: -webkit-right;
     border-top:1px solid #e6e6e6;
@@ -1630,11 +1576,11 @@ Credit Text Credit Text Credit Text Credit Text Credit Text Credit Text Credit T
 
 <style type="text/css">
    .event_date_time{
-        line-height: 0.2;color: rgb(120, 120, 100);text-align:center;padding: 9;margin-bottom: 6;font-size: smaller;
+        line-height: 0.2;color: rgb(120, 120, 100);text-align:center;padding: 9px;margin-bottom: 6px;font-size: smaller;
     }
     .event_date_time>h4{
-        margin-bottom: 3;
-    margin-top: 16;
+        margin-bottom: 3px;
+    margin-top: 16px;
     font-weight: 100;
     text-transform: capitalize;
     color: #524841;
@@ -1676,18 +1622,19 @@ Event Text Event Text Event Text Event Text Event Text Event Text Event Text, Ev
 </section>
 
 
-<br><section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">Jan-1 2017 9:00 EST</section>
+<br><section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9px;margin-bottom: 6px;font-size: smaller;">Jan-1 2017 9:00 EST</section>
 <span style="float:right;text-align: right;margin: 9px;
     font-weight: 600;margin-top: 2px;
     margin-bottom: 2px;word-spacing: 0.139em;
-" class="item_by_wrapper"><img class="item_by_profpic" src="images/ikp.jpg" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;
-    margin-top: -6;"> <small class="item_by_name">Name </small> <small class="item_by_username" style="color: grey">(@username)</small>
+" class="item_by_wrapper"><img class="item_by_profpic" src="images/ikp.jpg" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    
+margin-right: 9px;
+    margin-top: -6px;"> <small class="item_by_name">Name </small> <small class="item_by_username" style="color: grey">(@username)</small>
 <br>
 <!-- <small style="line-height: 0.2;color:grey" >Jan-1 2017 9:00 EST</small>
  -->    </span>
 <section style="
     margin-top:63px;
-    margin-bottom: 20;
+    margin-bottom: 20px;
     display: block;
     text-align: -webkit-right;
     border-top:1px solid #e6e6e6;
@@ -1791,15 +1738,15 @@ Event Text Event Text Event Text Event Text Event Text Event Text Event Text, Ev
 
 <h2 style="color: #1443a9;
     letter-spacing: 0.05em;
-    font-size: 28;
+    font-size: 28px;
     margin-bottom: -3px;"  class="item_title_wrapper">
 
 <span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto">
 <span style="
     position: absolute;
-    margin-left: -2;
-    margin-top:24.5;
-    font-size:10;
+    margin-left: -2px;
+    margin-top:24.5px;
+    font-size:10px;
     color: coral;
 " class="upvote-item">1000</span>
  U </span>
@@ -1823,12 +1770,13 @@ Event Text Event Text Event Text Event Text Event Text Event Text Event Text, Ev
 
 
 
-<section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">Jan-1 2017 9:00 EST</section>
+<section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9px;margin-bottom: 6px;font-size: smaller;">Jan-1 2017 9:00 EST</section>
 <span style="float:right;text-align: right;margin: 9px;
     font-weight: 600;margin-top: 2px;
     margin-bottom: 2px;word-spacing: 0.139em;
-" class="item_by_wrapper"><img class="item_by_profpic" src="images/ik.jpg" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;
-    margin-top: -6;">  <small class="item_by_name">Name </small> <small class="item_by_username" style="color: grey">(@username)
+" class="item_by_wrapper"><img class="item_by_profpic" src="images/ik.jpg" width="45" height="41" style="border-radius: 50%;margin-right: 9px;   
+ margin-right: 9px;
+    margin-top: -6px;">  <small class="item_by_name">Name </small> <small class="item_by_username" style="color: grey">(@username)
     </small><small> from </small><a class="item_by_place">Place</a>
 <br>
 <!-- <small style="line-height: 0.2;color:grey" >Jan-1 2017 9:00 EST</small>
@@ -1863,8 +1811,8 @@ Event Text Event Text Event Text Event Text Event Text Event Text Event Text, Ev
     padding: 5px;
     text-align: left;
     word-spacing: 0.12em;
-    padding-left: 18;
-    font-size: 12.5;
+    padding-left: 18px;
+    font-size: 12.5px;
     /* font-style: italic; */
     font-weight: 600;
     color: navy;
@@ -1913,12 +1861,13 @@ Credit Text Credit Text Credit Text Credit Text Credit Text Credit Text Credit T
     border-radius: 4px;
 ">
 </section>
-<section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">Jan-1 2017 9:00 EST</section>
+<section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9px;margin-bottom: 6px;font-size: smaller;">Jan-1 2017 9:00 EST</section>
 <span style="float:right;text-align: right;margin: 9px;
     font-weight: 600;margin-top: 2px;
     margin-bottom: 2px;word-spacing: 0.139em;
-" class="item_by_wrapper"><img class="item_by_profpic" src="images/ikp.jpg" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;
-    margin-top: -6;"><small class="item_by_name">Name </small> <small class="item_by_username" style="color: grey">(@username)</small>
+" class="item_by_wrapper"><img class="item_by_profpic" src="images/ikp.jpg" width="45" height="41" style="border-radius: 50%;margin-right: 9px;
+    margin-right: 9px;
+    margin-top: -6px;"><small class="item_by_name">Name </small> <small class="item_by_username" style="color: grey">(@username)</small>
 <br>
 <!-- <small style="line-height: 0.2;color:grey" >Jan-1 2017 9:00 EST</small>
  -->    </span>
@@ -1929,7 +1878,7 @@ Credit Text Credit Text Credit Text Credit Text Credit Text Credit Text Credit T
 
 <section style="
     margin-top:63px;
-    margin-bottom: 20;
+    margin-bottom: 20px;
     display: block;
     text-align: -webkit-right;
     border-top:1px solid #e6e6e6;
@@ -2011,9 +1960,9 @@ Credit Text Credit Text Credit Text Credit Text Credit Text Credit Text Credit T
 <span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto">
 <span style="
     position: absolute;
-    margin-left: -2;
-    margin-top:24.5;
-    font-size:10;
+    margin-left: -2px;
+    margin-top:24.5px;
+    font-size:10px;
     color: coral;
 " class="upvote-item">1000</span>
  U </span>
@@ -2029,7 +1978,7 @@ Idea Text Idea Text Idea Text Idea Text Idea Text Idea Text Idea Text, Idea Text
                      </section>
 
 <ol class="idea_links" style="/* padding: 5px; */text-align: left;word-spacing: 0.12em;word-wrap: break-word;margin-bottom: 2px;">
-  <h3 style="margin: 6px;margin-left: -13;">Sources : </h3>
+  <h3 style="margin: 6px;margin-left: -13px;">Sources : </h3>
 <li style="
     margin: 5px;
     cursor: pointer;
@@ -2046,12 +1995,13 @@ Idea Text Idea Text Idea Text Idea Text Idea Text Idea Text Idea Text, Idea Text
 </li></ol><br>
 
 <section style="  min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images"></section>
-<section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">Jan-1 2017 9:00 EST</section>
+<section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9px;margin-bottom: 6px;font-size: smaller;">Jan-1 2017 9:00 EST</section>
 <span style="float:right;text-align: right;margin: 9px;
     font-weight: 600;margin-top: 2px;
     margin-bottom: 2px;word-spacing: 0.139em;
-" class="item_by_wrapper"><img class="item_by_profpic" src="images/ikp.jpg" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;
-    margin-top: -6;"><small class="item_by_name">Name </small> <small class="item_by_username" style="color: grey">(@username)</small>
+" class="item_by_wrapper"><img class="item_by_profpic" src="images/ikp.jpg" width="45" height="41" style="border-radius: 50%;margin-right: 9px;
+    margin-right: 9px;
+    margin-top: -6px;"><small class="item_by_name">Name </small> <small class="item_by_username" style="color: grey">(@username)</small>
 <br>
 <!-- <small style="line-height: 0.2;color:grey" >Jan-1 2017 9:00 EST</small>
  -->    </span>
@@ -2062,7 +2012,7 @@ Idea Text Idea Text Idea Text Idea Text Idea Text Idea Text Idea Text, Idea Text
 
 <section style="
     margin-top:63px;
-    margin-bottom: 20;
+    margin-bottom: 20px;
     display: block;
     text-align: -webkit-right;
     border-top:1px solid #e6e6e6;
@@ -2160,12 +2110,12 @@ Idea Text Idea Text Idea Text Idea Text Idea Text Idea Text Idea Text, Idea Text
 <section class="card new_post compressed" id="" style="
     /* margin-left: -4; */
 ">
-<span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto;margin: 9;">
+<span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto;margin: 9px;">
 <span style="
     position: absolute;
-    margin-left: -2;
-    margin-top:24.5;
-    font-size:10;
+    margin-left: -2px;
+    margin-top:24.5px;
+    font-size:10px;
     color: coral;
 " class="upvote-item">1000</span>
  U </span><h2 class="item_title_wrapper"> <br>
@@ -2182,12 +2132,13 @@ Idea Text Idea Text Idea Text Idea Text Idea Text Idea Text Idea Text, Idea Text
 <section style="  min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images"></section>
 
 
-<section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">Jan-1 2017 9:00 EST</section>
+<section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9px;margin-bottom: 6px;font-size: smaller;">Jan-1 2017 9:00 EST</section>
 <span style="float:right;text-align: right;margin: 9px;
     font-weight: 600;margin-top: 2px;
     margin-bottom: 2px;word-spacing: 0.139em;
-" class="item_by_wrapper"><img class="item_by_profpic" src="images/bw.jpg" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;
-    margin-top: -6;"><small class="item_by_name">Bob Witanek </small><small style="color: grey" class="item_by_username">(@bwitanek)</small> <small>from</small> <a style="font-size: x-small;" class="item_by_place">Clevland,OH</a>
+" class="item_by_wrapper"><img class="item_by_profpic" src="images/bw.jpg" width="45" height="41" style="border-radius: 50%;margin-right: 9px;   
+ margin-right: 9px;
+    margin-top: -6px;"><small class="item_by_name">Bob Witanek </small><small style="color: grey" class="item_by_username">(@bwitanek)</small> <small>from</small> <a style="font-size: x-small;" class="item_by_place">Clevland,OH</a>
 <br>
 <!-- <small style="line-height: 0.2;color:grey" >Jan-1 2017 9:00 EST</small>
  -->    </span>
@@ -2198,7 +2149,7 @@ Idea Text Idea Text Idea Text Idea Text Idea Text Idea Text Idea Text, Idea Text
 
 <section style="
     margin-top:63px;
-    margin-bottom: 20;
+    margin-bottom: 20px;
     display: block;
     text-align: -webkit-right;
     border-top:1px solid #e6e6e6;
@@ -2711,8 +2662,8 @@ function appendideatoall(title,text,motiv,name,pic,username,links,h)
    console.log('lin'+links);
    var m='';
    if(motiv!='')m='<section style="font-size: small;padding: 5px;text-align: left;/* word-spacing: 0.12em; */word-wrap: break-word;font-style: italic;/* letter-spacing: 0.1em; */color: teal;" class="idea_motiv">Motivation:<br>'+motiv+'</section>';
-   if(links!='')str='<ol class="idea_links" style="/* padding: 5px; */text-align: left;word-spacing: 0.12em;word-wrap: break-word;margin-bottom: 2px;"><h3 style="margin: 6px;margin-left: -13;">Sources : </h3>'+links+'</ol>';
-    $('#show-all-posts').append('<section class="card new_post compressed" id="" style=""><h2 class="item_title_wrapper"><span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto"><span style=" position: absolute; margin-left: -2;margin-top:24.5;font-size:10;color: coral;" class="upvote-item"></span> U </span><br><span class="item_title_content">'+title+'</span></h2>'+m+'<section class="item_text_content" style="padding: 5px;text-align: left;word-spacing: 0.12em;word-wrap: break-word;">'+text+'</section>'+str+' <br><section style="  min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images">'+h+'</section><section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">'+date+'</section><span style="float:right;text-align: right;margin: 9px;font-weight: 600;margin-top: 2px;margin-bottom: 2px;word-spacing: 0.139em;" class="item_by_wrapper"><img class="item_by_profpic" src="'+pic+'" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px; margin-top: -6;"><small class="item_by_name">'+name+' </small> <small class="item_by_username" style="color: grey">('+username+')</small> <br></span><section style="  margin-top:63px;margin-bottom: 20;display: block;text-align: -webkit-right;border-top:1px solid #e6e6e6;" class="item_num_wrapper"><section class="action-link">E<span class="num"></span></section><section class="action-link">+<span class="num"></span></section><section class="action-link">H<span class="num"></span></section><section style="color: white;font-weight: 600;background: cornflowerblue;border-color: transparent;" onclick="replyTo($(this).parent().parent());" class="action-link">R</section></section></section>');
+   if(links!='')str='<ol class="idea_links" style="/* padding: 5px; */text-align: left;word-spacing: 0.12em;word-wrap: break-word;margin-bottom: 2px;"><h3 style="margin: 6px;margin-left: -13px;">Sources : </h3>'+links+'</ol>';
+    $('#show-all-posts').append('<section class="card new_post compressed" id="" style=""><h2 class="item_title_wrapper"><span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto"><span style=" position: absolute; margin-left: -2px;margin-top:24.5px;font-size:10;color: coral;" class="upvote-item"></span> U </span><br><span class="item_title_content">'+title+'</span></h2>'+m+'<section class="item_text_content" style="padding: 5px;text-align: left;word-spacing: 0.12em;word-wrap: break-word;">'+text+'</section>'+str+' <br><section style="  min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images">'+h+'</section><section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9px;margin-bottom: 6px;font-size: smaller;">'+date+'</section><span style="float:right;text-align: right;margin: 9px;font-weight: 600;margin-top: 2px;margin-bottom: 2px;word-spacing: 0.139em;" class="item_by_wrapper"><img class="item_by_profpic" src="'+pic+'" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px; margin-top: -6px;"><small class="item_by_name">'+name+' </small> <small class="item_by_username" style="color: grey">('+username+')</small> <br></span><section style="  margin-top:63px;margin-bottom: 20px;display: block;text-align: -webkit-right;border-top:1px solid #e6e6e6;" class="item_num_wrapper"><section class="action-link">E<span class="num"></span></section><section class="action-link">+<span class="num"></span></section><section class="action-link">H<span class="num"></span></section><section style="color: white;font-weight: 600;background: cornflowerblue;border-color: transparent;" onclick="replyTo($(this).parent().parent());" class="action-link">R</section></section></section>');
 
 
 
@@ -2731,7 +2682,7 @@ function appendhrtoall(title,ref,opts,name,username,img)
     var date = getCurrDate(new Date());
 
 
-$( "#show-all-posts" ).append( '<section class="card new_post compressed" id="" style=""><span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto"><span style=" position: absolute;margin-left: -2; margin-top:24.5; font-size:10; color: coral;" class="upvote-item">0</span>U </span><br><h2 class="item_title_wrapper"> <span class="item_title_content">'+title+'</span></h2><h3>'+ref+'</h3><section style="padding: 5px;text-align: left;word-spacing: 0.12em;word-wrap: break-word;" class="item_text_content"><ol class="hr-opts" type="a">'+opts+'</ol></section><br><section  class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">'+date+'</section><span style="float:right;text-align: right;margin: 9px;font-weight: 600;margin-top: 2px;margin-bottom: 2px;word-spacing: 0.139em;"  class="item_by_wrapper"><img class="item_by_profpic" src="'+img+'" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px; margin-top: -6;"><small class="item_by_name">'+name+' </small><small style="color: grey"  class="item_by_username">'+username+'</small></span><br><section style=" margin-top:63px; margin-bottom: 20;display: block;text-align: -webkit-right;border-top:1px solid #e6e6e6;"  class="item_num_wrapper"> <section  class="action-link show_act">E<span class="num">0</span></section> <section class="action-link BK" >+<span class="num">0</span></section><section class="action-link HF">H<span class="num">0</span></section><section style="color: white;font-weight: 600;background: cornflowerblue;border-color: transparent;" class="action-link replybutton" onclick="replyTo($(this).parent().parent());">R</section></section>        </section>' );
+$( "#show-all-posts" ).append( '<section class="card new_post compressed" id="" style=""><span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto"><span style=" position: absolute;margin-left: -2px; margin-top:24.5px; font-size:10px; color: coral;" class="upvote-item">0</span>U </span><br><h2 class="item_title_wrapper"> <span class="item_title_content">'+title+'</span></h2><h3>'+ref+'</h3><section style="padding: 5px;text-align: left;word-spacing: 0.12em;word-wrap: break-word;" class="item_text_content"><ol class="hr-opts" type="a">'+opts+'</ol></section><br><section  class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9px;margin-bottom: 6;font-size: smaller;">'+date+'</section><span style="float:right;text-align: right;margin: 9px;font-weight: 600;margin-top: 2px;margin-bottom: 2px;word-spacing: 0.139em;"  class="item_by_wrapper"><img class="item_by_profpic" src="'+img+'" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px; margin-top: -6px;"><small class="item_by_name">'+name+' </small><small style="color: grey"  class="item_by_username">'+username+'</small></span><br><section style=" margin-top:63px; margin-bottom: 20px;display: block;text-align: -webkit-right;border-top:1px solid #e6e6e6;"  class="item_num_wrapper"> <section  class="action-link show_act">E<span class="num">0</span></section> <section class="action-link BK" >+<span class="num">0</span></section><section class="action-link HF">H<span class="num">0</span></section><section style="color: white;font-weight: 600;background: cornflowerblue;border-color: transparent;" class="action-link replybutton" onclick="replyTo($(this).parent().parent());">R</section></section>        </section>' );
 
 
 
@@ -2745,7 +2696,7 @@ function appendupdatetoall(title,text,name,pic,username,H)
     /* My Prof pic */
     var date = getCurrDate(new Date());
     var place ='PL';
-$( "#show-all-posts" ).append( '<section class="card new_post compressed" id="" style=""><h2 class="item_title_wrapper"> <span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto"><span style=" position: absolute;margin-left: -2; margin-top:24.5; font-size:10; color: coral;" class="upvote-item"></span>U </span><br><span class="item_title_content">'+title+'</span></h2><section style="padding: 5px;text-align: left;word-spacing: 0.12em;word-wrap: break-word;" class="item_text_content">'+text+'</section><br><section style=" min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images">'+H+'</section><section  class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">'+date+'</section><span style="float:right;text-align: right;margin: 9px;font-weight: 600;margin-top: 2px;margin-bottom: 2px;word-spacing: 0.139em;"  class="item_by_wrapper"><img class="item_by_profpic" src="'+pic+'" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px; margin-top: -6;"><small class="item_by_name">'+name+' </small><small style="color: grey"  class="item_by_username">'+username+'</small><small> from</small> <a  style="font-size: x-small;" class="item_by_place">'+place+'</a></span><br><section style=" margin-top:63px; margin-bottom: 20;display: block;text-align: -webkit-right;border-top:1px solid #e6e6e6;"  class="item_num_wrapper"> <section  class="action-link show_act">E<span class="num"></span></section> <section class="action-link BK" >+<span class="num"></span></section><section class="action-link HF">H<span class="num"></span></section><section style="color: white;font-weight: 600;background: cornflowerblue;border-color: transparent;" class="action-link replybutton" onclick="replyTo($(this).parent().parent());">R</section></section>        </section>' );
+$( "#show-all-posts" ).append( '<section class="card new_post compressed" id="" style=""><h2 class="item_title_wrapper"> <span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto"><span style=" position: absolute;margin-left: -2px; margin-top:24.5px; font-size:10; color: coral;" class="upvote-item"></span>U </span><br><span class="item_title_content">'+title+'</span></h2><section style="padding: 5px;text-align: left;word-spacing: 0.12em;word-wrap: break-word;" class="item_text_content">'+text+'</section><br><section style=" min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images">'+H+'</section><section  class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9px;margin-bottom: 6px;font-size: smaller;">'+date+'</section><span style="float:right;text-align: right;margin: 9px;font-weight: 600;margin-top: 2px;margin-bottom: 2px;word-spacing: 0.139em;"  class="item_by_wrapper"><img class="item_by_profpic" src="'+pic+'" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px; margin-top: -6;"><small class="item_by_name">'+name+' </small><small style="color: grey"  class="item_by_username">'+username+'</small><small> from</small> <a  style="font-size: x-small;" class="item_by_place">'+place+'</a></span><br><section style=" margin-top:63px; margin-bottom: 20px;display: block;text-align: -webkit-right;border-top:1px solid #e6e6e6;"  class="item_num_wrapper"> <section  class="action-link show_act">E<span class="num"></span></section> <section class="action-link BK" >+<span class="num"></span></section><section class="action-link HF">H<span class="num"></span></section><section style="color: white;font-weight: 600;background: cornflowerblue;border-color: transparent;" class="action-link replybutton" onclick="replyTo($(this).parent().parent());">R</section></section>        </section>' );
 
 Allpics=[];return;
 }
@@ -2760,7 +2711,7 @@ function appendcredit(text,ref,username,name,pic,h)
     {
         pl='<small> from</small> <a class="item_by_place">'+$(ref).children('.ref-c-wrapper').children('.ref-wrapper').children('.ref-place').html();
     }
- $( "#show-all-posts" ).append( '<section class="card new_post compressed" id="" style=""><h2 style="color: #1443a9;letter-spacing: 0.05em;font-size: 28;  margin-bottom: -3px;" class="item_title_wrapper"><span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto"><span style="position: absolute; margin-left: -2; margin-top:24.5; font-size:10;color: coral;" class="upvote-item"> </span>U </span><br><span class="item_title_content">Credit to :</span></h2><section class="card new_post compressed is_ref" id="" style=""><h2 class="item_title_wrapper"><span class="item_title_content">'+$(ref).children('.ref-title').html()+'</span></h2><section style="padding: 5px;text-align: left;word-spacing: 0.12em; word-wrap: break-word;" class="item_text_content">'+$(ref).children('.ref-text').html()+'</section><br><section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">'+$(ref).children('.ref-c-wrapper').children('.ref-date').html()+'</section><span style="float:right;text-align: right;margin: 9px;font-weight: 600;margin-top: 2px; margin-bottom: 2px;word-spacing: 0.139em;" class="item_by_wrapper"><img class="item_by_profpic" src="'+$(ref).children('.ref-c-wrapper').children('.ref-wrapper').children('.ref-profpic').attr('src')+'" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;margin-top: -6;">        <small class="item_by_name">'+$(ref).children('.ref-c-wrapper').children('.ref-wrapper').children('.ref-name').html()+'</small> <small style="color: grey" class="item_by_username">'+$(ref).children('.ref-c-wrapper').children('.ref-wrapper').children('.ref-username').html()+'</small>'+pl+'<br></span></section><br><section style="padding: 5px;text-align: left;word-spacing: 0.12em;padding-left: 18;font-size: 12.5;font-style: italic;font-weight: 600;color: navy;" class="item_text_content">'+text+'</section><section style="  min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images">'+h+'</section><section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">'+date+'</section><span style="float:right;text-align: right;margin: 9px;font-weight: 600;margin-top: 2px; margin-bottom: 2px;word-spacing: 0.139em;" class="item_by_wrapper"><img class="item_by_profpic" src="'+pic+'" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;margin-top: -6;">  <small class="item_by_name">'+name+' </small> <small class="item_by_username" style="color: grey">'+username+'</small> <br></span><section style="margin-top:63px;margin-bottom: 20;display: block;text-align: -webkit-right;border-top:1px solid #e6e6e6;" class="item_num_wrapper"><section class="action-link">E<span class="num"></span></section><section class="action-link">+<span class="num"></span></section><section class="action-link">H<span class="num"></span></section><section style="color: white;font-weight: 600;background: cornflowerblue;border-color: transparent;" onclick="replyTo($(this).parent().parent());" class="action-link">R</section></section>  </section>' );
+ $( "#show-all-posts" ).append( '<section class="card new_post compressed" id="" style=""><h2 style="color: #1443a9;letter-spacing: 0.05em;font-size: 28;  margin-bottom: -3px;" class="item_title_wrapper"><span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto"><span style="position: absolute; margin-left: -2px; margin-top:24.5px; font-size:10px;color: coral;" class="upvote-item"> </span>U </span><br><span class="item_title_content">Credit to :</span></h2><section class="card new_post compressed is_ref" id="" style=""><h2 class="item_title_wrapper"><span class="item_title_content">'+$(ref).children('.ref-title').html()+'</span></h2><section style="padding: 5px;text-align: left;word-spacing: 0.12em; word-wrap: break-word;" class="item_text_content">'+$(ref).children('.ref-text').html()+'</section><br><section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9px;margin-bottom: 6px;font-size: smaller;">'+$(ref).children('.ref-c-wrapper').children('.ref-date').html()+'</section><span style="float:right;text-align: right;margin: 9px;font-weight: 600;margin-top: 2px; margin-bottom: 2px;word-spacing: 0.139em;" class="item_by_wrapper"><img class="item_by_profpic" src="'+$(ref).children('.ref-c-wrapper').children('.ref-wrapper').children('.ref-profpic').attr('src')+'" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;margin-top: -6;">        <small class="item_by_name">'+$(ref).children('.ref-c-wrapper').children('.ref-wrapper').children('.ref-name').html()+'</small> <small style="color: grey" class="item_by_username">'+$(ref).children('.ref-c-wrapper').children('.ref-wrapper').children('.ref-username').html()+'</small>'+pl+'<br></span></section><br><section style="padding: 5px;text-align: left;word-spacing: 0.12em;padding-left: 18;font-size: 12.5;font-style: italic;font-weight: 600;color: navy;" class="item_text_content">'+text+'</section><section style="  min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images">'+h+'</section><section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9px;margin-bottom: 6px;font-size: smaller;">'+date+'</section><span style="float:right;text-align: right;margin: 9px;font-weight: 600;margin-top: 2px; margin-bottom: 2px;word-spacing: 0.139em;" class="item_by_wrapper"><img class="item_by_profpic" src="'+pic+'" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;margin-top: -6;">  <small class="item_by_name">'+name+' </small> <small class="item_by_username" style="color: grey">'+username+'</small> <br></span><section style="margin-top:63px;margin-bottom: 20;display: block;text-align: -webkit-right;border-top:1px solid #e6e6e6;" class="item_num_wrapper"><section class="action-link">E<span class="num"></span></section><section class="action-link">+<span class="num"></span></section><section class="action-link">H<span class="num"></span></section><section style="color: white;font-weight: 600;background: cornflowerblue;border-color: transparent;" onclick="replyTo($(this).parent().parent());" class="action-link">R</section></section>  </section>' );
 
 
 Allpics=[];return;
@@ -3299,7 +3250,7 @@ return res;
 
 
 
-<center><div id="add-new" style="z-index:666;width: 86%;min-width: 255px;min-height: 30px;overflow: hidden;margin-top: 49px;/* height: 300px; */margin-top: 30;left: %;/* overflow-y: scroll; *//* top: 4.4%; *//* background: #399be8; */border-radius: 18px;/* padding-left: 11.5%; *//* position: absolute; */text-align: center;/* padding: 18px; *//* padding-top: 20px; *//* padding-left: 3.5%; */transition: 0.2s ease-in-out;box-shadow: none;/* margin: 9; */color: #38383a;">
+<center><div id="add-new" style="z-index:666;width: 86%;min-width: 255px;min-height: 30px;overflow: hidden;margin-top: 49px;/* height: 300px; */margin-top: 30px;left: %;/* overflow-y: scroll; *//* top: 4.4%; *//* background: #399be8; */border-radius: 18px;/* padding-left: 11.5%; *//* position: absolute; */text-align: center;/* padding: 18px; *//* padding-top: 20px; *//* padding-left: 3.5%; */transition: 0.2s ease-in-out;box-shadow: none;/* margin: 9; */color: #38383a;">
 
 
 <!-- display: inline-block-->
@@ -3317,7 +3268,7 @@ return res;
 ">Reply  : </h1>
       <ul style="
     float: left;
-    padding-left: 19;
+    padding-left: 19px;
     list-style: none;
     font-size: large;
     /* color: rgba(255, 255, 255, 0.71); */
@@ -3327,30 +3278,30 @@ return res;
     text-align: left;
 ">
   <li style="
-    padding-top: 10;
-    padding-bottom: 16;
+    padding-top: 10px;
+    padding-bottom: 16px;
       transition: 0.1s ease;
        cursor: pointer;
 " onclick="add__to_forum('add_to','reply')">Add To</li>
   <li style="
-    padding-top: 10;
-    padding-bottom: 16;
+    padding-top: 10px;
+    padding-bottom: 16px;
       transition: 0.1s ease;
        cursor: pointer;
 " onclick="add__to_forum('credit','reply')">Give Credit </li>
 
           <li style="
-    padding-top: 10;
+    padding-top: 10px;
     transition: 0.1s ease;
-    padding-bottom: 16;
+    padding-bottom: 16px;
     cursor: pointer;
 " onclick="add__to_forum('mention','reply')">Mention</li>
 
 
           <li style="
-    padding-top: 10;
+    padding-top: 10px;
     transition: 0.1s ease;
-    padding-bottom: 16;
+    padding-bottom: 16px;
     cursor: pointer;
 " onclick="add__to_forum('pass_on','reply')">Pass On</li>
 
@@ -3381,44 +3332,44 @@ return res;
 ">Add  : </h1>
       <ul style="
     float: left;
-    padding-left: 19;
+    padding-left: 19px;
     list-style: none;
     font-size: large;
     /* color: #04041d; */
-    margin: 0;
+    margin: 0px;
     margin-left: 6px;
     font-size: x-large;
     text-align: left;
 ">
           <li style="
-    padding-top: 10;
+    padding-top: 10px;
     transition: 0.1s ease;
-    padding-bottom: 16;
+    padding-bottom: 16px;
     cursor: pointer;
 " onclick="add__to_forum('update','add')">Update</li>
           <li style="
-    padding-top: 10;
-    padding-bottom: 16;
+    padding-top: 10px;
+    padding-bottom: 16px;
       transition: 0.1s ease;
        cursor: pointer;
 " onclick="add__to_forum('idea','add')">Idea</li>
           <li style="
-    padding-top: 10;
-    padding-bottom: 16;
+    padding-top: 10px;
+    padding-bottom: 16px;
       transition: 0.1s ease;
        cursor: pointer;
 " onclick="add__to_forum('milestone','add')">Milestone</li>
   <li style="
-    padding-top: 10;
-    padding-bottom: 16;
+    padding-top: 10px;
+    padding-bottom: 16px;
       transition: 0.1s ease;
        cursor: pointer;
 " onclick="add__to_forum('event','add')">Event</li>
 
 
  <li style="
-    padding-top: 10;
-    padding-bottom: 16;
+    padding-top: 10px;
+    padding-bottom: 16px;
       transition: 0.1s ease;
        cursor: pointer;
 " onclick="add__to_forum('hand_raise','add')">Hand Raise</li>
@@ -3598,7 +3549,7 @@ $(argument).parent().remove();
 
 section.livestream {
     padding: 9px;
-    padding-top: 15;
+    padding-top: 15px;
 }
 
 section.livestream>input[type="checkbox"]:checked + label {
@@ -3606,7 +3557,7 @@ section.livestream>input[type="checkbox"]:checked + label {
     color: #2573b1;
     /* transform: scale(8,8); */
     /* transform: scale(0.5,2); */
-    font-size: 19;
+    font-size: 19px;
     border: none;
 }
 
@@ -3643,7 +3594,7 @@ section.open-to {
 }
 
 .open-to>input[type="radio"]:checked + label {
-    color: orange;font-size:18;
+    color: orange;font-size:18px;
 }
 
 .open-to>input[type="text"] {
@@ -3651,8 +3602,8 @@ section.open-to {
     opacity: 1;
     padding: 5px;
     min-width: 210;
-    padding-top: 12;
-    font-size: 16;
+    padding-top: 12px;
+    font-size: 16px;
     width: 70%;
 }
 
@@ -3742,7 +3693,7 @@ input#custom-open-to {
     letter-spacing: 0.14em;
     padding-left: 9px;
     padding-right: 9px;
-    margin-right: 0;
+    margin-right: 0px;
 " onclick="var loc=document.getElementById('event_address').value;title=document.getElementById('eventtitle_').value;text=document.getElementById('eventdesc_').value;var time=document.getElementById('when_time').value;var dt=document.getElementById('when_date').value;;var r=null;var l='';if(document.getElementById('only').checked)r='Only to this forum';else if(document.getElementById('everyone').checked)r='Open to all';else if(document.getElementById('custom').checked) r='Custom';if(document.getElementById('yt').checked)l=l+' Youtube ,'; if(document.getElementById('fb').checked)l=l+' Facebook ,'; if(document.getElementById('sp').checked) l=l+' Servepool';if(!document.getElementById('sp').checked&&!document.getElementById('yt').checked&&!document.getElementById('fb').checked) l='Not available';appendEvent(title,text,dt,time,loc,r,l,'name','@uname','images/ikp.jpg') ;closeadd_window()">Post</button>
 
 
@@ -3819,7 +3770,7 @@ input#custom-open-to {
 " onclick="if(isURL($('#ideasource_').val())){ linkonchange($('#ideasource_').val()); ;}
 else {$('#ideasource_').css('border','2px solid redorange');}
 " >GO</span>
-<ol id="allsources" style="/* color: white; */text-align: left;font-size: medium;padding: 4px;padding-left: 21px;margin-bottom: -70;margin-top: 3px;"></ol>
+<ol id="allsources" style="/* color: white; */text-align: left;font-size: medium;padding: 4px;padding-left: 21px;margin-bottom: -70px;margin-top: 3px;"></ol>
 
 
 
@@ -3881,7 +3832,7 @@ id="add_pic_title">Add Pictures</h7>
 
 
 
-<section style="/* max-width: 40%; *//* float: left; *//* min-height: 260px; */margin: 9px;margin-top:59px;text-align: -webkit-center;margin-left: 3;margin-right: 9;">
+<section style="/* max-width: 40%; *//* float: left; *//* min-height: 260px; */margin: 9px;margin-top:59px;text-align: -webkit-center;margin-left: 3px;margin-right: 9px;">
 
        <section class="add_link group" style="
     margin-bottom: 17px;
@@ -3890,10 +3841,10 @@ id="add_pic_title">Add Pictures</h7>
   <span style="
     font-weight: 600;
     /* position: absolute; */
-    margin: 19;
+    margin: 19px;
     /* margin-left: 9; */
     color: #ea7208;
-    margin-top: 3;
+    margin-top: 3px;
     letter-spacing: 0.05em;
     /* font-size: x-small; */
     padding: 9px;
@@ -3902,10 +3853,10 @@ id="add_pic_title">Add Pictures</h7>
   <section style="
     position: absolute;
     width: 94.4%;
-    margin-left: 1;
-    min-height: 38;
+    margin-left: 1px;
+    min-height: 38px;
     background: rgba(90, 224, 81, 0.64);
-    margin-top: 10;
+    margin-top: 10px;
    /* transition:  all 600ms cubic‑bezier(0.175, 0.885, 0.32, 1.275);
     transition: all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
     width: 50%;
@@ -3919,7 +3870,7 @@ id="add_pic_title">Add Pictures</h7>
     text-align: center;
     border: 1px solid orange;
     color: transparent;
-    margin-top: 9;
+    margin-top: 9px;
 " id="up_m" onchange="pic_change(this)"><span style="position: absolute; margin-top: 18px; margin-left: -15px; color: rgb(234, 114, 8); font-weight: 600;" id="add_pics_span"></span></section>
 
 
@@ -3929,8 +3880,8 @@ id="add_pic_title">Add Pictures</h7>
             <section class="item_images edit">
 <ul id="" style="
     list-style: none;
-    padding-left: 0;
-    padding-top:9;
+    padding-left: 0px;
+    padding-top:9px;
 ">
 
 </ul></section>
@@ -3948,9 +3899,9 @@ id="add_pic_title">Add Pictures</h7>
     overflow: hidden;
     padding: 16px;
     text-align: -webkit-center;
-    margin-right: -90;
+    margin-right: -90px;
     padding-right: 0px;
-    margin-top: -19;
+    margin-top: -19px;
 "><button style="
     margin-top:69px;
     /* float: right; */
@@ -3960,7 +3911,7 @@ id="add_pic_title">Add Pictures</h7>
     letter-spacing: 0.14em;
     padding-left: 9px;
     padding-right: 9px;
-    margin-right: 0;
+    margin-right: 0px;
 " onclick="var h=this.parentElement.previousElementSibling.lastElementChild.lastElementChild.innerHTML;;motiv=document.getElementById('ideamotivation_').value;title=document.getElementById('ideatitle_').value;text=document.getElementById('ideacontent_').value;appendideatoall(title,text,motiv,'ik','images/ikp.jpg','@u',$('#allsources').html(),h);closeadd_window();">Post</button></section>
   </section>
 
@@ -4050,7 +4001,7 @@ id="add_pic_title">Add Pictures</h7>
 
 
 
-<section style="/* max-width: 40%; *//* float: left; *//* min-height: 260px; */margin: 9px;text-align: -webkit-center;margin-left: 3;margin-right: 9;">
+<section style="/* max-width: 40%; *//* float: left; *//* min-height: 260px; */margin: 9px;text-align: -webkit-center;margin-left: 3px;margin-right: 9px;">
   <h5 style="
     margin-top: 36px;
     /* margin-top: -8px; */
@@ -4068,10 +4019,10 @@ id="add_pic_title">Add Pictures</h7>
   <span style="
     font-weight: 600;
     /* position: absolute; */
-    margin: 19;
+    margin: 19px;
     /* margin-left: 9; */
     color: #ea7208;
-    margin-top: 3;
+    margin-top: 3px;
     letter-spacing: 0.05em;
     /* font-size: x-small; */
     padding: 9px;
@@ -4080,10 +4031,10 @@ id="add_pic_title">Add Pictures</h7>
   <section style="
     position: absolute;
     width: 94.4%;
-    margin-left: 1;
-    min-height: 38;
+    margin-left: 1px;
+    min-height: 38px;
     background: rgba(90, 224, 81, 0.64);
-    margin-top: 10;
+    margin-top: 10px;
    /* transition:  all 600ms cubic‑bezier(0.175, 0.885, 0.32, 1.275);
     transition: all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
     width: 50%;
@@ -4097,7 +4048,7 @@ id="add_pic_title">Add Pictures</h7>
     text-align: center;
     border: 1px solid orange;
     color: transparent;
-    margin-top: 9;
+    margin-top: 9px;
 " id="up_m" onchange="pic_change(this)"><span style="position: absolute; margin-top: 18px; margin-left: -15px; color: rgb(234, 114, 8); font-weight: 600;" id="add_pics_span"></span></section>
 
 
@@ -4107,8 +4058,8 @@ id="add_pic_title">Add Pictures</h7>
             <section  class="item_images edit">
 <ul id="" style="
     list-style: none;
-    padding-left: 0;
-    padding-top:9;
+    padding-left: 0px;
+    padding-top:9px;
 ">
 
 </ul></section>
@@ -4216,7 +4167,7 @@ id="add_pic_title">Add Pictures</h7>
 
 
 
-<section style="/* max-width: 40%; *//* float: left; *//* min-height: 260px; */margin: 9px;margin-top:19px;text-align: -webkit-center;margin-left: 3;margin-right: 9;">
+<section style="/* max-width: 40%; *//* float: left; *//* min-height: 260px; */margin: 9px;margin-top:19px;text-align: -webkit-center;margin-left: 3px;margin-right: 9px;">
 
        <section class="add_link group" style="
     margin-bottom: 17px;
@@ -4225,10 +4176,10 @@ id="add_pic_title">Add Pictures</h7>
   <span style="
     font-weight: 600;
     /* position: absolute; */
-    margin: 19;
+    margin: 19px;
     /* margin-left: 9; */
     color: #ea7208;
-    margin-top: 3;
+    margin-top: 3px;
     letter-spacing: 0.05em;
     /* font-size: x-small; */
     padding: 9px;
@@ -4237,10 +4188,10 @@ id="add_pic_title">Add Pictures</h7>
   <section style="
     position: absolute;
     width: 94.4%;
-    margin-left: 1;
-    min-height: 38;
+    margin-left: 1px;
+    min-height: 38px;
     background: rgba(90, 224, 81, 0.64);
-    margin-top: 10;
+    margin-top: 10px;
    /* transition:  all 600ms cubic‑bezier(0.175, 0.885, 0.32, 1.275);
     transition: all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
     width: 50%;
@@ -4254,7 +4205,7 @@ id="add_pic_title">Add Pictures</h7>
     text-align: center;
     border: 1px solid orange;
     color: transparent;
-    margin-top: 9;
+    margin-top: 9px;
 " id="up_m" onchange="pic_change(this)"><span style="position: absolute; margin-top: 18px; margin-left: -15px; color: rgb(234, 114, 8); font-weight: 600;" id="add_pics_span"></span></section>
 
 
@@ -4264,8 +4215,8 @@ id="add_pic_title">Add Pictures</h7>
             <section class="item_images edit">
 <ul id="" style="
     list-style: none;
-    padding-left: 0;
-    padding-top:9;
+    padding-left: 0px;
+    padding-top:9px;
 ">
 
 </ul></section>
@@ -4328,7 +4279,7 @@ id="add_pic_title">Add Pictures</h7>
     text-align: left;
     margin-bottom: 19px;
     font-size: small;
-    padding: 5;
+    padding: 5px;
 
 " class="ref-text">Text</section><section style="
     min-height: 30px;
@@ -4350,7 +4301,7 @@ id="add_pic_title">Add Pictures</h7>
     margin-bottom: 2px;
     word-spacing: 0.139em;
 " class="ref-wrapper"><img src="images/ikp.jpg" width="35" height="30" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;
-    margin-top: -6;" class="ref-profpic"><small class="ref-name">Name </small><small style="color: grey" class="ref-username">(@username)</small> <small>from</small> <a class="ref-place" style="
+    margin-top: -6px;" class="ref-profpic"><small class="ref-name">Name </small><small style="color: grey" class="ref-username">(@username)</small> <small>from</small> <a class="ref-place" style="
     font-size: x-small;
 ">Place</a>
 <br>
@@ -4405,7 +4356,7 @@ id="add_pic_title">Add Pictures</h7>
 
 
 
-<section style="/* max-width: 40%; *//* float: left; *//* min-height: 260px; */margin: 9px;margin-top:19px;text-align: -webkit-center;margin-left: 3;margin-right: 9;">
+<section style="/* max-width: 40%; *//* float: left; *//* min-height: 260px; */margin: 9px;margin-top:19px;text-align: -webkit-center;margin-left: 3px;margin-right: 9px;">
 
        <section class="add_link group" style="
     margin-bottom: 17px;
@@ -4414,10 +4365,10 @@ id="add_pic_title">Add Pictures</h7>
   <span style="
     font-weight: 600;
     /* position: absolute; */
-    margin: 19;
+    margin: 19px;
     /* margin-left: 9; */
     color: #ea7208;
-    margin-top: 3;
+    margin-top: 3px;
     letter-spacing: 0.05em;
     /* font-size: x-small; */
     padding: 9px;
@@ -4426,10 +4377,10 @@ id="add_pic_title">Add Pictures</h7>
   <section style="
     position: absolute;
     width: 94.4%;
-    margin-left: 1;
+    margin-left: 1px;
     min-height: 38;
     background: rgba(90, 224, 81, 0.64);
-    margin-top: 10;
+    margin-top: 10px;
    /* transition:  all 600ms cubic‑bezier(0.175, 0.885, 0.32, 1.275);
     transition: all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
     width: 50%;
@@ -4443,7 +4394,7 @@ id="add_pic_title">Add Pictures</h7>
     text-align: center;
     border: 1px solid orange;
     color: transparent;
-    margin-top: 9;
+    margin-top: 9px;
 " id="up_m" onchange="pic_change(this)"><span style="position: absolute; margin-top: 18px; margin-left: -15px; color: rgb(234, 114, 8); font-weight: 600;" id="add_pics_span"></span></section>
 
 
@@ -4453,8 +4404,8 @@ id="add_pic_title">Add Pictures</h7>
             <section class="item_images edit">
 <ul id="" style="
     list-style: none;
-    padding-left: 0;
-    padding-top:9;
+    padding-left: 0px;
+    padding-top:9px;
 ">
 
 </ul></section>
@@ -4585,7 +4536,7 @@ id="add_pic_title">Add Pictures</h7>
 
 <center>
 
-<section id="add_to_Ref" style="padding:8px;margin:5px;word-wrap:break-word;border: 1px solid rgba(130, 130, 130, 0.45);min-height:60px;background: white;border-radius: 6px;margin-bottom: 20px;max-width: 400">
+<section id="add_to_Ref" style="padding:8px;margin:5px;word-wrap:break-word;border: 1px solid rgba(130, 130, 130, 0.45);min-height:60px;background: white;border-radius: 6px;margin-bottom: 20px;max-width: 400px">
 
   <h4 style="
     margin: 5px;
@@ -4598,7 +4549,7 @@ id="add_pic_title">Add Pictures</h7>
     text-align: left;
     margin-bottom: 19px;
     font-size: small;
-    padding: 5;
+    padding: 5px;
 
 " class="ref-text">Text</section><section style="
     min-height: 30px;
@@ -4620,7 +4571,7 @@ id="add_pic_title">Add Pictures</h7>
     margin-bottom: 2px;
     word-spacing: 0.139em;
 " class="ref-wrapper"><img src="images/ikp.jpg" width="35" height="30" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;
-    margin-top: -6;" class="ref-profpic"><small class="ref-name">Name </small> <small style="color: grey" class="ref-username">(@username)</small><small> from</small> <a class="ref-place" style="
+    margin-top: -6px;" class="ref-profpic"><small class="ref-name">Name </small> <small style="color: grey" class="ref-username">(@username)</small><small> from</small> <a class="ref-place" style="
     font-size: x-small;
 ">Place</a>
 <br>
@@ -4674,10 +4625,10 @@ id="add_pic_title">Add Pictures</h7>
   <span style="
     font-weight: 600;
     /* position: absolute; */
-    margin: 19;
+    margin: 19px;
     /* margin-left: 9; */
     color: #ea7208;
-    margin-top: 3;
+    margin-top: 3px;
     letter-spacing: 0.05em;
     /* font-size: x-small; */
     padding: 9px;
@@ -4686,10 +4637,10 @@ id="add_pic_title">Add Pictures</h7>
   <section style="
     position: absolute;
     width: 94.4%;
-    margin-left: 1;
-    min-height: 38;
+    margin-left: 1px;
+    min-height: 38px;
     background: rgba(90, 224, 81, 0.64);
-    margin-top: 10;
+    margin-top: 10px;
    /* transition:  all 600ms cubic‑bezier(0.175, 0.885, 0.32, 1.275);
     transition: all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
     width: 50%;
@@ -4703,7 +4654,7 @@ id="add_pic_title">Add Pictures</h7>
     text-align: center;
     border: 1px solid orange;
     color: transparent;
-    margin-top: 9;
+    margin-top: 9px;
 " id="up_m" onchange="pic_change(this)"><span style="position: absolute; margin-top: 18px; margin-left: -15px; color: rgb(234, 114, 8); font-weight: 600;" id="add_pics_span"></span></section>
 
 
@@ -4713,8 +4664,8 @@ id="add_pic_title">Add Pictures</h7>
             <section class="item_images edit">
 <ul id="" style="
     list-style: none;
-    padding-left: 0;
-    padding-top:9;
+    padding-left: 0px;
+    padding-top:9px;
 ">
 
 </ul></section>
@@ -4785,7 +4736,7 @@ id="add_pic_title">Add Pictures</h7>
     text-align: left;
     margin-bottom: 19px;
     font-size: small;
-    padding: 5;
+    padding: 5px;
 
 " class="ref-text">Text</section><section style="
     min-height: 30px;
@@ -4807,7 +4758,7 @@ id="add_pic_title">Add Pictures</h7>
     margin-bottom: 2px;
     word-spacing: 0.139em;
 " class="ref-wrapper"><img src="images/ikp.jpg" width="35" height="30" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;
-    margin-top: -6;" class="ref-profpic"><small class="ref-name">Name </small><small style="color: grey" class="ref-username">(@username)</small><small> from </small><a class="ref-place" style="
+    margin-top: -6px;" class="ref-profpic"><small class="ref-name">Name </small><small style="color: grey" class="ref-username">(@username)</small><small> from </small><a class="ref-place" style="
     font-size: x-small;
 ">Place</a>
 <br>
@@ -4856,7 +4807,7 @@ id="add_pic_title">Add Pictures</h7>
 
 
 
-<section style="/* max-width: 40%; *//* float: left; *//* min-height: 260px; */margin: 9px;margin-top:19px;text-align: -webkit-center;margin-left: 3;margin-right: 9;">
+<section style="/* max-width: 40%; *//* float: left; *//* min-height: 260px; */margin: 9px;margin-top:19px;text-align: -webkit-center;margin-left: 3px;margin-right: 9px;">
 
        <section class="add_link group" style="
     margin-bottom: 17px;
@@ -4865,10 +4816,10 @@ id="add_pic_title">Add Pictures</h7>
   <span style="
     font-weight: 600;
     /* position: absolute; */
-    margin: 19;
+    margin: 19px;
     /* margin-left: 9; */
     color: #ea7208;
-    margin-top: 3;
+    margin-top: 3px;
     letter-spacing: 0.05em;
     /* font-size: x-small; */
     padding: 9px;
@@ -4877,10 +4828,10 @@ id="add_pic_title">Add Pictures</h7>
   <section style="
     position: absolute;
     width: 94.4%;
-    margin-left: 1;
-    min-height: 38;
+    margin-left: 1px;
+    min-height: 38px;
     background: rgba(90, 224, 81, 0.64);
-    margin-top: 10;
+    margin-top: 10px;
    /* transition:  all 600ms cubic‑bezier(0.175, 0.885, 0.32, 1.275);
     transition: all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
     width: 50%;
@@ -4894,7 +4845,7 @@ id="add_pic_title">Add Pictures</h7>
     text-align: center;
     border: 1px solid orange;
     color: transparent;
-    margin-top: 9;
+    margin-top: 9px;
 " id="up_m" onchange="pic_change(this)"><span style="position: absolute; margin-top: 18px; margin-left: -15px; color: rgb(234, 114, 8); font-weight: 600;" id="add_pics_span"></span></section>
 
 
@@ -4904,8 +4855,8 @@ id="add_pic_title">Add Pictures</h7>
             <section class="item_images edit">
 <ul id="" style="
     list-style: none;
-    padding-left: 0;
-    padding-top:9;
+    padding-left: 0px;
+    padding-top:9px;
 ">
 
 </ul></section>
@@ -4988,7 +4939,7 @@ id="add_pic_title">Add Pictures</h7>
 
 <button class="floating-button" onclick="add_window('add',this)" id="post-something" style="
  top:90%;
-    right: 0;
+    right: 0px;
     font-size: x-large;
     width: 48px;
     height: 48px;

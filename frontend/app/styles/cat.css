@@ -9,7 +9,7 @@
     margin-top: 12px;
     margin-left: 12px;
     margin-right: 9px;
-    left: 4;
+    left: 4px;
     padding-left: 6px;
     /* border: 1.6px solid rgba(255, 255, 255, 0.56); */
     border-radius: 50%;
@@ -79,7 +79,7 @@ background:inherit;padding: 16px;min-height:140px;overflow: hidden;margin:9px;te
 }
 
 #category_menu .menucontent li big {
-    font-size: 13;
+    font-size: 13px;
     
     letter-spacing: 1.8px;
     /* font-style: italic; */
@@ -148,7 +148,7 @@ ul.menucontent.food li button.floating-button {
 }
 
 .category_section a.more{
-float:right;transition-duration:0.3s;cursor:pointer;color:white;font-size: 20;
+float:right;transition-duration:0.3s;cursor:pointer;color:white;font-size: 20px;
 }
 .category_section a.more:hover{
 text-decoration: none;}
@@ -161,8 +161,8 @@ content: "  . .";
 
 
 section.ctext- {
-    margin: -13;
-    padding: 5;
+    margin: -13px;
+    padding: 5px;
     background: rgba(0, 0, 0, 0.84);
     color: white;
     letter-spacing: .5;
@@ -316,10 +316,10 @@ ul.menu-wrapper {
     margin-bottom: 89px;
     /* border: 1px solid white; */
     display: block;
-    padding: 9;
+    padding: 9px;
     transition: all 0.4s ease-in-out;
     /* transform: translateX(-104%); */
-    margin-top: 28;
+    margin-top: 28px;
 }
 .menu-wrapper-li ul{
     display: block;
@@ -330,7 +330,7 @@ ul.menu-wrapper {
 
 .slide-show-item ul {
     list-style: none;
-    padding: 9;
+    padding: 9px;
     width: 80%;
     position: absolute;
     text-align: -webkit-center;
@@ -339,14 +339,14 @@ ul.menu-wrapper {
     letter-spacing: 1.5px;
     min-height: 56px;
     overflow: hidden;
-    margin-top: -15;
+    margin-top: -15px;
 }
 
 
 
 .slide-show-item ul li img {
-    width: 49;
-    height: 58;
+    width: 49px;
+    height: 58px;
     border-radius: 2px;
 }
 
@@ -381,9 +381,9 @@ ul.menu-wrapper {
     
     float: left;
     position: relative;
-    max-width: 390;
-    margin-left: 10;
-    margin-right: 13.9;
+    max-width: 390px;
+    margin-left: 10px;
+    margin-right: 13.9px;
 }
 
 .goN .menu-wrapper-li{
@@ -401,7 +401,7 @@ ul.menu-wrapper {
 }
 .tour{
     position: fixed;
-    right:10;
+    right:10px;
     top:50%;
     min-width: 44px;min-height: 44px;max-width: 44px;max-height: 44px;height:44px;width:44px;
     background:#04b0c5;
@@ -420,18 +420,18 @@ padding: 3px;background: rgba(255,255,255,0.1);transition: all 0.5s cubic-bezier
 }
 .tour-text.step1:before{
 content: "⤺";
-    padding-right: 9;
+    padding-right: 9px;
     font-size: x-large;
 }
 .tour-text.step2:after{
     content: "↗";
     font-size: xx-large;
-    padding-left: 15;
+    padding-left: 15px;
 }
 
 .menu-wrapper-li:last-child
 {
-    margin-top: 310;
+    margin-top: 310px;
 }
 
 .tour.info{
@@ -458,7 +458,7 @@ font-family: serif;;
 @media (min-width: 878px) {
 .menu-wrapper-li:last-child
 {
-    margin-top: 10;
+    margin-top: 10px;
 }
 #category_menu .menucontent li{
     border:none; margin-right: 50px;margin-bottom: 30px;float: left;width:23%;
@@ -467,12 +467,12 @@ font-family: serif;;
     list-style: none;
     padding: 5px;
     display: block;
-    margin-left: 10;
+    margin-left: 10px;
     text-align: -webkit-center;
-    min-height: 90;
+    min-height: 90px;
     overflow: hidden;
     display: inline-block;
-    margin-left: 100;
+    margin-left: 100px;
 /*    position: absolute;
 */}
 
@@ -485,7 +485,7 @@ font-family: serif;;
 ul.menu-wrapper {
     list-style: none;
     min-width: 200%;
-    padding: 0;
+    padding: 0px;
     overflow: hidden;
     min-height: 90px;
     margin-top:-21.9px;
@@ -517,7 +517,7 @@ ul.menu-wrapper {
     /* display: none; */
     /*display: block;*/
     letter-spacing: 1;
-    font-size: 14;
+    font-size: 14px;
 }
 #category_menu.overlay_menu .menucontent .floating-button {
     width: 37px;
@@ -539,9 +539,9 @@ ul.menu-wrapper {
     
     float: left;
     position: relative;
-    max-width: 500;
-    margin-left: 15;
-    margin-right: 15.9;
+    max-width: 500px;
+    margin-left: 15px;
+    margin-right: 15.9px;
 }
 .goN .menu-wrapper-li{
     transform: translateX(-106%);
@@ -559,7 +559,7 @@ ul.menu-wrapper {
 
 
 
-    margin-right: 3;
+    margin-right: 3px;
     margin-bottom: 20px;
    
 }
@@ -586,9 +586,9 @@ ul.menu-wrapper {
     
     float: left;
     position: relative;
-    max-width: 190;
-    margin-left: 19;
-    margin-right: 12.9;
+    max-width: 190px;
+    margin-left: 19px;
+    margin-right: 12.9px;
 }
 
 
