@@ -103,6 +103,33 @@ section.hero-unit > section > section {
 h4 {
     margin: 6;
 }
+
+section.tabs {
+    /* border-bottom: 1px solid; */
+    padding: 0px;
+}
+
+section.tabs>div {
+    /* float: left; */
+    display: inline-block;
+    padding: 8px;
+    min-width: 18%;
+    margin-left: 3;
+    font-size: small;
+    box-shadow: none;
+    border-bottom: 3px solid #2cb8d8;
+    cursor: pointer;
+}
+
+section.tabs>div:last-child {
+    margin-left: 6;
+}
+
+section.hero-unit > section.tabs {
+    padding: 0px;
+    margin-left: -20;
+    margin-right: -19;
+}
 @media  (min-width: 800px) {
   section.trends{
         float: left;
@@ -129,6 +156,16 @@ section.whatsnew{
 }
 section.hero-unit > section > section{
   max-width: 250px;
+}
+
+section.hero-unit > section.trends > section {
+    background: transparent;
+    color: white;
+    border: 2px solid;
+    font-size: large;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    background: coral;
 }
 }
 
@@ -229,6 +266,9 @@ section.hero-unit > section > section{
     color: black;
     margin: 0;
     width: 100%;">
+
+
+    
 <h1 style="margin-top: 4px">Home</h1>
 
 
@@ -238,7 +278,13 @@ section.hero-unit > section > section{
 
 
 
+<section class="tabs">
+    <div>Trends</div>
+    
+<div>For You</div>
+<div>Recommended</div><div>New</div>
 
+</section>
 
 
 
