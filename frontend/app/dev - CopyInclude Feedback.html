@@ -1,0 +1,883 @@
+<!DOCTYPE doctype html>
+<html lang="">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="" name="description"/>
+        <meta content="initial-scale=1.0, maximum-scale=1.0, width=device-width, minimal-ui" name="viewport"/>
+        <title>
+            Servepool:Landing Page
+        </title>
+        <link href="apple-touch-icon.png" rel="apple-touch-icon"/>
+        <!-- Place favicon.ico in the root directory -->
+  
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+
+
+        <link href="styles/icons.css" rel="stylesheet"/>
+       
+        <!-- <link rel="stylesheet" type="text/css" href="styles/jquery.auto-complete.css"/> -->
+        <!-- endbuild -->
+        
+        <style type="text/css">
+
+        @font-face {
+        font-family: 'Merriweather';
+     src: url('../fonts/NotoSans-Regular.ttf'),
+            url('../fonts/NotoSans-Italic.ttf'),
+            url('../fonts/NotoSans-BoldItalic.ttf'),
+            url('../fonts/NotoSans-Bold.ttf')
+        ;
+
+
+         font-weight: normal;
+        font-style: normal;
+    }
+    body
+{
+    font-family: 'Merriweather';overflow-x: hidden;
+}
+.notif-wrapper{
+  min-height: 70px;background: white;border-radius: 6px;border:1px solid rgba(128, 128, 128, 0.40);max-width: 600px;min-width: 250px;margin-top: 34px;
+}
+.notif-wrapper > .notif-detail{
+  padding:9px;min-height: 60px;text-align: left;padding-left: 14px; 
+}
+.notif-dismiss-button
+  {
+        min-height: 30px;
+    min-width: 35px;
+    border: 1px solid;
+    padding: 12px;
+    padding-top:6;
+    padding-bottom: 6;
+    border-radius: 50%;
+    font-weight: 100;
+    font-size: large;
+    transform: rotate(45deg);
+    margin-right: 8px;
+    cursor: pointer;
+    color:#f15454;
+  }
+.notif-dismiss-wrapper{
+  text-align: right;
+}
+
+.notif-action{
+  display: none;
+}
+.notif-action>span{
+      padding: 7px;
+    border: 1px solid;
+    border-radius: 8px;
+    color: #57d484;
+}
+
+
+
+
+
+
+
+
+
+            </style>
+        </head>
+        <body>
+               <div class="generic" id="fixnav" >
+           <button class="menu" onclick="open_Nav()"></button>
+            <section class="group" id="searchbar"  style="display:inline-block;width: 66%;
+    margin-left: 10px;padding-bottom:49px;">
+                 <form action="https://www.google.co.in/search?q=mdio&oq=m&aqs=chrome.0.69i59l2j69i57j69i60j69i59j69i60.5787j0j8&sourceid=chrome&es_sm=93&ie=UTF-8#q=h" method="GET">
+                    <input class="textip" id="searchtext" placeholder="🔎" required="" type="text"/>
+                    <span class="bar">
+                    </span>
+                </form> 
+            </section>
+        </div>
+        
+
+
+      <div class="overlay_menu" id="category_menu" >
+      <button class="menu"></button>
+            <button class="floating-button closebutton" id="close_cat">
+                <b>
+                    X
+                </b>
+            </button>
+            <button class="menu " onclick="toggleMenu(this)">
+  
+</button>
+            <br>
+            <h2 class="title"> lifestyle</h2>
+
+             <ul class="menu-wrapper">
+<li class="menu-wrapper-li">
+            <ul class="menucontent">
+                <li><button onclick="location.href='/category.html'" class="floating-button food icon-food" value="food">
+                </button>
+  <big>Food</big><small></small>
+</li>
+            <li>    <button class="floating-button lifestyle icon-lifestyle" value="lifestyle" onclick="location.href='/category.html'">
+                </button><big>Lifestyle</big></li>
+               <li> <button onclick="location.href='/category.html'" class="floating-button accom icon-accom " value="Accomodation">
+                </button><big>Accomodation</big></li>
+             <li>   <button onclick="location.href='/category.html'" class="floating-button education icon-education" value="education">
+                </button><big>Education</big></li>
+              <li>  <button onclick="location.href='/category.html'" class="floating-button entertainment icon-entertainment" id="entertainmentgo" value="entertainment">
+                </button><big>Entertainment</big></li>
+               <li> <button onclick="location.href='/category.html'" class="floating-button social_welfare icon-social_welfare" value="social welfare">
+                </button><big>Welfare</big></li>
+            </ul>
+
+</li>
+<li class="menu-wrapper-li" id="menu-li-">
+             <ul class="usermenu menucontent user">
+                <li>  <button onclick="location.href='/forums.html'" class="floating-button icon-personal_page" value="My Page">
+                </button>
+  <big>Forums</big><small></small>
+</li>
+            <li>     <button onclick="location.href='/notifications.html'" class="floating-button icon-notifications" value="My Notifications">
+                </button><big>Notifications</big></li>
+               <li>  <button onclick="location.href='/bookmark.html'" class="floating-button icon-bookmarks" value="My Bookmarks">
+                </button><big>Bookmarks</big></li>
+
+             <li>    <button class="floating-button icon-developments" onclick="location.href='/development.html'"value="My Developments">
+                </button><big>Developments</big></li>
+             
+                 <li>       <button class="floating-button screen-button" value="MY DASHBOARD" onclick="location.href='/sitemaker.html'">
+                </button><big>Dashboard</big></li>
+          <li>     <button onclick="location.href='/messages.html'" class="floating-button message-button" value="My Notifications">
+                </button><big>Messages</big></li>
+                 <li>     <button onclick="location.href='/ratings.html'" class="floating-button i-ratings" value="My Notifications">
+                </button><big>Ratings</big></li>
+
+            <li>       <button class="floating-button icon-settings" onclick="location.href='/settings-conshub.html'" id="settings_user" value="My Settings">
+                </button><big>Settings</big></li>
+
+            </ul>
+
+           </li>
+            </ul>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <section class="hero-unit " style="    background: rgba(255, 233, 151, 0.88);
+    padding: 25px;
+    color: black;
+    margin: 0;
+    width: 100%;">
+<h1 style="margin-top: 4px">Developments</h1>
+
+<h5 >Effects of your contributions <br>(get consequences of tangible actions )</h6>
+
+
+
+
+
+
+<section style="
+    padding: 9px;
+    min-height: 190;
+"><h2 style="/* text-align: center; *//* text-align: left; *//* padding-left: 12%; *//* border-bottom: 1px solid rgba(12, 11, 11, 0.75); *//* padding: 9; */text-align: left;/* padding-left: 12%; *//* border-bottom: 1px solid rgba(0, 0, 0, 0.65); */padding: 9;opacity: 0.3;font-size: x-large;margin-top: -9;">Follow Up</h2>
+
+<ol style="text-align: left;">
+  <li>Milestone</li>
+  <li>Mention</li>
+  <li>Credit</li>
+
+</ol>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<i style="font-weight: 600">Ways to make that better </i>
+   <div id='owner' style='margin:0 auto;width:100%;'></div>
+          <script src="scripts/complete.ly.1.0.1.min.js"></script>
+        <script type="text/javascript">
+          
+
+var level=0;
+var last_char="";
+var sp_q="";
+var length=0;
+var kc=0;
+var type=0;
+var typ2=0;
+
+
+ function inp_text_press(event) {
+var curr_ch=String.fromCharCode(e.which);
+last_char=curr_ch;
+level=level+1;
+console.log("console "+level);
+ }
+
+  function inp_text_up(event) {
+
+       var key = event.keyCode || event.charCode;
+        if( key == 8 || key == 46 ){
+         console("IF");
+            
+         if(level>0 && event.which==8 && last_char==='.'&&sp_q){  
+          level=level-1;}
+
+
+             return false;
+        }
+        else{
+          console.log("ELSE");
+          var curr_ch=String.fromCharCode(event.keyCode);
+         if(curr_ch=='.') level=level+1;
+        }
+  console.log("console "+level+            +curr_ch);
+}
+
+function inp_text_up(event,input) {
+
+       var key = event.keyCode || event.charCode;
+        if( key == 8 || key == 46 ){
+         console("IF");
+           var c_char='k';
+           if($(input).val().length>1)c_char=$(input).val().charAt($(input).val().length-1);
+           else{
+           c_char= $(input).val().charAt(0);
+           }
+         if(level>0 && event.which==8 && last_char==='.'&&sp_q){  
+          level=level-1;}
+
+
+             return false;
+        }
+        else{
+          console.log("ELSE");
+         
+         if(c_char=='.') level=level+1;
+        }
+  console.log("console "+level+            +c_char+$(input).val().charAt($(input).val().length-1));
+}
+
+
+
+          var owner = document.getElementById('searchbar');
+    var p = completely(owner, { 
+        fontSize:'17.8px',
+        promptInnerHTML:''
+    });
+    p.input.style.borderBottom = '1.4px solid orange';
+
+    p.input.onkeyup=function (e) {
+     
+    //  kc=e.keyCode;
+    // console.log("keyup "+kc);
+     // length=p.input.length;
+     // inp_text_up(e,$(p.input));
+
+    }
+   p.input.keypress=function (e) {
+   //if(e.keyCode==190&&level==3)return;
+   };
+      
+    p.onChange = function (text) {
+       
+       var arr= text.split('.');
+
+            level=arr.length-1;
+              
+//console.log(kc);
+// if(kc==8||kc==46)
+// $(p.dropDown).css("display","none");
+// else{
+//   $(p.dropDown).css("display","block");
+// }
+;
+        // if(text.charAt(text.length-1)=='.')  
+     
+  
+        if(text.charAt(0)=='#'||text.charAt(0)=='!'||text.charAt(0)=='$') type=text.charAt(0);
+  else if(text.charAt(0)=='@'){
+
+    if(text.charAt(1)==':')type="@:";
+    else type='@';
+  }
+  else if(arr[0]=='this'||arr[0]=='me'||arr[0]=='Welfare'){
+    type=arr[0];
+  }
+          p.startFrom = text.lastIndexOf('.')+1;
+               
+              if(level==0){
+                p.options=["@","@:","#","$","!","this","me","Welfare"];
+              }
+             else if(level==1){
+
+              switch(type) {
+    case "@":
+       // code block
+       p.options=["posts","forums","page"];
+        break;
+    case "@:":
+        //code block
+        p.options=["site","products","posts","forums","event","suggest","complain","question","rate"];
+        break;
+        case "#":
+        p.options=["posts","()"];
+        break;
+      case "!":  case "$":
+        p.options=["events","page"];
+        break;
+        case "this":
+
+        p.options=["site","posts","suggest","complain","question","rate"];
+        break;
+        case "me":
+
+        p.options=["page","page(e)","forums","bookmarks","posts","messages","notifications","ratings","dashboard","settings"];
+        break;
+        
+        case "Welfare":p.options=["new","popular","()"];
+        break;
+    default:p.options=[];
+    break;
+        //default code block
+}
+              // p.options = ["posts","forums"];     
+             }
+            else if(level==2){
+               // p.options=["('  ')","#h","#4"];
+               typ2=arr[1];
+                 switch(type) {
+        case "@":
+            if(typ2=='posts'){
+             
+             p.options=["()"];
+            }
+            else if(typ2=='forums'){
+                    
+            p.options=["()"];        
+            }
+            else if(typ2=='page'){
+
+                p.options=['()'];     
+            }
+            else {
+              p.options=[];
+            }
+
+
+        break;
+        case "@:": 
+            if(typ2=='site'){
+                p.options=['()'];     
+            } 
+            else if(typ2=='products')
+            {
+                       p.options=['()'];     
+            } 
+            else if(typ2=='posts')
+            {
+                  p.options=['()'];     
+            } 
+            else if(typ2=='forums'){
+                  p.options=['()'];     
+            }
+            else if(typ2=='event'){
+               p.options=['()'];     
+            }
+            else if(typ2=='suggest'){
+                 p.options=['()'];     
+            }
+            else if(typ2=='complain'){
+                p.options=['()'];     
+
+            }
+            else if(typ2=='question'){
+               p.options=['()'];     
+            }
+            else if(typ2=='rate'){
+            p.options=['()'];     
+            }
+            else {
+                p.options=['()'];     
+            }
+        break;
+        case "#":
+                   if(typ2=='posts')
+                     {
+                      p.options=['()'];  
+                     }
+                   else if(typ2=='()')
+                   {
+                    p.options=[];  
+                   }
+                   else{
+                    p.options=["()"];  
+                   }
+                          
+        break;
+      case "$":  case "!":
+                if(typ2=='events')
+                     {
+                      p.options=['()'];  
+                     }
+                   else if(typ2=='page')
+                   {
+                    p.options=["()"];  
+                   }
+                   else{
+                    p.options=["()"];  
+                   }
+        break;
+        
+        
+         case "this":
+         if(typ2=='posts'){
+           p.options=['()'];
+         }
+         else if(typ2=='site'){
+            p.options=[];
+         }
+          else if(typ2=='suggest'){
+              p.options=[];
+          }
+            else if(typ2=='complain'){
+                p.options=[];
+            }
+              else if(typ2=='question'){
+                  p.options=[];
+              }
+              else if(typ2=='rate'){
+            p.options=[];
+              }
+          else{
+            p.options=[];
+          } 
+         break;
+         case "me":
+         
+         if(typ2=='forums'){
+          
+          p.options=['()'];
+
+         }
+         else if(typ2=='bookmarks'){
+          p.options=['()'];
+         }
+         else if(typ2=='messages'){
+          p.options=['()'];
+         }
+         else if(typ2=='notifications'){
+           p.options=['()'];
+         }
+         else if(typ2=='ratings'){
+          p.options=['()'];
+         }
+           else if(typ2=='posts'){
+          p.options=['()'];
+         }
+         else if(typ2=='page'||typ2=='page(e)'){
+            p.options=[];
+         }
+          else{
+            p.options=[];
+          }
+
+         break;
+         case "Welfare":
+         if(typ2=='new'){
+          p.options=["()"];
+         }
+         else if(typ2=='popular'){
+          p.options=["()"];
+         }
+
+         else{
+          p.options=[];
+         }
+         break;
+
+        default: p.options=[];
+        break;
+  }
+
+              }
+
+              else if(level==3){
+                p.options=[];
+                   
+
+              }
+            p.repaint();  
+             // var i=0;
+             // for(i=0;i<arr.length;i++)
+             // {
+             //  console.log(arr[i]+" <br> ");
+             // }
+
+
+                //  p.repaint();return;
+        //
+
+  //length=text.length;
+    
+        //else
+         // { if(level==0){
+         //        p.options=["Welfare","@","@:","#","$","!","this"];
+         //     //  p.repaint();
+         //     }}
+             //console.log("Level  "+level);
+ console.log(level+" "+type);
+          
+             return;
+
+   
+    };
+
+    var cmds = {
+        'post'  : ['bigger','smaller'],
+        'move'  : ['left','right','up','down'],
+        'paint' : ['aqua','blue','gray','green','lime','maroon','orange','red','yellow']    
+    };
+
+    p.options = ["posts","forums"];     
+
+    
+    p.input.maxLength = 50; // limit the max number of characters in the input text 
+
+        </script>
+             
+
+
+<button class="floating-button tour info" onclick="tour(this)"></button>
+<section class="tour-text step1"  style="opacity:0" id="m-text">This the main menu</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  var c=1;
+
+function notif() {
+
+
+if(c==0){//top: 2; */
+   // background: rgba(226, 36, 15, 0.96); */
+  $('#all-notifications').velocity('fadeIn',{ duration:70});
+  $('#shownotif').css('top','2');
+   $('#shownotif').css('background',' rgba(226, 36, 15, 0.96)');
+c=1;
+}
+else{
+  $('#all-notifications').velocity('fadeOut',{ duration:70});
+  $('#shownotif').css('top','calc(90% - 10px)');
+   $('#shownotif').css('background',' rgba(255, 88, 34, 0.96)');
+c=0;
+}
+
+
+  // body...
+}
+
+</script>
+<div id="all-notifications" style="display: block;
+    box-shadow: none;
+    min-height: 30px;
+    overflow-x: hidden;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    z-index: 9;
+    right: 0px;
+    bottom: 0px;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.946);
+
+    opacity: 1;text-align: -webkit-center;">
+      
+
+<h1>All Notifications</h1>
+
+<ul style="list-style: none;padding: 6px">
+<li>
+<section class="notif-wrapper" style="">
+  <h2 class="notif-title" style="">Notif Title</h2>
+  <h5 class="notif-on">On : 25/8/2017</h5>
+   <section class="notif-detail" style="">Detail........................................................</section>
+   <section class="notif-action">
+     <span>Action</span>
+   </section>
+   <h1 style="" class="notif-dismiss-wrapper">
+     <span class="notif-dismiss-button" style="" onclick="$(this).parent().parent().parent().remove()">×</span>
+   </h1>
+</section>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+<button id="shownotif" style="position: fixed;top: calc(90% - 10px);transition: 0.3s ease;right:2;color:white;background: rgba(255, 88, 34, 0.96);min-height: 48px;max-width: 49px;max-height: 49px;min-width: 47;z-index: 700;/* font-weight: 900; *//* transform: rotate(45deg); */font-size: xx-large;padding-left: 11;padding-top: 0;line-height: 0;/* top: 2; *//* background: rgba(226, 36, 15, 0.96); */" class="floating-button" onclick="notif()">+</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+e.src='https://www.google-analytics.com/analytics.js';
+r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+  
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+    <div id="floating-panel" style="box-shadow: none;padding: 11px">
+      <input id="latlng" type="text" value="40.714224,-73.961452">
+      <input id="submit" type="button" value="Reverse Geocode">
+    </div>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 8,
+          center: {lat: 40.731, lng: -73.997}
+        });
+        var geocoder = new google.maps.Geocoder;
+        var infowindow = new google.maps.InfoWindow;
+
+        document.getElementById('submit').addEventListener('click', function() {
+          geocodeLatLng(geocoder, map, infowindow);
+        });
+      }
+
+      function geocodeLatLng(geocoder, map, infowindow) {
+        var input = document.getElementById('latlng').value;
+        var latlngStr = input.split(',', 2);
+        var latlng = {lat: parseFloat(latlngStr[0]), lng: parseFloat(latlngStr[1])};
+        geocoder.geocode({'location': latlng}, function(results, status) {
+          if (status === 'OK') {
+            if (results[1]) {
+              map.setZoom(11);
+              var marker = new google.maps.Marker({
+                position: latlng,
+                map: map
+              });
+              infowindow.setContent(results[1].formatted_address);
+              infowindow.open(map, marker);
+            } else {
+              window.alert('No results found');
+            }
+          } else {
+            window.alert('Geocoder failed due to: ' + status);
+          }
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaPb8YuZfFcd6r36sf0avPfg80ji4TM6I&callback=initMap">
+    </script>
+
+
+
+
+ -->
+
+
+
+
+
+ <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:js scripts/velocity.min.js -->
+  <script src="scripts/velocity.min.js"></script>
+  <!-- endbuild -->
+  <!-- build:js scripts/jquery-autocomplete.js -->
+  <script src="scripts/jquery-autocomplete.js"></script>
+  <!-- endbuild -->
+  <!-- build:js scripts/catmenu.js -->
+  <script src="scripts/catmenu.js"></script>
+  <!-- endbuild -->
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </body>
+        </html>
+
+
