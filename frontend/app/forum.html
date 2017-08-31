@@ -2671,6 +2671,11 @@ function appendideatoall(title,text,motiv,name,pic,username,links,h)
    var m='';
    if(motiv!='')m='<section style="font-size: small;padding: 5px;text-align: left;/* word-spacing: 0.12em; */word-wrap: break-word;font-style: italic;/* letter-spacing: 0.1em; */color: teal;" class="idea_motiv">Motivation:<br>'+motiv+'</section>';
    if(links!='')str='<ol class="idea_links" style="/* padding: 5px; */text-align: left;word-spacing: 0.12em;word-wrap: break-word;margin-bottom: 2px;"><h3 style="margin: 6px;margin-left: -13px;">Sources : </h3>'+links+'</ol>';
+   if(title!=''&&text!=''){
+
+    document.getElementById('ideatitle_').style.border="1px solid rgba(0,0,0,0.6)";
+    document.getElementById('ideacontent_').style.border="1px solid rgba(0,0,0,0.6)";
+
     $('#show-all-posts').append('<section class="card new_post compressed" id="" style=""><h2 class="item_title_wrapper"><span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto"><span style=" position: absolute; margin-left: -2px;margin-top:24.5px;font-size:10px;color: coral;" class="upvote-item"></span> U </span><br><span class="item_title_content">'+title+'</span></h2>'+m+'<section class="item_text_content" style="padding: 5px;text-align: left;word-spacing: 0.12em;word-wrap: break-word;">'+text+'</section>'+str+' <br><section style="  min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images">'+h+'</section><section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9px;margin-bottom: 6px;font-size: smaller;">'+date+'</section><span style="float:right;text-align: right;margin: 9px;font-weight: 600;margin-top: 2px;margin-bottom: 2px;word-spacing: 0.139em;" class="item_by_wrapper"><img class="item_by_profpic" src="'+pic+'" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px; margin-top: -6px;"><small class="item_by_name">'+name+' </small> <small class="item_by_username" style="color: grey">('+username+')</small> <br></span><section style="  margin-top:63px;margin-bottom: 20px;display: block;text-align: -webkit-right;border-top:1px solid #e6e6e6;" class="item_num_wrapper"><section class="action-link">E<span class="num"></span></section><section class="action-link">+<span class="num"></span></section><section class="action-link">H<span class="num"></span></section><section  onclick="replyTo($(this).parent().parent());" class="action-link reply">R</section></section></section>');
 
 
@@ -2679,6 +2684,17 @@ function appendideatoall(title,text,motiv,name,pic,username,links,h)
 
 Allsources=[];
 Allpics=[];
+
+closeadd_window();
+}
+else{
+    if(title==='') document.getElementById('ideatitle_').style.border="1px solid rgba(255,0,0,0.6)"; 
+    else document.getElementById('ideatitle_').style.border="1px solid rgba(0,0,0,0.6)"; 
+   if(text==='')    document.getElementById('ideacontent_').style.border="1px solid rgba(255,0,0,0.6)";
+    else document.getElementById('ideacontent_').style.border="1px solid rgba(0,0,0,0.6)"; 
+}
+
+
 return;
 
 }
@@ -2704,9 +2720,25 @@ function appendupdatetoall(title,text,name,pic,username,H)
     /* My Prof pic */
     var date = getCurrDate(new Date());
     var place ='PL';
+    if(text!=''&&title!=''){
+        document.getElementById('updatetitle_').style.border="1px solid rgba(0,0,0,0.6)";
+        document.getElementById('updatecontent_').style.border="1px solid rgba(0,0,0,0.6)";
 $( "#show-all-posts" ).append( '<section class="card new_post compressed" id="" style=""><h2 class="item_title_wrapper"> <span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto"><span style=" position: absolute;margin-left: -2px; margin-top:24.5px; font-size:10px; color: coral;" class="upvote-item"></span>U </span><br><span class="item_title_content">'+title+'</span></h2><section style="padding: 5px;text-align: left;word-spacing: 0.12em;word-wrap: break-word;" class="item_text_content">'+text+'</section><br><section style=" min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images">'+H+'</section><section  class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9px;margin-bottom: 6px;font-size: smaller;">'+date+'</section><span style="float:right;text-align: right;margin: 9px;font-weight: 600;margin-top: 2px;margin-bottom: 2px;word-spacing: 0.139em;"  class="item_by_wrapper"><img class="item_by_profpic" src="'+pic+'" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px; margin-top: -6px;"><small class="item_by_name">'+name+' </small><small style="color: grey"  class="item_by_username">'+username+'</small><small> from</small> <a  style="font-size: x-small;" class="item_by_place">'+place+'</a></span><br><section style=" margin-top:63px; margin-bottom: 20px;display: block;text-align: -webkit-right;border-top:1px solid #e6e6e6;"  class="item_num_wrapper"> <section  class="action-link show_act">E<span class="num"></span></section> <section class="action-link BK" >+<span class="num"></span></section><section class="action-link HF">H<span class="num"></span></section><section  class="action-link reply" onclick="replyTo($(this).parent().parent());">R</section></section>        </section>' );
 
-Allpics=[];return;
+Allpics=[];
+closeadd_window();
+}
+else{
+
+if(title==='')document.getElementById('updatetitle_').style.border="1px solid rgba(255,0,0,0.6)";
+else document.getElementById('updatetitle_').style.border="1px solid rgba(0,0,0,0.6)";
+if(text==='')   document.getElementById('updatecontent_').style.border="1px solid rgba(255,0,0,0.6)";
+else    document.getElementById('updatecontent_').style.border="1px solid rgba(0,0,0,0.6)";
+
+
+}
+
+return;
 }
 
 
@@ -2719,10 +2751,18 @@ function appendcredit(text,ref,username,name,pic,h)
     {
         pl='<small> from</small> <a class="item_by_place">'+$(ref).children('.ref-c-wrapper').children('.ref-wrapper').children('.ref-place').html();
     }
+    if(text!=''){
+            document.getElementById('creditcontent_').style.border="1px solid rgba(0,0,0,0.6)";
  $( "#show-all-posts" ).append( '<section class="card new_post compressed" id="" style=""><h2 style="color: #1443a9;letter-spacing: 0.05em;font-size: 28px;  margin-bottom: -3px;" class="item_title_wrapper"><span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto"><span style="position: absolute; margin-left: -2px; margin-top:24.5px; font-size:10px;color: coral;" class="upvote-item"> </span>U </span><br><span class="item_title_content">Credit to :</span></h2><section class="card new_post compressed is_ref" id="" style=""><h2 class="item_title_wrapper"><span class="item_title_content">'+$(ref).children('.ref-title').html()+'</span></h2><section style="padding: 5px;text-align: left;word-spacing: 0.12em; word-wrap: break-word;" class="item_text_content">'+$(ref).children('.ref-text').html()+'</section><br><section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9px;margin-bottom: 6px;font-size: smaller;">'+$(ref).children('.ref-c-wrapper').children('.ref-date').html()+'</section><span style="float:right;text-align: right;margin: 9px;font-weight: 600;margin-top: 2px; margin-bottom: 2px;word-spacing: 0.139em;" class="item_by_wrapper"><img class="item_by_profpic" src="'+$(ref).children('.ref-c-wrapper').children('.ref-wrapper').children('.ref-profpic').attr('src')+'" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;margin-top: -6;">        <small class="item_by_name">'+$(ref).children('.ref-c-wrapper').children('.ref-wrapper').children('.ref-name').html()+'</small> <small style="color: grey" class="item_by_username">'+$(ref).children('.ref-c-wrapper').children('.ref-wrapper').children('.ref-username').html()+'</small>'+pl+'<br></span></section><br><section style="padding: 5px;text-align: left;word-spacing: 0.12em;padding-left: 18px;font-size: 12.5px;font-style: italic;font-weight: 600;color: navy;" class="item_text_content">'+text+'</section><section style="  min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images">'+h+'</section><section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9px;margin-bottom: 6px;font-size: smaller;">'+date+'</section><span style="float:right;text-align: right;margin: 9px;font-weight: 600;margin-top: 2px; margin-bottom: 2px;word-spacing: 0.139em;" class="item_by_wrapper"><img class="item_by_profpic" src="'+pic+'" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;margin-top: -6px;">  <small class="item_by_name">'+name+' </small> <small class="item_by_username" style="color: grey">'+username+'</small> <br></span><section style="margin-top:63px;margin-bottom: 20px;display: block;text-align: -webkit-right;border-top:1px solid #e6e6e6;" class="item_num_wrapper"><section class="action-link">E<span class="num"></span></section><section class="action-link">+<span class="num"></span></section><section class="action-link">H<span class="num"></span></section><section  onclick="replyTo($(this).parent().parent());" class="action-link">R</section></section>  </section>' );
 
 
-Allpics=[];return;
+
+Allpics=[];
+closeadd_window();}
+else{
+    document.getElementById('creditcontent_').style.border="1px solid rgba(255,0,0,0.6)";
+}
+return;
 
 }
 
@@ -2745,12 +2785,22 @@ function appendaddto(text,ref,username,name,pic,h)
     {
         pl='<small> from</small> <a class="item_by_place">'+$(ref).children('.ref-c-wrapper').children('.ref-wrapper').children('.ref-place').html();
     }
+ 
+if(text!=''){
+    document.getElementById('addtocontent_').style.border="1px solid rgba(0,0,0,0.6)";
  $( "#show-all-posts" ).append( '<section class="card new_post compressed" id="" style=""><h2 style="color: #1443a9;letter-spacing: 0.05em;font-size: 28px;  margin-bottom: -3px;" class="item_title_wrapper"><span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto"><span style="position: absolute; margin-left: -2px; margin-top:24.5px; font-size:10px;color: coral;" class="upvote-item"> </span>U </span><br><span class="item_title_content">Adding To :</span></h2><section style="padding: 5px;text-align: left;word-spacing: 0.12em;padding-left: 18px;font-size: 12.5px;font-style: italic;font-weight: 600;color: navy;" class="item_text_content">'+text+'</section><section class="card new_post compressed is_ref" id="" style=""><h2 class="item_title_wrapper"><span class="item_title_content">'+$(ref).children('.ref-title').html()+'</span></h2><section style="padding: 5px;text-align: left;word-spacing: 0.12em; word-wrap: break-word;" class="item_text_content">'+$(ref).children('.ref-text').html()+'</section><br><section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9px;margin-bottom: 6px;font-size: smaller;">'+$(ref).children('.ref-c-wrapper').children('.ref-date').html()+'</section><span style="float:right;text-align: right;margin: 9px;font-weight: 600;margin-top: 2px; margin-bottom: 2px;word-spacing: 0.139em;" class="item_by_wrapper"><img class="item_by_profpic" src="'+$(ref).children('.ref-c-wrapper').children('.ref-wrapper').children('.ref-profpic').attr('src')+'" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;margin-top: -6px;">        <small class="item_by_name">'+$(ref).children('.ref-c-wrapper').children('.ref-wrapper').children('.ref-name').html()+'</small> <small style="color: grey" class="item_by_username">'+$(ref).children('.ref-c-wrapper').children('.ref-wrapper').children('.ref-username').html()+'</small>'+pl+'<br></span></section><br><section style="  min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images">'+h+'</section><section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9px;margin-bottom: 6px;font-size: smaller;">'+date+'</section><span style="float:right;text-align: right;margin: 9px;font-weight: 600;margin-top: 2px; margin-bottom: 2px;word-spacing: 0.139em;" class="item_by_wrapper"><img class="item_by_profpic" src="'+pic+'" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;margin-top: -6px;">  <small class="item_by_name">'+name+' </small> <small class="item_by_username" style="color: grey">'+username+'</small> <br></span><section style="margin-top:63px;margin-bottom: 20;display: block;text-align: -webkit-right;border-top:1px solid #e6e6e6;" class="item_num_wrapper"><section class="action-link">E<span class="num"></span></section><section class="action-link">+<span class="num"></span></section><section class="action-link">H<span class="num"></span></section><section style="color: white;font-weight: 600;background: cornflowerblue;border-color: transparent;" onclick="replyTo($(this).parent().parent());" class="action-link reply">R</section></section>  </section>' );
 
 
 
 
-Allpics=[];return;
+
+Allpics=[];
+closeadd_window();
+}
+else{
+    document.getElementById('addtocontent_').style.border="1px solid rgba(255,0,0,0.6)";
+}
+return;
 
 }
 
@@ -2760,9 +2810,30 @@ Allpics=[];return;
 function appendEvent(title,desc,date,time,place,open_to,livestream,name,uname,src) {
  var dt=getCurrDate(new Date());
 console.log(src+date);
-$('#show-all-posts').append('<section class="card new_post compressed" id="" style=""><br><h2 style=" text-align: center;" class="item_title_wrapper"><span class="item_title_content">'+title+'</span></h2><section class="event_date_time" style=""><span class="ev-when">On '+date+' '+time+'  EST</span> <br><h4 style="" class="ev-where">At '+place+'</h4><br><br><section style=""><a>RSVP</a></section><br></section><section style="padding: 9px;text-align: left;word-spacing: 0.12em;" class="item_text_content">'+desc+' </section><br><section class="specs">  <h6>Open to :'+open_to+' </h6> <h6>Livestream/Recording :'+livestream+'</h6></section><br><section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9px;margin-bottom: 6px;font-size: smaller;">'+dt+'</section><span style="float:right;text-align: right;margin: 9px; font-weight: 600;margin-top: 2px; margin-bottom: 2px;word-spacing: 0.139em;" class="item_by_wrapper"><img class="item_by_profpic" src="'+src+'" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;margin-top: -6px;"> <small class="item_by_name">'+name+' </small> <small class="item_by_username" style="color: grey">'+uname+'</small> <br> </span><section style="  margin-top:63px;  margin-bottom: 20px; display: block; text-align: -webkit-right; border-top:1px solid #e6e6e6;" class="item_num_wrapper">  <section class="action-link">E<span class="num">0</span></section><section class="action-link">+<span class="num">0</span></section> <section class="action-link">H<span class="num">0</span></section><section  onclick="replyTo($(this).parent().parent());" class="action-link reply">R</section></section></section>');
 
+if(title!=''&&desc!=''&&date!=''&&time!=''&&place!=''&&open_to!='')
+{
+document.getElementById('eventtitle_').style.border="1px solid rgba(0, 0, 0, 0.53)";
+document.getElementById('eventdesc_').style.border="1px solid rgba(0, 0, 0, 0.53)";
+document.getElementById('event_address').style.border="1px solid rgba(0, 0, 0, 0.53)";
+document.getElementById('when_date').style.border="1px solid rgba(0, 0, 0, 0.53)";
+document.getElementById('when_time').style.border="1px solid rgba(0, 0, 0, 0.53)";
+    $('#show-all-posts').append('<section class="card new_post compressed" id="" style=""><br><h2 style=" text-align: center;" class="item_title_wrapper"><span class="item_title_content">'+title+'</span></h2><section class="event_date_time" style=""><span class="ev-when">On '+date+' '+time+'  EST</span> <br><h4 style="" class="ev-where">At '+place+'</h4><br><br><section style=""><a>RSVP</a></section><br></section><section style="padding: 9px;text-align: left;word-spacing: 0.12em;" class="item_text_content">'+desc+' </section><br><section class="specs">  <h6>Open to :'+open_to+' </h6> <h6>Livestream/Recording :'+livestream+'</h6></section><br><section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9px;margin-bottom: 6px;font-size: smaller;">'+dt+'</section><span style="float:right;text-align: right;margin: 9px; font-weight: 600;margin-top: 2px; margin-bottom: 2px;word-spacing: 0.139em;" class="item_by_wrapper"><img class="item_by_profpic" src="'+src+'" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;margin-top: -6px;"> <small class="item_by_name">'+name+' </small> <small class="item_by_username" style="color: grey">'+uname+'</small> <br> </span><section style="  margin-top:63px;  margin-bottom: 20px; display: block; text-align: -webkit-right; border-top:1px solid #e6e6e6;" class="item_num_wrapper">  <section class="action-link">E<span class="num">0</span></section><section class="action-link">+<span class="num">0</span></section> <section class="action-link">H<span class="num">0</span></section><section  onclick="replyTo($(this).parent().parent());" class="action-link reply">R</section></section></section>');
+closeadd_window();
 
+}
+else{
+if(title==='')document.getElementById('eventtitle_').style.border="1px solid rgba(255, 0, 0, 0.53)";
+else document.getElementById('eventtitle_').style.border="1px solid rgba(0, 0, 0, 0.53)";
+if(desc==='')document.getElementById('eventdesc_').style.border="1px solid rgba(255, 0, 0, 0.53)";
+else document.getElementById('eventdesc_').style.border="1px solid rgba(0, 0, 0, 0.53)";
+if(place==='')document.getElementById('event_address').style.border="1px solid rgba(255, 0, 0, 0.53)";
+else document.getElementById('event_address').style.border="1px solid rgba(0, 0, 0, 0.53)";
+if(date==='')document.getElementById('when_date').style.border="1px solid rgba(255, 0, 0, 0.53)";
+else document.getElementById('when_date').style.border="1px solid rgba(0, 0, 0, 0.53)";
+if(time==='')document.getElementById('when_time').style.border="1px solid rgba(255, 0, 0, 0.53)";
+else document.getElementById('when_time').style.border="1px solid rgba(0, 0, 0, 0.53)";
+}
 
 
 
@@ -2802,9 +2873,22 @@ function appendmention(text,ref,username,name,pic,h)
     {
         pl='<small> from</small> <a class="item_by_place">'+$(ref).children('.ref-c-wrapper').children('.ref-wrapper').children('.ref-place').html();
     }
+    if(text!=''){
+            document.getElementById('mentioncontent_').style.border="1px solid rgba(0,0,0,0.6)";
+
  $( "#show-all-posts" ).append( '<section class="card new_post compressed" id="" style=""><h2 style="color: #1443a9;letter-spacing: 0.05em;font-size: 28px;  margin-bottom: -3px;" class="item_title_wrapper"><span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto"><span style="position: absolute; margin-left: -2px; margin-top:24.5px; font-size:10px;color: coral;" class="upvote-item"> </span>U </span><br><span class="item_title_content">Mention</span></h2><section class="card new_post compressed is_ref" id="" style=""><h2 class="item_title_wrapper"><span class="item_title_content">'+$(ref).children('.ref-title').html()+'</span></h2><br><section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9px;margin-bottom: 6px;font-size: smaller;">'+$(ref).children('.ref-c-wrapper').children('.ref-date').html()+'</section><span style="float:right;text-align: right;margin: 9px;font-weight: 600;margin-top: 2px; margin-bottom: 2px;word-spacing: 0.139em;" class="item_by_wrapper"><img class="item_by_profpic" src="'+$(ref).children('.ref-c-wrapper').children('.ref-wrapper').children('.ref-profpic').attr('src')+'" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;margin-top: -6;">        <small class="item_by_name">'+$(ref).children('.ref-c-wrapper').children('.ref-wrapper').children('.ref-name').html()+'</small> <small style="color: grey" class="item_by_username">'+$(ref).children('.ref-c-wrapper').children('.ref-wrapper').children('.ref-username').html()+'</small>'+pl+'<br></span></section><br><section style="padding: 5px;text-align: left;word-spacing: 0.12em;padding-left: 18px;font-size: 12.5px;font-style: italic;font-weight: 600;color: navy;" class="item_text_content">'+text+'</section><section style="  min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images">'+h+'</section><section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9px;margin-bottom: 6px;font-size: smaller;">'+date+'</section><span style="float:right;text-align: right;margin: 9px;font-weight: 600;margin-top: 2px; margin-bottom: 2px;word-spacing: 0.139em;" class="item_by_wrapper"><img class="item_by_profpic" src="'+pic+'" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px;margin-top: -6px;">  <small class="item_by_name">'+name+' </small> <small class="item_by_username" style="color: grey">'+username+'</small> <br></span><section style="margin-top:63px;margin-bottom: 20px;display: block;text-align: -webkit-right;border-top:1px solid #e6e6e6;" class="item_num_wrapper"><section class="action-link">E<span class="num"></span></section><section class="action-link">+<span class="num"></span></section><section class="action-link">H<span class="num"></span></section><section  onclick="replyTo($(this).parent().parent());" class="action-link reply">R</section></section>  </section>' );
 
-Allpics=[];return;
+Allpics=[];
+closeadd_window();
+}
+else{
+    document.getElementById('mentioncontent_').style.border="1px solid rgba(255,0,0,0.6)";
+}
+
+
+
+
+return;
 }
 
 
@@ -2816,11 +2900,28 @@ function appendmilestone(title,text,name,pic,username,ref,ht)
     /* My Prof pic */
     var date = getCurrDate(new Date());
     var place ='PL';
+    if(title!=''&&text!=''){
+
+           document.getElementById('milestonetitle_').style.border="1px solid rgba(255,0,0,0.6)";
+              document.getElementById('milestonedesc_').style.border="1px solid rgba(255,0,0,0.6)";
  $( "#show-all-posts" ).append( '<section class="card new_post compressed" id="" style=""><h2 style="color: #1443a9;letter-spacing: 0.05em;font-size: 28px;margin-bottom: -3px;" class="item_title_wrapper"><span class="action-link" style="float: right;color:grey;font-size: small;font-weight: 100;padding: 4px;padding-left:9px;padding-right:9px;border-radius: 50%;border:1px solid;cursor: pointer;opacity: 0.9;margin-top: auto"><span style=" position: absolute; margin-left: -2px;margin-top:24.5px; font-size:10px;  color: coral;" class="upvote-item"></span> U </span> <span class="item_title_content">Milestone:<br>'+title+'</span></h2><section class="card new_post compressed is_ref" id="" style=" text-align:left;"><big>In Reference to <span>'+ref+'</span></big> </section><br><section style="padding: 5px;text-align: left;word-spacing: 0.12em;padding-left: 18px;font-size: 12.5px;    font-weight: 600; color: navy;  margin: 9px;margin-top: 0px;margin-bottom: 20px;" class="item_text_content">Description :<br>'+text+' </section><section style="  min-height: 40px;overflow: hidden;padding: 7px;padding-left: 20px;display: block;text-align: -webkit-center;" class="item_images">'+ht+'</section><section class="item_date_time" style="line-height: 0.2;color: rgb(162, 162, 162);text-align: right;padding: 9;margin-bottom: 6;font-size: smaller;">'+date+'</section><span style="float:right;text-align: right;margin: 9px;  font-weight: 600;margin-top: 2px; margin-bottom: 2px;word-spacing: 0.139em;" class="item_by_wrapper"><img class="item_by_profpic" src="'+pic+'" width="45" height="41" style="border-radius: 50%;margin-right: 9px;    margin-right: 9px; margin-top: -6px;"><small class="item_by_name">'+name+' </small> <small class="item_by_username" style="color: grey">'+username+'</small> <br> </span><section style=" margin-top:63px; margin-bottom: 20px; display: block;text-align: -webkit-right;border-top:1px solid #e6e6e6;" class="item_num_wrapper"> <section class="action-link">E<span class="num"></span></section><section class="action-link">+<span class="num"></span></section><section class="action-link">H<span class="num"></span></section><section  onclick="replyTo($(this).parent().parent());" class="action-link reply">R</section></section>        </section>' );
 
 // slideshowsmilestone(document.getElementById('mx6'));
 
-Allpics=[];return;
+Allpics=[];
+closeadd_window();
+ }
+ else{
+
+if(title==='')   document.getElementById('milestonetitle_').style.border="1px solid rgba(255,0,0,0.6)";
+else  document.getElementById('milestonetitle_').style.border="1px solid rgba(0,0,0,0.6)";
+if(text==='') document.getElementById('milestonedesc_').style.border="1px solid rgba(255,0,0,0.6)";
+else  document.getElementById('milestonedesc_').style.border="1px solid rgba(0,0,0,0.6)";
+
+ }
+
+
+return;
 }
 
 
@@ -3702,7 +3803,7 @@ input#custom-open-to {
     padding-left: 9px;
     padding-right: 9px;
     margin-right: 0px;
-" onclick="var loc=document.getElementById('event_address').value;title=document.getElementById('eventtitle_').value;text=document.getElementById('eventdesc_').value;var time=document.getElementById('when_time').value;var dt=document.getElementById('when_date').value;;var r=null;var l='';if(document.getElementById('only').checked)r='Only to this forum';else if(document.getElementById('everyone').checked)r='Open to all';else if(document.getElementById('custom').checked) r='Custom';if(document.getElementById('yt').checked)l=l+' Youtube ,'; if(document.getElementById('fb').checked)l=l+' Facebook ,'; if(document.getElementById('sp').checked) l=l+' Servepool';if(!document.getElementById('sp').checked&&!document.getElementById('yt').checked&&!document.getElementById('fb').checked) l='Not available';appendEvent(title,text,dt,time,loc,r,l,'name','@uname','images/ikp.jpg') ;closeadd_window()">Post</button>
+" onclick="var loc=document.getElementById('event_address').value;title=document.getElementById('eventtitle_').value;text=document.getElementById('eventdesc_').value;var time=document.getElementById('when_time').value;var dt=document.getElementById('when_date').value;;var r=null;var l='';if(document.getElementById('only').checked)r='Only to this forum';else if(document.getElementById('everyone').checked)r='Open to all';else if(document.getElementById('custom').checked) r='Custom';if(document.getElementById('yt').checked)l=l+' Youtube ,'; if(document.getElementById('fb').checked)l=l+' Facebook ,'; if(document.getElementById('sp').checked) l=l+' Servepool';if(!document.getElementById('sp').checked&&!document.getElementById('yt').checked&&!document.getElementById('fb').checked) l='Not available';appendEvent(title,text,dt,time,loc,r,l,'name','@uname','images/ikp.jpg') ;">Post</button>
 
 
 
@@ -3920,7 +4021,7 @@ id="add_pic_title">Add Pictures</h7>
     padding-left: 9px;
     padding-right: 9px;
     margin-right: 0px;
-" onclick="var h=this.parentElement.previousElementSibling.lastElementChild.lastElementChild.innerHTML;;motiv=document.getElementById('ideamotivation_').value;title=document.getElementById('ideatitle_').value;text=document.getElementById('ideacontent_').value;appendideatoall(title,text,motiv,'ik','images/ikp.jpg','@u',$('#allsources').html(),h);closeadd_window();">Post</button></section>
+" onclick="var h=this.parentElement.previousElementSibling.lastElementChild.lastElementChild.innerHTML;;motiv=document.getElementById('ideamotivation_').value;title=document.getElementById('ideatitle_').value;text=document.getElementById('ideacontent_').value;appendideatoall(title,text,motiv,'ik','images/ikp.jpg','@u',$('#allsources').html(),h);">Post</button></section>
   </section>
 
 
@@ -3975,7 +4076,7 @@ id="add_pic_title">Add Pictures</h7>
     font-size: medium;
     margin-bottom: 17px;
     width: 95%;
-" placeholder="Reference" id="milestone_ref" >
+" placeholder="Reference (optional)" id="milestone_ref" >
  <textarea maxlength="200"  minlength="1" style="
     font-size: medium;
     /* padding: 8px; */
@@ -4109,7 +4210,7 @@ id="add_pic_title">Add Pictures</h7>
     letter-spacing: 0.14em;
     padding-left: 9px;
     padding-right: 9px;
-" onclick="var h=this.previousElementSibling.lastElementChild.lastElementChild.innerHTML;console.log(h);title=document.getElementById('milestonetitle_').value;text=document.getElementById('milestonedesc_').value;appendmilestone(title,text,'anu','images/ikp.jpg','@use',document.getElementById('milestone_ref').value,h);closeadd_window();">Post</button>
+" onclick="var h=this.previousElementSibling.lastElementChild.lastElementChild.innerHTML;console.log(h);title=document.getElementById('milestonetitle_').value;text=document.getElementById('milestonedesc_').value;appendmilestone(title,text,'anu','images/ikp.jpg','@use',document.getElementById('milestone_ref').value,h);">Post</button>
   </section>
 
 
@@ -4248,7 +4349,7 @@ id="add_pic_title">Add Pictures</h7>
     letter-spacing: 0.14em;
     padding-left: 9px;
     padding-right: 9px;
-" onclick="var h=this.previousElementSibling.lastElementChild.lastElementChild.innerHTML;title=document.getElementById('updatetitle_').value;text=document.getElementById('updatecontent_').value;appendupdatetoall(title,text,'name','images/ikp.jpg','@ik',h);closeadd_window();">Post</button>
+" onclick="var h=this.previousElementSibling.lastElementChild.lastElementChild.innerHTML;title=document.getElementById('updatetitle_').value;text=document.getElementById('updatecontent_').value;appendupdatetoall(title,text,'name','images/ikp.jpg','@ik',h);">Post</button>
 
 <!-- //name,pic,username
  -->
@@ -4436,7 +4537,7 @@ id="add_pic_title">Add Pictures</h7>
     letter-spacing: 0.14em;
     padding-left: 9px;
     padding-right: 9px;
-" onclick="var h=this.previousElementSibling.lastElementChild.lastElementChild.innerHTML;;text=document.getElementById('mentioncontent_').value;appendmention(text,$('#mention_Ref'),'@ik','nm','images/ik.jpg',h);closeadd_window();">Post</button>
+" onclick="var h=this.previousElementSibling.lastElementChild.lastElementChild.innerHTML;;text=document.getElementById('mentioncontent_').value;appendmention(text,$('#mention_Ref'),'@ik','nm','images/ik.jpg',h);">Post</button>
 
 
 
@@ -4698,7 +4799,7 @@ id="add_pic_title">Add Pictures</h7>
     letter-spacing: 0.14em;
     padding-left: 9px;
     padding-right: 9px;
-" onclick="var h=this.previousElementSibling.lastElementChild.lastElementChild.innerHTML;text=document.getElementById('addtocontent_').value;appendaddto(text,$('#add_to_Ref'),'@ik','nm','images/ik.jpg',h);closeadd_window();">Post</button>
+" onclick="var h=this.previousElementSibling.lastElementChild.lastElementChild.innerHTML;text=document.getElementById('addtocontent_').value;appendaddto(text,$('#add_to_Ref'),'@ik','nm','images/ik.jpg',h);">Post</button>
 
 
 
@@ -4890,7 +4991,7 @@ id="add_pic_title">Add Pictures</h7>
     letter-spacing: 0.14em;
     padding-left: 9px;
     padding-right: 9px;
-" onclick="var h=this.previousElementSibling.lastElementChild.lastElementChild.innerHTML;;text=document.getElementById('creditcontent_').value;appendcredit(text,$('#credit_ref'),'@ik','nm','images/ik.jpg',h);closeadd_window();">Post</button>
+" onclick="var h=this.previousElementSibling.lastElementChild.lastElementChild.innerHTML;;text=document.getElementById('creditcontent_').value;appendcredit(text,$('#credit_ref'),'@ik','nm','images/ik.jpg',h);">Post</button>
 
 
 
