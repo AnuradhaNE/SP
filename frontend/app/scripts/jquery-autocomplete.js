@@ -33,6 +33,7 @@
                     c = a.data('val');
                 (c || a.hasClass('autocomplete-suggestion')) && (s.val(c), o.onSelect(t, c, a), s.sc.hide())
             }), s.on('blur.autocomplete', function() {
+                var over_sb;
                 try {
                     over_sb = e('.autocomplete-suggestions:hover').length
                 } catch (t) {
@@ -98,6 +99,7 @@ $(function() {
             term = term.toLowerCase();
             var choices = ['ActionScript', 'AppleScript', 'Asp', 'Assembly', 'BASIC', 'Batch', 'C', 'C++', 'CSS', 'Clojure', 'COBOL', 'ColdFusion', 'Erlang', 'Fortran', 'Groovy', 'Haskell', 'HTML', 'Java', 'JavaScript', 'Lisp', 'Perl', 'PHP', 'PowerShell', 'Python', 'Ruby', 'Scala', 'Scheme', 'SQL', 'TeX', 'XML'];
             var suggestions = [];
+            var i=0;
             for (i = 0; i < choices.length; i++)
                 if (~choices[i].toLowerCase().indexOf(term)) suggestions.push(choices[i]);
             suggest(suggestions);
