@@ -4689,8 +4689,35 @@ ul.menu-wrapper {
         margin-right: 12.9px;
     }
 }
+/************************** ***************************************************    TABS *************************************************/
+section.tabs {
+    /* border-bottom: 1px solid; */
+    padding: 0px;
+}
 
+section.tabs>div {
+    /* float: left; */
+    display: inline-block;
+    padding: 8px;
+    min-width: 23%;
+    margin-left: 3;
+    font-size: small;
+    box-shadow: none;
+    border-bottom: 3.4px solid cornflowerblue;
+    cursor: pointer;
+}
+section.tabs>div.selected{
+	border-color: orangered;
+}
+section.tabs>div:last-child {
+    margin-left: 6;
+}
 
+section.hero-unit > section.tabs {
+    padding: 0px;
+    margin-left: -20;
+    margin-right: -19;
+}
 
 
 
