@@ -77,10 +77,97 @@
 
 
 
+section.hero-unit > section {
+    margin-bottom: 9px;
+    padding: 8px;
+    font-size: 16;
+}
 
+section.hero-unit > section > section {
+    padding: 9px;
+    border: 1px solid;
+    border-radius: 90px;
+    background: cornflowerblue;
+    color: white;
+    border-color: rgba(255,255,255,0.7);
+    font-size: 15px;
+    text-align: left;
+    padding-left: 17;
+    min-height: 50px;
+    padding-top: 11px;
+    cursor: pointer;
+    margin-bottom: 30;
+    max-width: 300px;
+}
 
+h4 {
+    margin: 6;
+}
 
+/*section.tabs {
+   
+    padding: 0px;
+}
 
+section.tabs>div {
+   
+    display: inline-block;
+    padding: 8px;
+    min-width: 18%;
+    margin-left: 3;
+    font-size: small;
+    box-shadow: none;
+    border-bottom: 3px solid #2cb8d8;
+    cursor: pointer;
+}
+
+section.tabs>div:last-child {
+    margin-left: 6;
+}
+
+section.hero-unit > section.tabs {
+    padding: 0px;
+    margin-left: -20;
+    margin-right: -19;
+}*/
+@media  (min-width: 800px) {
+  section.trends{
+        float: left;
+    min-width: 30%;
+  }
+
+  section.hero-unit > section {
+    margin-bottom: 9px;
+    padding: 8px;
+    font-size: 16;
+    display: inline-block;
+    min-width: 40%;
+    /* text-align: left; */
+    margin-left: -9;
+}
+section.recommended,section.foryou{
+      margin-left: -18%
+}
+section.whatsnew{
+  
+    margin-left: -35%;
+   /* float: left; */
+    margin-top: 80;
+}
+section.hero-unit > section > section{
+  max-width: 250px;
+}
+
+section.hero-unit > section.trends > section {
+    background: transparent;
+    color: white;
+    border: 2px solid;
+    font-size: large;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    background: coral;
+}
+}
 
             </style>
         </head>
@@ -89,11 +176,11 @@
            <button class="menu" onclick="open_Nav()"></button>
             <section class="group" id="searchbar"  style="display:inline-block;width: 66%;
     margin-left: 10px;padding-bottom:49px;">
-                 <form action="https://www.google.co.in/search?q=mdio&oq=m&aqs=chrome.0.69i59l2j69i57j69i60j69i59j69i60.5787j0j8&sourceid=chrome&es_sm=93&ie=UTF-8#q=h" method="GET">
+                <form action="https://www.google.co.in/search?q=mdio&oq=m&aqs=chrome.0.69i59l2j69i57j69i60j69i59j69i60.5787j0j8&sourceid=chrome&es_sm=93&ie=UTF-8#q=h" method="GET">
                     <input class="textip" id="searchtext" placeholder="🔎" required="" type="text"/>
                     <span class="bar">
                     </span>
-                </form> 
+                </form>
             </section>
         </div>
         
@@ -133,21 +220,30 @@
 
 </li>
 <li class="menu-wrapper-li" id="menu-li-">
-             <ul class="usermenu menucontent user">
-                <li>  <button onclick="location.href='/forums.html'" class="floating-button icon-personal_page" value="My Page">
+          <!--    <ul class="usermenu menucontent user">
+               
+                <li>  <button onclick="location.href='/forum.html'" class="floating-button icon-personal_page" value="My Page">
                 </button>
-  <big>Forums</big><small></small>
+  <big>Profile</big>
 </li>
-            <li>     <button onclick="location.href='/notifications.html'" class="floating-button icon-notifications" value="My Notifications">
-                </button><big>Notifications</big></li>
+
+                <li>  <button onclick="location.href='/forum.html'" class="floating-button icon-personal_page" value="My Page">
+                </button>
+  <big>Forums</big>
+</li>
+
+ <li>    <button class="floating-button icon-developments" onclick="location.href='/development.html'"value="My Developments">
+                </button><big>Developments</big></li>
+
+            
                <li>  <button onclick="location.href='/bookmark.html'" class="floating-button icon-bookmarks" value="My Bookmarks">
                 </button><big>Bookmarks</big></li>
 
-             <li>    <button class="floating-button icon-developments" onclick="location.href='/development.html'"value="My Developments">
-                </button><big>Developments</big></li>
+            
              
                  <li>       <button class="floating-button screen-button" value="MY DASHBOARD" onclick="location.href='/sitemaker.html'">
                 </button><big>Dashboard</big></li>
+                
           <li>     <button onclick="location.href='/messages.html'" class="floating-button message-button" value="My Notifications">
                 </button><big>Messages</big></li>
                  <li>     <button onclick="location.href='/ratings.html'" class="floating-button i-ratings" value="My Notifications">
@@ -155,6 +251,49 @@
 
             <li>       <button class="floating-button icon-settings" onclick="location.href='/settings-conshub.html'" id="settings_user" value="My Settings">
                 </button><big>Settings</big></li>
+
+            </ul>
+ -->
+
+ <ul class="menucontent user">
+              
+
+
+
+ 
+                <li>  <button onclick="location.href='/forum.html'" class="floating-button icon-personal_page" value="My Page">
+                </button>
+  <big>Profile</big>
+</li>
+
+                <li>  <button onclick="location.href='/forum.html'" class="floating-button icon-personal_page" value="My Page">
+                </button>
+  <big>Forums</big>
+</li>
+
+ <li>    <button class="floating-button icon-developments" onclick="location.href='/development.html'"value="My Developments">
+                </button><big>Developments</big></li>
+
+            
+               <li>  <button onclick="location.href='/bookmark.html'" class="floating-button icon-bookmarks" value="My Bookmarks">
+                </button><big>Following</big></li>
+
+            
+             
+                 <li>       <button class="floating-button screen-button" value="MY DASHBOARD" onclick="location.href='/sitemaker.html'">
+                </button><big>Dashboard</big></li>
+                
+         <!--  <li>     <button onclick="location.href='/messages.html'" class="floating-button message-button" value="My Notifications">
+                </button><big>Messages</big></li>
+                 <li>     <button onclick="location.href='/ratings.html'" class="floating-button i-ratings" value="My Notifications">
+                </button><big>Ratings</big></li> -->
+
+            <li>       <button class="floating-button icon-settings" onclick="location.href='/settings-conshub.html'" id="settings_user" value="My Settings">
+                </button><big>Settings</big></li>
+
+
+
+
 
             </ul>
 
@@ -174,32 +313,103 @@
 
 
 
-            <section class="hero-unit " style="    background: rgba(255, 233, 151, 0.88);
+           <section class="hero-unit " style="    background: rgba(255, 233, 151, 0.88);
     padding: 25px;
     color: black;
     margin: 0;
     width: 100%;">
-<h1 style="margin-top: 4px">Developments</h1>
-
-<h5 >Find the results of my actions <br>(get consequences of tangible actions )</h6>
-<i style="font-weight: 600">Ways to make that better </i>
 
 
-<h3>CF</h3>
+    
+<h1 style="margin-top: 4px">How did we get here</h1>
 
-
-
-<section style="
-    padding: 9px;
-    min-height: 190;
-"><h2 style="/* text-align: center; *//* text-align: left; *//* padding-left: 12%; *//* border-bottom: 1px solid rgba(12, 11, 11, 0.75); *//* padding: 9; */text-align: left;/* padding-left: 12%; *//* border-bottom: 1px solid rgba(0, 0, 0, 0.65); */padding: 9;opacity: 0.3;font-size: x-large;margin-top: -9;">Follow Up</h2>
-
-<ol style="text-align: left;">
-  <li class="credit-dev">Thanks/Credit</li>
-  <li class="milestone-influenced">Milestone influenced</li>
-  
-
+<ol style="display: inline-block;font-weight: 600">
+  <li><b>9</b></li>
+<li><b>8</b></li>
 </ol>
+
+
+
+
+
+<!-- 
+<section class="tabs">
+    <div>Trends</div>
+    
+<div>For You</div>
+<div>Recommended</div><div>New</div>
+
+</section>
+
+
+
+
+
+
+<section class="trends">
+    <h4>Trends</h4>
+<br>
+    <section>#eryj</section>
+     <section>#eryj</section>
+      <section>#eryj</section>
+       <section>#eryj</section>
+        <section>#eryj</section>
+         <section>#eryj</section>
+          <section>#eryj</section>
+
+</section><br>
+<section class="foryou"><h4>For you</h4>
+<br>
+
+    <section>#eryj</section>
+</section><br>
+<section class="recommended">
+    
+    <h4> Recommended</h4>
+<br>
+
+
+    <section>#eryj</section>
+    <section>#eryj</section><section>#eryj</section>
+</section><br>
+
+<section class="whatsnew">
+    <h4>New</h4>
+<br>
+
+<section>#eryj</section>
+</section><br>
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </section>
 
 
@@ -224,7 +434,7 @@
 
 
 
-   <div id='owner' style='margin:0 auto;width:100%;'></div>
+
           <script src="scripts/complete.ly.1.0.1.min.js"></script>
         <script type="text/javascript">
           
@@ -629,71 +839,7 @@ c=0;
 }
 
 </script>
-<div id="all-notifications" style="display: block;
-    box-shadow: none;
-    min-height: 30px;
-    overflow-x: hidden;
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    z-index: 9;
-    right: 0px;
-    bottom: 0px;
-    overflow-y: auto;
-    background: rgba(255, 255, 255, 0.946);
 
-    opacity: 1;text-align: -webkit-center;">
-      
-
-<h1>All Notifications</h1>
-<h3>From</h3>
-<style type="text/css">
- section.tabs>div{
-min-width: calc(90% / 5)
-  }
-</style>
-<section class="highlights-notifications"></section>
-
-
-<section class="tabs" style="margin:9%;margin-top: -1px;">
-      <div class="selected">@</div>
-      <div>#</div>
-      <div>@:</div>
-      <div>Messages</div>
-      <div>Events</div>
-    </section>
-
-<ul style="list-style: none;padding: 6px">
-<li>
-<!-- <section class="notif-wrapper" style="">
-  <h2 class="notif-title" style="">Notif Title</h2>
-  <h5 class="notif-on">On : 25/8/2017</h5>
-   <section class="notif-detail" style="">Detail........................................................</section>
-   <section class="notif-action">
-     <span>Action</span>
-   </section>
-   <h1 style="" class="notif-dismiss-wrapper">
-     <span class="notif-dismiss-button" style="" onclick="$(this).parent().parent().parent().remove()">×</span>
-   </h1>
-</section> -->
-</li>
-</ul>
-
-
-
-
-
-
-
-
-
-
-    </div>
-
-
-
-<button id="shownotif" style="position: fixed;top: calc(90% - 10px);transition: 0.3s ease;right:2;color:white;background: rgba(255, 88, 34, 0.96);min-height: 48px;max-width: 49px;max-height: 49px;min-width: 47;z-index: 700;/* font-weight: 900; *//* transform: rotate(45deg); */font-size: xx-large;padding-left: 11;padding-top: 0;line-height: 0;/* top: 2; *//* background: rgba(226, 36, 15, 0.96); */" class="floating-button" onclick="notif()">+</button>
 
 
 
