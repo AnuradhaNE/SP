@@ -91,20 +91,11 @@ section.hero-unit > section {
 }
 
 section.hero-unit > section > section {
+min-width: 400px;
+    min-height: 100px;
     padding: 9px;
-    border: 1px solid;
-    border-radius: 90px;
-    background: cornflowerblue;
-    color: white;
-    border-color: rgba(255,255,255,0.7);
-    font-size: 15px;
-    text-align: left;
-    padding-left: 17;
-    min-height: 50px;
-    padding-top: 11px;
-    cursor: pointer;
-    margin-bottom: 30;
-    max-width: 300px;
+  
+
 }
 
 h4 {
@@ -160,6 +151,8 @@ section.hero-unit > section.tabs {
     width: 280px;
     height: 67px;
     font-size: x-large;
+
+
 
 }
 .add-forum.floating-button {
@@ -250,9 +243,7 @@ button.add-forum.floating-button.go:before{
 button.add-forum.floating-button.go{
     transform: rotate(0deg);
 }
-.f-header {
-    margin-left: -1;
-}
+
 
 
 button.add-forum.floating-button:before {
@@ -279,6 +270,27 @@ button.add-forum.floating-button.disabled.close {
 }
 
 
+
+.forums__ > .f_img {
+    width: 33.32%;
+    margin: 0;
+    padding: 0;
+    height: 128px;
+    display: inline-block;
+    float: left;
+  
+    /* position: absolute; */
+    z-index: -5;
+display: none;
+}
+
+/*.forums__ > .f_img:first-child {
+    display: block;
+    background: linear-gradient(rgba(245, 242, 242, 0.26),rgba(255, 255, 255, 0.21)),url(images/sph.jpg);
+    width: 90%;
+}
+*/
+
 @media  (min-width: 800px) {
   section.trends{
         float: left;
@@ -289,8 +301,9 @@ button.add-forum.floating-button.disabled.close {
     margin-bottom: 9px;
     padding: 8px;
     font-size: 16;
-    display: inline-block;
-    min-width: 40%;
+/*    display: inline-block;
+*/ 
+   min-width: 40%;
     /* text-align: left; */
     margin-left: -9;
 }
@@ -304,7 +317,21 @@ section.whatsnew{
     margin-top: 80;
 }
 section.hero-unit > section > section{
-  max-width: 250px;
+ /* max-width: 250px;*/
+}
+.forums__{
+	margin-bottom: 50px;
+background: transparent;}
+.f-header {
+   position: absolute;
+    margin-left: 36%;
+}
+
+
+.forums__ > .f_img {
+    background: linear-gradient(rgba(245, 242, 242, 0.26),rgba(255, 255, 255, 0.21)),url(images/sph.jpg);
+display: inline-block;
+  background-size: 100% 100%;
 }
 
 section.hero-unit > section.trends > section {
@@ -484,9 +511,9 @@ section.hero-unit > section.trends > section {
 
 
     Posted in</big><br><br>
-    <div class="f-header">#Medicare4All</div>
-    <div class="f-header">#NetNeutrality</div>
-    <div class="f-header">#GreenNewDeal</div>
+  <section class="forums__">    <div class="f-header">#Medicare4All</div></section>
+     <section class="forums__"> <div class="f-header">#NetNeutrality</div></section>
+      <section class="forums__"><div class="f-header">#GreenNewDeal</div></section>
 
 </section>
 
@@ -498,11 +525,11 @@ section.hero-unit > section.trends > section {
     font-weight: 500;
 ">
 Created</big><br><br>
-    
-<div class="f-header">#Medicare4All</div>
-    <div class="f-header">#NetNeutrality</div>
-    <div class="f-header">#GreenNewDeal</div>
-
+      <section class="forums__">
+<div class="f-header">#Medicare4All</div></section>
+    <section class="forums__">  <div class="f-header">#NetNeutrality</div></section>
+      <section class="forums__"><div class="f-header">#GreenNewDeal</div>
+</section>
 </section>
 
 
@@ -514,10 +541,10 @@ Created</big><br><br>
     font-weight: 500;
 ">
 Recommended</big><br><br>
-    
-<div class="f-header">#Medicare4All</div>
-    <div class="f-header">#NetNeutrality</div>
-    <div class="f-header">#GreenNewDeal</div>
+    <section class="forums__">  
+<div class="f-header">#Medicare4All</div></section>
+     <section class="forums__"> <div class="f-header">#NetNeutrality</div></section>
+     <section class="forums__"> <div class="f-header">#GreenNewDeal</div></section>
 
 </section>
 
@@ -530,11 +557,13 @@ Recommended</big><br><br>
     font-weight: 500;
 ">
 Trending</big><br><br>
-    
-<div class="f-header">#Medicare4All</div>
-    <div class="f-header">#NetNeutrality</div>
-    <div class="f-header">#GreenNewDeal</div>
-
+    <section class="forums__">    <section class="f_img"></section>
+      <section class="f_img"></section>
+        <section class="f_img"></section>
+<div class="f-header">#Medicare4All</div></section>
+   <section class="forums__">   <div class="f-header">#NetNeutrality</div></section>
+     <section class="forums__"> <div class="f-header">#GreenNewDeal</div>
+</section>
 </section>
 
 

@@ -102,7 +102,37 @@ section.hero-unit > section > section {
 h4 {
     margin: 6;
 }
+ul#prof_activities>li {
+    margin-top: 17;
+    text-align: left;
+    font-size: large;
+}
+ul#prof_activities{
+	padding-left:20%;
+	padding-top:2%;
+}
+#dp{
+	max-height: 190px;max-width: 196px;height:180px;width:180px;   border: 3px double rgba(255, 255, 255, 0.81);margin-top: -80px}
 
+	#prof_details li{
+margin-bottom: 16px;
+	}
+	#prof_details{
+		    text-align: left;
+    list-style: none;
+    display: inline-block;
+    padding: 14px;
+	}
+
+
+@media (max-width: 531px){
+	#dp{
+margin-top: 20px;
+	}
+	#prof_activities{
+		padding-left: 0%;
+	}
+}
 
             </style>
         </head>
@@ -215,25 +245,39 @@ h4 {
 
 
 
-
 <section class="prof-pic">
   <img src="images">
 </section>
 <section class="prof-details">
-  <pre style="text-align: left;">
-    Name :Anuradha
-    Occupution: 
-    Description:
-    Based in:
-  </pre>
+<h1>@AnuNaik <span>  Timeline</span></h1>
+<img id="dp" src="images/anu.jpg">
+  <ul style="" id="prof_details">
+    <li>Name: Anuradha</li>
+    <li>Bio: They say ,I am polarizing</li>
+    <li>Occupation: Designer/Developer</li>
+    <li>Based in: Ahmedabad</li>
+  </ul>
 
+
+<ul style="
+    list-style: none;
+" id="prof_activities">
+    <li><b>Frequently posts in </b></li>
+<li><b>Created </b></li>
+<li><b>Milestones</b></li>
+    
+    
+    
+  </ul>
 
 </section>
 
-<section class="best-posts">Best Posts</section>
-<section class="recent-posts">Recent Posts</section>
-<section class="my-timeline">My Timeline<br>Pop up timeline</section>
-<section class="related-items">Related /Similar</section>
+<section class="best-posts"><h2>Top Posts</h2>
+<h4 style="text-align: right;"><i>More...</i></h4>
+</section>
+<!-- <section class="recent-posts">Recent Posts</section> -->
+<!-- <section class="my-timeline">My Timeline<br>Pop up timeline</section> -->
+<section class="related-items"><h2>Related /Similar</h2></section>
 
 <section class="prof-achievments"></section>
 <section class="prof-stats"></section>
