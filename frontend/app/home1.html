@@ -209,7 +209,7 @@ section.notif {
     background: white;
     margin-bottom: 60px;
     margin-right: 30px;
-    margin-left: 40px;
+    margin-left: 50px;
     margin-top: 18px;
     padding-bottom: 0px;
   
@@ -242,20 +242,22 @@ section.notif>button{
     font-weight: 600;
     border-width: 2px;
 }
-.home_trending li {
-    border-bottom: 1px solid rgb(197, 166, 65);
+.home_trending li ,.home_new li{
+    border-bottom: 1px solid rgb(224, 192, 87);
     padding: 8px;
     margin: 4px;
     margin-bottom: 14px;
     margin-left: 8%;
     margin-right: 8%;
+
     font-size: larger;
 }
-.home_trending ul
+.home_trending ul,.home_new ul
 {
   list-style: none;
+  max-width: 500px;margin-bottom: 75px;margin-top: 50px;
 }
-.home_trending li > section {
+.home_trending li > section ,.home_new li > section {
     padding: 9px;
     min-width: 150px;
     display: inline-block;
@@ -273,6 +275,12 @@ section.li_t_forum {
     border-radius: 19px;
     color: white;
     background: cornflowerblue;
+}
+
+section.home_trending, section.home_new {
+  /*  display: inline-block;
+     background-color: white; 
+    min-width: 550px;*/
 }
 
 </style>
@@ -451,7 +459,73 @@ This section shows Forums /people which are trending
 <section class="home_new">
   <h1 style="margin-top: 4px">New</h1>
 This section shows newly added people,: ,forums ,!,$
+
+
+
+<ul>
+  <li><section class="li_t_forum">#EndWar</section> <h6 style="margin:3px;margin-top: 13px;opacity:0.75"><i>Posting many important milestones</i></h6></li>
+
+    
+    <li><section class="li_t_forum" style="
+    background: #5dbd2b;
+">#BanFracking</section> </li>
+  <li><section class="li_t_person">
+    
+    <img src="images/bsl.jpg" width="40" height="40" style="border-radius:50%;margin-right: 13px;">@BoyanSlat</section></li>
+    
+    <li><section class="li_t_person">
+    
+    <img src="images/lh.jpg" width="40" height="40" style="border-radius:50%;margin-right: 13px;">@LarryHamm</section></li>
+    
+</ul>
 </section>
+
+
+
+<section class="home_trending">
+  <h1 style="margin-top: 4px">Trending</h1>
+This section shows Forums /people which are trending
+
+<ul>
+  <li><section class="li_t_forum">#EndWar</section> <h6 style="margin:3px;margin-top: 13px;opacity:0.75"><i>Posting many important milestones</i></h6></li>
+
+    
+    <li><section class="li_t_forum" style="
+    background: #5dbd2b;
+">#BanFracking</section> </li>
+  
+    
+    
+    
+</ul>
+
+</section>
+
+
+
+<section class="home_new">
+  <h1 style="margin-top: 4px">New</h1>
+This section shows newly added people,: ,forums ,!,$
+
+
+
+<ul>
+  
+
+    
+    
+  <li><section class="li_t_person">
+    
+    <img src="images/bsl.jpg" width="40" height="40" style="border-radius:50%;margin-right: 13px;">@BoyanSlat</section></li>
+    
+    <li><section class="li_t_person">
+    
+    <img src="images/lh.jpg" width="40" height="40" style="border-radius:50%;margin-right: 13px;">@LarryHamm</section></li>
+    
+</ul>
+</section>
+
+
 
 </center>
 
